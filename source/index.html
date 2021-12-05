@@ -184,20 +184,26 @@
         <article class="traveler">
           <div class="traveler__info">
             <img class="traveler__img" src="#" width="270" height="270" alt="Таня Фирсова">
-            <div class="traveler__level">
+            <div class="traveler-level">
               <img src="#" alt="Уровень попутчика">
             </div>
           </div>
           <div class="traveler__content">
             <ul class="flag">
               <li class="flag__item">
-                <img class="flags flags--one" src="#" width="35" height="25" alt="Флаг">
+                <div class="flags" data-tooltip="Чехия">
+                  <img class="flags__img" src="#" width="35" height="25" alt="Флаг Шри-Ланки">
+                </div>
               </li>
               <li class="flag__item">
-                <img class="flags flags--thailand" src="#" width="35" height="25" alt="Флаг">
+                <div class="flags" data-tooltip="Таиланд">
+                  <img class="flags__img" src="#" width="35" height="25" alt="Флаг Таиланд">
+                </div>
               </li>
               <li class="flag__item">
-                <img class="flags flags--three" src="#" width="35" height="25" alt="Флаг">
+                <div class="flags" data-tooltip="Сейшелы">
+                  <img class="flags__img" src="#" width="35" height="25" alt="Флаг Сейшел">
+                </div>
               </li>
             </ul>
             <h3 class="traveler__title">
@@ -224,17 +230,21 @@
         <article class="traveler">
           <div class="traveler__info">
             <img class="traveler__img" src="#" width="270" height="270" alt="Петя Демин">
-            <div class="traveler__level">
+            <div class="traveler-level">
               <img src="#" alt="Уровень попутчика">
             </div>
           </div>
           <div class="traveler__content">
-            <ul class="flag">
+            <ul class="flag list-default">
               <li class="flag__item">
-                <img class="flags flags--germany" src="#" width="35" height="25" alt="Флаг">
+                <div class="flags" data-tooltip="Бельгия">
+                  <img class="flags__img" src="#" width="35" height="25" alt="Флаг Бельгии">
+                </div>
               </li>
               <li class="flag__item">
-                <img class="flags flags--czech" src="#" width="35" height="25" alt="Флаг">
+                <div class="flags" data-tooltip="Чехия">
+                  <img class="flags__img" src="#" width="35" height="25" alt="Флаг Чехии">
+                </div>
               </li>
             </ul>
             <h3 class="traveler__title">
@@ -334,28 +344,28 @@
         <img class="location__img" src="#" alt="Карта">
       </div>
     </section>
-
-    <footer class="footer">
-      <div class="container">
-        <a class="logo footer__logo" href="/" aria-label="Логотип погнали">
-        </a>
-        <div class="social footer__social">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"
-            aria-label="Фейсбук"></a>
-          <a class="social__link social__link--vk" href="https://twitter.com/htmlacademy_ru" aria-label="Вконтакте"></a>
-          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy/"
-            aria-label="Инстаграм"></a>
-        </div>
-        <div class="developer">
-          <p>Разработано</p>
-          <a class="developer__logo" href="https://htmlacademy.ru">
-            <img src="#" width="27" height="33" alt="Логотип разработчика">
-          </a>
-        </div>
-      </div>
-    </footer>
-
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      <a class="logo footer__logo" href="/" aria-label="Логотип погнали">
+      </a>
+      <div class="social footer__social">
+        <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"
+          aria-label="Фейсбук"></a>
+        <a class="social__link social__link--vk" href="https://twitter.com/htmlacademy_ru" aria-label="Вконтакте"></a>
+        <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy/"
+          aria-label="Инстаграм"></a>
+      </div>
+      <div class="developer">
+        <p>Разработано</p>
+        <a class="developer__logo" href="https://htmlacademy.ru" aria-label="Логотип и ссылка на разработчика">
+          <img src="#" width="27" height="33" alt="Логотип разработчика">
+        </a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 
 </html>
