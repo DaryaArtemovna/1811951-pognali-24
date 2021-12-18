@@ -209,7 +209,7 @@
               <div class="preference">
                 <div class="people">
                   <label class="people__label" for="people">Ищу попутчиков:</label>
-                  <p>Чел.</p>
+                  <p class="people__tex">Чел.</p>
                   <div class="counter">
                     <button class="counter__button counter__button--less" type="button">Уменьшить на 1</button>
                     <input class="counter__input" type="number" id="people" name="people" value="2" min="0">
@@ -218,7 +218,7 @@
                 </div>
                 <div class="days">
                   <label class="days__label" for="days">Длительность:</label>
-                  <p>дн.</p>
+                  <p class="days__tex">дн.</p>
                   <div class="counter">
                     <button class="counter__button counter__button--less" type="button">Уменьшить на 1</button>
                     <input class="counter__button__input" type="number" id="days" name="days" value="2" min="1">
@@ -243,25 +243,25 @@
                   <thead class="dates__head">
                     <tr>
                       <th class="dates__day">
-                        П<span>н</span>
+                        П<span class="dates__letter">н</span>
                       </th>
                       <th class="dates__day">
-                        В<span>т</span>
+                        В<span class="dates__letter">т</span>
                       </th>
                       <th class="dates__day">
-                        С<span>р</span>
+                        С<span class="dates__letter">р</span>
                       </th>
                       <th class="dates__day">
-                        Ч<span>т</span>
+                        Ч<span class="dates__letter">т</span>
                       </th>
                       <th class="dates__day">
-                        П<span>т</span>
+                        П<span class="dates__letter">т</span>
                       </th>
                       <th class="dates__day dates__day--weekend">
-                        С<span>б</span>
+                        С<span class="dates__letter">б</span>
                       </th>
                       <th class="dates__day dates__day--weekend">
-                        В<span>с</span>
+                        В<span class="dates__letter">с</span>
                       </th>
                     </tr>
                   </thead>
@@ -1213,9 +1213,9 @@
             aria-label="Инстаграм"></a>
         </div>
         <div class="developer">
-          <p>Разработано</p>
+          <p class="developer__text">Разработано</p>
           <a class="developer__logo" href="https://htmlacademy.ru" aria-label="Логотип и ссылка на разработчика">
-            <img src="#" width="27" height="33" alt="Логотип разработчика">
+            <img class="developer__img" src="#" width="27" height="33" alt="Логотип разработчика">
           </a>
         </div>
       </div>
