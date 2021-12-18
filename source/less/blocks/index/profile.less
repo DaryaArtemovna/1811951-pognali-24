@@ -1,0 +1,72 @@
+.profile {
+  background-color: @dark-blue;
+}
+
+.profile__wrapper {
+  padding: 37px 0 39px 0;
+  background-color: @profile;
+  border-radius: 0 0 30px 30px;
+}
+
+.profile__title {
+  margin-bottom: 56px;
+}
+
+.profile__list {
+  margin-bottom: 43px;
+  counter-reset: profile-counter;
+}
+
+.profile__item {
+  position: relative;
+}
+
+.profile__item p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 16px;
+  color: @greyish-brown;
+}
+
+.profile__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.profile a {
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  color: @business-blue;
+}
+
+.profile__item::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  counter-increment: profile-counter;
+  content: counter(profile-counter);
+  top: 0;
+  right: 0;
+  width: 34px;
+  height: 34px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: @white;
+  border-radius: 50%;
+}
+
+.profile__item:nth-child(1)::before {
+  background-color: @orange;
+}
+
+.profile__item:nth-child(2)::before {
+  background-color: @orange-yellow;
+}
+
+.profile__item:nth-child(3)::before {
+  background-color: @accent-yellow;
+}

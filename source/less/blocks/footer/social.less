@@ -1,0 +1,42 @@
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social__link {
+  display: block;
+  width: 45px;
+  height: 45px;
+  text-decoration: none;
+  border-radius: 50%;
+  position: relative;
+  background-color: @accent-yellow;
+}
+
+.social__link::before {
+  left: 50%;
+  top: 50%;
+  content: "";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: @dark-blue;
+}
+
+.social__link--facebook::before {
+  mask: url("../img/vk.svg") no-repeat center/cover;
+  width: 11px;
+  height: 21px;
+}
+
+.social__link--vk::before {
+  mask: url("../img/facebook.svg") no-repeat center/cover;
+  width: 23px;
+  height: 12px;
+}
+
+.social__link--instagram::before {
+  mask: url("../img/instagram.svg") no-repeat center/cover;
+  width: 18px;
+  height: 18px;
+}
