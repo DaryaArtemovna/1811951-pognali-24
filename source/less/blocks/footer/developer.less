@@ -2,6 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid #f2f2f2;
 }
 
 .developer__text {
@@ -16,8 +18,24 @@
 
 .developer__img {
   background-color: @dark-blue;
-  display: block;
   width: 27px;
-  height: 34px;
+  height: 33px;
   mask: url("../img/htmlacademy.svg") no-repeat center/cover;
+}
+
+@media only screen and (min-width: @tablet-width) {
+  .developer {
+    border-top: none;
+    padding: 0;
+    align-items: flex-start;
+  }
+
+  .developer__logo {
+    margin-left: 24px;
+  }
+
+  .developer__text {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

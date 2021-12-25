@@ -1,40 +1,17 @@
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: @rectangle-blue;
-}
-
-.header--active {
-  background-color: @white;
-}
-
-.header--active .logo {
-  background-image: url("../img/logo_mobile-blue.svg");
-}
-
-.header--active .header__button span {
-  background-color: @grey;
-  left: 50%;
-}
-
-.header--active .header__button span:first-child {
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.header--active .header__button span:last-child {
-  bottom: 33%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-.header--active .nav {
-  display: block;
+  z-index: 99;
 }
 
 .header__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0;
+  padding: 16px 0 30px;
 }
 
 .header__button {
@@ -63,4 +40,76 @@
 
 .header__button span:last-child {
   bottom: 7%;
+}
+
+.header--active {
+  background-color: @white;
+}
+
+.header--active .logo {
+  background-image: url("../img/logo-blue_mobile.svg");
+}
+
+.header--active .header__button span {
+  background-color: @grey;
+  left: 50%;
+}
+
+.header--active .header__button span:first-child {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.header--active .header__button span:last-child {
+  bottom: 33%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.header--active .nav {
+  display: block;
+}
+
+.header--active .interaction {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.header--active .interaction span {
+  display: block;
+}
+
+.header--active .interaction__link::before {
+  width: 45px;
+  height: 45px;
+  background-color: @black-blue;
+}
+
+.header--active .interaction__link--phone::before {
+  background-image: url("../img/icon-phone--secondary.svg");
+}
+
+.header--active .interaction__link--email::before {
+  background-image: url("../img/icon-email--secondary.svg");
+}
+
+.header--scroll {
+  background-color: @white;
+}
+
+.header--scroll .logo {
+  background-image: url("../img/logo-blue_mobile.svg");
+}
+
+.header--scroll .header__button span {
+  background-color: @grey;
+}
+
+@media only screen and (min-width: @desktop-width) {
+  .header__button {
+    display: none;
+  }
+
+  .header--scroll .nav__link {
+    color: @dark-blue;
+  }
 }

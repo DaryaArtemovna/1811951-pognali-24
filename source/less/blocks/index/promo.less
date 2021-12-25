@@ -1,23 +1,36 @@
 .promo {
-  background-image: url("../img/traveller-illustration-mobile@1x.png"), url("../img/globe-back-mobile@1x.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-size: 192px 255px, 320px 569px;
-  padding-bottom: 30px;
   color: @white;
-  background-position: right 50px top 130px, left 0 bottom 509px;
   background-color: @deep-dark-blue;
+  padding-top: 91px;
+  background-image:
+    url("../img/background-traveler.png"),
+    url("../img/background-globe.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 192px 255px, 320px 398px;
+  background-position: top 222px right 48px, top 77px left 0;
 }
 
 .promo__title {
-  margin: 0 0 313px 0;
   text-align: center;
   font-weight: 700;
   line-height: 40px;
   font-size: 36px;
+  margin: 0 0 245px;
+}
+
+.promo__interaction {
+  display: flex;
+  margin-bottom: 26px;
+}
+
+.promo__interaction .login {
+  display: block;
 }
 
 .promo__text {
-  margin-bottom: 29px;
+  margin-bottom: 30px;
+  padding: 0 25px;
+  max-width: 210px;
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
@@ -25,10 +38,11 @@
 
 .promo__text cite {
   font-weight: 700;
+  font-style: normal;
 }
 
 .promo__text blockquote {
-  margin: 0 0 18px 0;
+  margin: 0 0 18px;
 }
 
 .promo__list {
@@ -41,7 +55,7 @@
   line-height: 28px;
   color: @deep-dark-blue;
   border-radius: 10px;
-  padding: 21px 27px 39px;
+  padding: 21px 65px 35px 23px;
   position: relative;
 }
 
@@ -63,17 +77,155 @@
 }
 
 .promo__item:not(:first-child) {
-  margin-top: -16px;
+  margin-top: -12px;
 }
 
 .promo__item::before {
   position: absolute;
   counter-increment: promo-counter;
   content: counter(promo-counter);
-  top: 20px;
-  right: 20px;
+  top: 21px;
+  right: 22px;
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
   color: @white;
+}
+
+@media only screen and (min-width: @tablet-width) {
+  .promo__interaction {
+    display: none;
+  }
+
+  .promo__title {
+    width: 490px;
+    margin: 0 auto 86px;
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .promo__text {
+    max-width: 360px;
+    padding: 0 33px;
+    margin-bottom: 212px;
+  }
+
+  .promo__text blockquote {
+    font-size: 28px;
+    line-height: 33px;
+    margin-bottom: 45px;
+  }
+
+  .promo__text cite {
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  .promo__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .promo__item::before {
+    top: 88px;
+    left: 34px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .promo__item {
+    height: 140px;
+    padding: 30px 87px 50px 32px;
+  }
+
+  .promo__item:not(:first-child) {
+    margin-top: 0;
+  }
+
+  .promo__item p {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .promo__item:nth-child(odd) {
+    width: 365px;
+  }
+
+  .promo__item:nth-child(even) {
+    width: 344px;
+    margin-left: -21px;
+  }
+
+  .promo__item:nth-child(1) {
+    border-radius: 20px 0 0 0;
+  }
+
+  .promo__item:nth-child(2) {
+    border-radius: 20px 20px 0 0;
+  }
+
+  .promo__item:nth-child(3) {
+    border-radius: 0 0 0 20px;
+  }
+
+  .promo__item:nth-child(4) {
+    border-radius: 0 0 20px 20px;
+  }
+}
+
+@media only screen and (min-width: @desktop-width) {
+  .promo {
+    padding-top: 200px;
+  }
+
+  .promo__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 101px;
+  }
+
+  .promo__title {
+    margin: 0;
+    text-align: start;
+  }
+
+  .promo__text {
+    margin: 0;
+    padding: 0;
+  }
+
+  .promo__item {
+    padding: 30px 76px 50px 32px;
+  }
+
+  .promo__item:nth-child(odd),
+  .promo__item:nth-child(even) {
+    width: 340px;
+    height: 107px;
+  }
+
+  .promo__item:nth-child(1) {
+    margin: 0;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .promo__item:nth-child(2) {
+    margin-left: -20px;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .promo__item:nth-child(3) {
+    margin-left: -20px;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .promo__item:nth-child(4) {
+    margin-left: -20px;
+    border-radius: 20px;
+  }
+
+  .promo__item::before {
+    top: 29px;
+    left: 273px;
+  }
 }

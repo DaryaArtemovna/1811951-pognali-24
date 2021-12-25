@@ -3,15 +3,14 @@
 }
 
 .about__wrapper {
-  background: url("../img/about-mobile@1x.png") no-repeat center/cover;
-  background-color: @dark-blue;
+  background: url("../img/background-about.png") @dark-blue no-repeat left 20px top 40px;
   color: @white;
-  padding: 32px 0 60px 0;
+  padding: 70px 24px 82px;
   border-radius: 0 0 30px 30px;
 }
 
 .about__title {
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 }
 
 .about__text {
@@ -20,14 +19,65 @@
   line-height: 22px;
 }
 
-.about__text p:last-child {
-  font-weight: 700;
+.about__text p:first-child {
+  margin-bottom: 19px;
 }
 
-.about__text p:not(:last-child) {
-  margin-bottom: 20px;
+.about__text p:nth-child(2) {
+  font-weight: 700;
 }
 
 .about__button {
   display: none;
+}
+
+@media only screen and (min-width: @tablet-width) {
+  .about__button {
+    display: block;
+    position: relative;
+    max-width: 276px;
+    height: 80px;
+    padding: 28px 34px;
+  }
+
+  .about__button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 21px;
+    transform: translateY(-50%);
+    width: 13px;
+    height: 13px;
+    background: url("../img/icon-arrow.svg") no-repeat center;
+  }
+
+  .about__wrapper {
+    padding: 134px 330px 90px 34px;
+  }
+
+  .about__title {
+    margin-bottom: 42px;
+  }
+
+  .about__text {
+    margin-bottom: 53px;
+  }
+
+  .about__text p:nth-child(1) {
+    font-size: 28px;
+    line-height: 33px;
+    margin-bottom: 31px;
+  }
+
+  .about__text p:nth-child(2) {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
+
+@media only screen and (min-width: @desktop-width) {
+  .about__wrapper {
+    padding: 134px 545px 90px 34px;
+  }
 }
