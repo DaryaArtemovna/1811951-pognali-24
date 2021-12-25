@@ -4,17 +4,17 @@
 
 .directions__wrapper {
   background-color: @light-violet;
-  padding-top: 71px;
-  padding-bottom: 30px;
+  padding: 70px 0 31px;
   border-radius: 0 0 30px 30px;
 }
 
 .directions__title {
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 }
 
 .directions__text {
-  margin-bottom: 60px;
+  padding: 0 25px;
+  margin-bottom: 61px;
 }
 
 .directions__text p {
@@ -25,33 +25,89 @@
 }
 
 .directions__options {
-  margin-bottom: 25px;
+  margin-bottom: 26px;
 }
 
-.direction__content {
-  background-color: @white;
-  padding: 0 25px;
+.directions__options .direction:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.directions__button {
+  font-size: 18px;
+  line-height: 18px;
+  position: relative;
+  padding: 24px 23px;
   border-radius: 10px;
 }
 
-.direction__title {
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 21px;
-  color: @black;
-  margin-bottom: 2px;
+.directions__button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 21px;
+  transform: translateY(-50%);
+  width: 13px;
+  height: 13px;
+  background: url("../img/icon-arrow.svg") no-repeat center;
 }
 
-.direction__about {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
-  color: @greyish-brown;
+@media only screen and (min-width: @tablet-width) {
+  .directions__title {
+    margin-bottom: 58px;
+  }
+
+  .directions__text p {
+    font-size: 28px;
+    line-height: 33px;
+    max-width: 340px;
+    padding-right: 0;
+    margin-bottom: 106px;
+  }
+
+  .directions__options {
+    padding: 0 34px;
+    margin-bottom: 48px;
+  }
+
+  .directions__button {
+    max-width: 618px;
+    margin: 0 auto;
+    padding: 28px 34px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px;
+  }
 }
 
-.direction__number {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  color: @deep-dark-blue;
+@media only screen and (min-width: @desktop-width) {
+  .directions__content {
+    display: grid;
+    grid-template-columns: 560px 380px;
+    grid-template-rows: minmax(340px, max-content) minmax(80px, 80px) auto;
+    gap: 0 171px;
+    align-items: start;
+  }
+
+  .directions__options {
+    grid-row: 1 / 4;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .directions__text {
+    order: 1;
+    grid-row: 1 / 2;
+    padding: 0;
+    margin-bottom: 70px;
+  }
+
+  .directions__button {
+    order: 2;
+    grid-column-start: 2;
+    grid-row: 2 / 3;
+  }
+
+  .directions__text p {
+    margin-bottom: 0;
+  }
 }

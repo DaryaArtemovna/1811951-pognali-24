@@ -65,25 +65,27 @@
     </h1>
     <section class="promo">
       <div class="container">
-        <h2 class="promo__title">В путешествие с крутыми попутчиками!</h2>
-        <div class="promo__interaction">
-          <ul class="interaction list-default">
-            <li class="interaction__item">
-              <a class="interaction__link interaction__link--phone" href="tel:88005558628">
-                <span>800 555-86-28</span>
-              </a>
-            </li>
-            <li class="interaction__item">
-              <a class="interaction__link interaction__link--email" href="mailto:mail@htmlacademy.ru">
-                <span>mail@htmlacademy.ru</span>
-              </a>
-            </li>
-          </ul>
-          <a class="login button" href="#">Авторизация</a>
-        </div>
-        <div class="promo__text">
-          <blockquote>«Лучшее приложение, что я видел в жизни!»</blockquote>
-          <cite>Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
+        <div class="promo__wrapper">
+          <h2 class="promo__title">В путешествие с крутыми попутчиками!</h2>
+          <div class="promo__interaction">
+            <ul class="interaction list-default">
+              <li class="interaction__item">
+                <a class="interaction__link interaction__link--phone" href="tel:88005558628">
+                  <span>800 555-86-28</span>
+                </a>
+              </li>
+              <li class="interaction__item">
+                <a class="interaction__link interaction__link--email" href="mailto:mail@htmlacademy.ru">
+                  <span>mail@htmlacademy.ru</span>
+                </a>
+              </li>
+            </ul>
+            <a class="login button" href="#">Авторизация</a>
+          </div>
+          <div class="promo__text">
+            <blockquote>«Лучшее приложение, что я видел в жизни!»</blockquote>
+            <cite>Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
+          </div>
         </div>
         <div class="promo__info">
           <ul class="promo__list list-default">
@@ -117,14 +119,14 @@
               черпайте вдохновение в чужих.</p>
             <p>А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
           </div>
-          <a href="#" class="about__button button">Побробнее</a>
+          <a href="#" class="about__button button">Подробнее</a>
         </div>
       </div>
     </section>
 
     <section class="directions">
       <div class="directions__wrapper">
-        <div class="container">
+        <div class="container directions__content">
           <div class="directions__text">
             <h2 class="directions__title title">
               Направления
@@ -135,41 +137,47 @@
           </div>
           <div class="directions__options">
             <article class="direction">
-              <img class="direction__img" src="#" width="240" height="110" alt="Таиланд">
-              <div class="direction__flag">
-                <img class="flags flags--thailand" src="#" width="35" height="24" alt="Флаг Таиланда">
-              </div>
+              <picture class="direction__picture">
+                <img class="direction__img" src="img/direction-thailand.jpg" width="270" height="110" alt="Таиланд">
+              </picture>
               <div class="direction__content">
-                <h3 class="direction__title">
-                  Таиланд
-                </h3>
-                <p class="direction__about">Джунгли зовут!</p>
+                <img class="direction__flag" src="img/flags-thailand.jpg" width="35" height="24" alt="Флаг Таиланда">
+                <div class="direction__text">
+                  <h3 class="direction__title">
+                    Таиланд
+                  </h3>
+                  <p class="direction__about">Джунгли зовут!</p>
+                </div>
                 <p class="direction__number">18321</p>
               </div>
             </article>
             <article class="direction">
-              <img class="direction__img" src="#" width="240" height="110" alt="Франция">
-              <div class="direction__flag">
-                <img class="flags flags--france" src="#" width="35" height="24" alt="Флаг Франции">
-              </div>
+              <picture class="direction__picture">
+                <img class="direction__img" src="img/direction-france.jpg" width="270" height="110" alt="Франция">
+              </picture>
               <div class="direction__content">
-                <h3 class="direction__title">
-                  Франция
-                </h3>
-                <p class="direction__about">Трэ бьен, манифик!</p>
+                <img class="direction__flag" src="img/flags-france.jpg" width="35" height="24" alt="Флаг Франции">
+                <div class="direction__text">
+                  <h3 class="direction__title">
+                    Франция
+                  </h3>
+                  <p class="direction__about">Трэ бьен, манифик!</p>
+                </div>
                 <p class="direction__number">12518</p>
               </div>
             </article>
             <article class="direction">
-              <img class="direction__img" src="#" width="240" height="110" alt="Чехия">
-              <div class="direction__flag">
-                <img class="flags flags--czech" src="#" width="35" height="24" alt="Флаг Чехии">
-              </div>
+              <picture class="direction__picture">
+                <img class="direction__img" src="img/direction-czech.jpg" width="270" height="110" alt="Чехия">
+              </picture>
               <div class="direction__content">
-                <h3 class="direction__title">
-                  Чехия
-                </h3>
-                <p class="direction__about">Закоулки старой Европы</p>
+                <img class="direction__flag" src="img/flags-czech.jpg" width="35" height="24" alt="Флаг Чехии">
+                <div class="direction__text">
+                  <h3 class="direction__title">
+                    Чехия
+                  </h3>
+                  <p class="direction__about">Закоулки старой Европы</p>
+                </div>
                 <p class="direction__number">5326</p>
               </div>
             </article>
@@ -179,49 +187,49 @@
       </div>
     </section>
 
-    <section class="companion">
-      <div class="companion__wrapper">
-        <div class="container">
-          <div class="companion__content">
-            <h2 class="companion__title title">
+    <section class="companions">
+      <div class="companions__wrapper">
+        <div class="companions__content container">
+          <div class="companions__about">
+            <h2 class="companions__title title">
               Попутчики
             </h2>
-            <p class="companion__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен
+            <p class="companions__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен
               пляж
               и коктейль, а другому маршрут для хайкинга.</p>
-            <p class="companion__text companion__text--bold">Теперь можно легко найти единомышленников!
+            <p class="companions__text companions__text--bold">Теперь можно легко найти единомышленников!
             </p>
           </div>
-          <div class="traveler__wrapper">
-            <article class="traveler">
-              <div class="traveler__info">
-                <img class="traveler__img" src="#" width="270" height="270" alt="Таня Фирсова">
-                <div class="traveler__level">
-                  <img src="#" alt="Уровень попутчика">
+          <div class="companions__showcase">
+            <article class="companion">
+              <div class="companion__info">
+                <img class="companion__img" src="img/companion-firsova.jpg" width="270" height="270" alt="Таня Фирсова">
+                <div class="companion-level">
+                  <img src="img/companion-level.svg" widht="60" height="60" alt="Уровень попутчика">
                 </div>
               </div>
-              <div class="traveler__content">
-                <ul class="flag">
+              <div class="companion__content">
+                <ul class="companion__flag flag list-default">
                   <li class="flag__item">
-                    <div class="flags" data-tooltip="Чехия">
-                      <img class="flags__img" src="#" width="35" height="25" alt="Флаг Шри-Ланки">
+                    <div class="flags" data-tooltip="Шри-Ланка">
+                      <img class="flags__img" src="img/flags-srilanka.jpg" width="35" height="25" alt="Флаг Шри-Ланки">
                     </div>
                   </li>
                   <li class="flag__item">
                     <div class="flags" data-tooltip="Таиланд">
-                      <img class="flags__img" src="#" width="35" height="25" alt="Флаг Таиланд">
+                      <img class="flags__img" src="img/flags-thailand.jpg" width="35" height="25" alt="Флаг Таиланд">
                     </div>
                   </li>
                   <li class="flag__item">
                     <div class="flags" data-tooltip="Сейшелы">
-                      <img class="flags__img" src="#" width="35" height="25" alt="Флаг Сейшел">
+                      <img class="flags__img" src="img/flags-seychelles.jpg" width="35" height="25" alt="Флаг Сейшел">
                     </div>
                   </li>
                 </ul>
-                <h3 class="traveler__title">
+                <h3 class="companion__title companion__title--offline">
                   Таня Фирсова
                 </h3>
-                <p class="traveler__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+                <p class="companion__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
                 <ul class="moving list-default" aria-label="Варианты путешествий">
                   <li class="moving__item">
                     <span class="moving__type moving__type--plane moving__type--active"
@@ -239,30 +247,30 @@
                 </ul>
               </div>
             </article>
-            <article class="traveler">
-              <div class="traveler__info">
-                <img class="traveler__img" src="#" width="270" height="270" alt="Петя Демин">
-                <div class="traveler__level">
-                  <img src="#" alt="Уровень попутчика">
+            <article class="companion">
+              <div class="companion__info">
+                <img class="companion__img" src="img/companion-demin.jpg" width="270" height="270" alt="Петя Демин">
+                <div class="companion-level">
+                  <img src="img/companion-level.svg" widht="60" height="60" alt="Уровень попутчика">
                 </div>
               </div>
-              <div class="traveler__content">
-                <ul class="flag list-default">
+              <div class="companion__content">
+                <ul class="companion__flag flag list-default">
                   <li class="flag__item">
                     <div class="flags" data-tooltip="Бельгия">
-                      <img class="flags__img" src="#" width="35" height="25" alt="Флаг Бельгии">
+                      <img class="flags__img" src="img/flags-belgium.jpg" width="35" height="25" alt="Флаг Бельгии">
                     </div>
                   </li>
                   <li class="flag__item">
                     <div class="flags" data-tooltip="Чехия">
-                      <img class="flags__img" src="#" width="35" height="25" alt="Флаг Чехии">
+                      <img class="flags__img" src="img/flags-czech.jpg" width="35" height="25" alt="Флаг Чехии">
                     </div>
                   </li>
                 </ul>
-                <h3 class="traveler__title">
+                <h3 class="companion__title companion__title--online">
                   Петя Демин
                 </h3>
-                <p class="traveler__tags">#бургер #бар #футбол #концерт #крафт</p>
+                <p class="companion__tags">#бургер #бар #футбол #концерт #крафт</p>
                 <ul class="moving list-default" aria-label="Варианты путешествий">
                   <li class="moving__item">
                     <span class="moving__type moving__type--plane moving__type--active"
@@ -283,7 +291,7 @@
               </div>
             </article>
           </div>
-          <a href="#" class="companion__more button">Показать всех</a>
+          <a href="#" class="companions__more button">Показать всех</a>
         </div>
       </div>
     </section>
@@ -319,7 +327,7 @@
           <h2 class="feedback__title title">
             Заинтересовались?
           </h2>
-          <p class="feedback__content">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее<a
+          <p class="feedback__content">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a
               href="#">авторизуйтесь</a>.</p>
           <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="GET">
             <div class="field">
@@ -362,21 +370,27 @@
           </div>
         </div>
       </div>
-      <div class="location__img">
-        <img src="../img/map-mobile@1x.jpg" alt="Карта"> </div>
+      <div class="location__map">
+        <iframe class="location__iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3929853020711!2d30.322135308357478!3d59.93569358925926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631f78d87263d%3A0x62e1d00744aea5a3!2z0JrRg9GA0LAuINCT0YDQtdGH0LAuINCh0YPQvy4!5e0!3m2!1sru!2sru!4v1639562898687!5m2!1sru!2sru"
+          width="320" height="424" allowfullscreen loading="lazy">
+        </iframe>
+        <img class="location__img" src="img/map.jpg" width="320" height="424" alt="Карта">
+      </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="footer__wrapper">
-      <div class="container">
+      <div class="container footer__content">
         <a class="logo footer__logo" href="/" aria-label="Логотип погнали">
         </a>
-        <div class="social footer__social">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"
+        <div class="footer__networks networks">
+          <a class="networks__link networks__link--facebook" href="https://www.facebook.com/htmlacademy"
             aria-label="Фейсбук"></a>
-          <a class="social__link social__link--vk" href="https://twitter.com/htmlacademy_ru" aria-label="Вконтакте"></a>
-          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy/"
+          <a class="networks__link networks__link--vk" href="https://twitter.com/htmlacademy_ru"
+            aria-label="Вконтакте"></a>
+          <a class="networks__link networks__link--instagram" href="https://www.instagram.com/htmlacademy/"
             aria-label="Инстаграм"></a>
         </div>
         <div class="developer">
@@ -388,7 +402,7 @@
       </div>
     </div>
   </footer>
-
+  <script src="js/script.js"></script>
 </body>
 
 </html>

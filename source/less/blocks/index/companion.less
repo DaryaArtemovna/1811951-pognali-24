@@ -1,30 +1,105 @@
 .companion {
-  background-color: @profile;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 270px;
+  margin: 0 auto;
 }
 
-.companion__content .traveler:not(:last-child) {
-  margin-bottom: 9px;
+.companion__info {
+  position: relative;
 }
 
-.companion__wrapper {
-  background-color: @dark-blue;
-  color: @white;
-  padding: 29px 0;
-  border-radius: 0 0 30px 30px;
+.companion__img {
+  width: 270px;
+  height: 270px;
+}
+
+.companion-level {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+}
+
+.companion__content {
+  position: relative;
+  padding: 25px 40px;
+  background-color: @white;
 }
 
 .companion__title {
-  margin-bottom: 19px;
-}
-
-.companion__text {
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 300;
-  margin-bottom: 25px;
-}
-
-.companion__text--bold {
+  position: relative;
+  font-size: 21px;
+  line-height: 21px;
   font-weight: 700;
-  margin-bottom: 54px;
+  text-align: center;
+  color: @twilight-blue;
+  margin: 0 0 16px;
+}
+
+.companion__title::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 13px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.companion__title--offline::before {
+  background-color: @offline-red;
+}
+
+.companion__title--online::before {
+  background-color: @online-green;
+}
+
+.companion__flag {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  top: -10px;
+  left: 0;
+  width: 100%;
+}
+
+.companion__flag .flag__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.companion__tags {
+  line-height: 18px;
+  text-align: center;
+  margin: 0 0 15px;
+  font-weight: 300;
+  color: @greyish-brown;
+}
+
+.companion__moving {
+  justify-content: center;
+}
+
+@media only screen and (min-width: @tablet-width) {
+  .companion {
+    width: 285px;
+    border-radius: 20px;
+  }
+
+  .companion__img {
+    width: 285px;
+    height: 286px;
+    object-fit: cover;
+  }
+
+  .companion__title {
+    font-size: 24px;
+    line-height: 22px;
+    margin-bottom: 24px;
+  }
+
+  .companion__tags {
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 26px;
+  }
 }

@@ -1,0 +1,126 @@
+.direction {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.direction__content {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: @white;
+  padding: 24px 24px 5px;
+  height: 89px;
+  margin-top: -10px;
+}
+
+.direction__text {
+  max-width: 155px;
+}
+
+.direction__title {
+  font-size: 21px;
+  line-height: 21px;
+  color: @black;
+  margin: 0 0 2px;
+}
+
+.direction__about {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: @placeholder;
+}
+
+.direction__number {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #161c354d;
+  position: relative;
+  min-width: 60px;
+  padding-left: 20px;
+  padding-top: 3px;
+  margin: 0;
+}
+
+.direction__number::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  background: url("../img/icon-user.svg") no-repeat center;
+}
+
+.direction__flag {
+  position: absolute;
+  left: 25px;
+  top: -14px;
+}
+
+@media only screen and (min-width: @tablet-width) {
+  .direction {
+    display: flex;
+    max-width: 620px;
+    height: 140px;
+    border-radius: 20px;
+    margin: 0 auto;
+  }
+
+  .direction__picture {
+    order: 1;
+    flex-shrink: 0;
+    max-width: 186px;
+  }
+
+  .direction__content {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding: 28px 31px 10px;
+  }
+
+  .direction__img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .direction__text {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .direction__title {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 5px;
+  }
+
+  .direction__about {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .direction__number {
+    font-size: 20px;
+    padding-top: 0;
+    padding-left: 29px;
+  }
+
+  .direction__number::before {
+    width: 24px;
+    height: 24px;
+  }
+
+  .direction__flag {
+    top: 17px;
+    left: 399px;
+    width: 70px;
+    height: 47px;
+    border-radius: 8px;
+  }
+}
