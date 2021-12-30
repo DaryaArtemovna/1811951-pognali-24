@@ -1,14 +1,60 @@
-.pages {
-  background-color: @light-violet;
-  padding-top: 20px;
-}
-
 .pages__button {
-  text-decoration: none;
-  font-weight: 700;
+  position: relative;
+  display: block;
   font-size: 17px;
   line-height: 30px;
-  color: @twilight-blue;
+  font-weight: 700;
   text-transform: uppercase;
-  text-align: center;
+  color: @twilight-blue;
+  width: 150px;
+  margin: 0 auto 19px;
+  padding-left: 33px;
+}
+
+.pages__button::after,
+.pages__button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 2px;
+  background-color: @twilight-blue;
+}
+
+.pages__button::after {
+  transform: translateY(-50%);
+}
+
+.pages__button::before {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+@media only screen and (min-width: @tablet-width) {
+  .pages__button {
+    font-size: 20px;
+    line-height: 20px;
+    width: 192px;
+    padding-left: 51px;
+    margin-bottom: 54px;
+  }
+
+  .pages__button::after,
+  .pages__button::before {
+    width: 26px;
+    height: 2px;
+  }
+}
+
+@media only screen and (min-width: @desktop-width) {
+  .pages {
+    padding: 0;
+  }
+
+  .pages__button {
+    width: 260px;
+    padding-left: 50px;
+    margin-bottom: 75px;
+  }
 }

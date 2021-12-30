@@ -6,6 +6,8 @@
   width: 100%;
   padding: 41px 25px;
   background-color: @white;
+  height: calc(100vh - 66px);
+  overflow-y: scroll;
 }
 
 .nav .login {
@@ -27,8 +29,19 @@
 }
 
 @media only screen and (min-width: @tablet-width) {
+  .nav {
+    height: calc(100vh - 132px);
+    padding: 48px 97px;
+  }
+
   .nav__link {
     text-align: start;
+    font-size: 60px;
+    line-height: 71px;
+  }
+
+  .nav__list {
+    margin-bottom: 133px;
   }
 
   .nav .login {
@@ -38,20 +51,35 @@
 
 @media only screen and (min-width: @desktop-width) {
   .nav {
+    position: relative;
+    top: auto;
+    left: auto;
     display: flex;
-    position: static;
-    top: 0;
-    left: 0;
-    padding: 0;
-    background-color: transparent;
     align-items: center;
-    padding-left: 100px;
+    height: auto;
+    padding: 0 0 0 107px;
+    overflow: auto;
+    background-color: transparent;
+  }
+
+  .nav::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: @white;
+  }
+
+  .nav .interaction {
+    margin-left: auto;
   }
 
   .nav__list {
     display: flex;
     margin: 0;
-    width: 100%;
   }
 
   .nav__item:not(:last-child) {

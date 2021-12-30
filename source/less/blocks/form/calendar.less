@@ -1,6 +1,13 @@
-.calendar__wrapper {
-  display: flex;
-  justify-content: space-between;
+.calendar {
+  margin-bottom: 21px;
+}
+
+.calendar__month {
+  position: relative;
+  padding: 11px;
+  border-top: 1px solid @inputs-grey;
+  border-bottom: 1px solid @inputs-grey;
+  margin-bottom: 13px;
 }
 
 .calendar__title {
@@ -8,4 +15,63 @@
   font-size: 20px;
   line-height: 20px;
   color: @twilight-blue;
+  text-align: center;
+  margin: 0;
+}
+
+.calendar__control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 21px;
+  mask: url("../img/arrow.svg") no-repeat center / cover;
+  background-color: #0000004d;
+  border: none;
+  padding: 0;
+}
+
+.calendar__control--prev {
+  left: 0;
+}
+
+.calendar__control--next {
+  right: 0;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+@media only screen and (min-width: @tablet-width) {
+  .calendar {
+    margin-bottom: 46px;
+  }
+
+  .calendar__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .calendar__month {
+    padding: 25px 40px;
+    margin-bottom: 28px;
+  }
+
+  .calendar__control {
+    height: 100%;
+    width: 55px;
+    mask-size: 30px 36px;
+  }
+}
+
+@media only screen and (min-width: @desktop-width) {
+  .calendar {
+    margin-bottom: 56px;
+  }
+
+  .calendar__month {
+    margin: 0;
+  }
+
+  .calendar__control {
+    mask-position: 0 50%;
+  }
 }

@@ -5,12 +5,90 @@
 .add__wrapper {
   background-color: @dark-violet;
   border-radius: 30px 30px 0 0;
-  padding: 28px 0 43px 0;
+  padding: 28px 0 42px;
 }
 
-.add-plan__title {
-  margin: 0 0 29px 0;
+.add__title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.add__title h2 {
   font-size: 24px;
   line-height: 24px;
+  font-weight: 700;
   color: @twilight-blue;
+  margin: 0 36px 0 0;
+}
+
+.add__dots {
+  display: flex;
+}
+
+.add__dot {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: @twilight-blue;
+  opacity: 0.3;
+}
+
+.add__dot:not(:last-child) {
+  margin-right: 16px;
+}
+
+.add__dot--active {
+  opacity: 1;
+}
+
+@media only screen and (min-width: @tablet-width) {
+  .add__form {
+    padding: 0 35px;
+  }
+
+  .add__wrapper {
+    padding: 51px 0 63px;
+  }
+
+  .add__title {
+    margin-bottom: 58px;
+  }
+
+  .add__title h2 {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .add__dots {
+    margin-left: auto;
+    width: 75px;
+  }
+
+  .add__dot:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media only screen and (min-width: @desktop-width) {
+  .add__title {
+    padding-left: 69px;
+  }
+
+  .add__title h2 {
+    margin: 0;
+  }
+
+  .add__dots {
+    display: none;
+  }
+
+  .add__wrapper {
+    padding: 51px 0 71px;
+  }
+
+  .add__form {
+    padding: 0;
+  }
 }

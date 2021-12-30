@@ -25,14 +25,12 @@
 .networks__link--facebook::before {
   width: 11px;
   height: 21px;
-  margin-right: 27px;
   mask-image: url("../img/icon-facebook.svg");
 }
 
 .networks__link--vk::before {
   width: 23px;
   height: 12px;
-  margin-right: 26px;
   mask-image: url("../img/icon-vkontakte.svg");
 }
 
@@ -40,4 +38,26 @@
   width: 18px;
   height: 18px;
   mask-image: url("../img/icon-instagram.svg");
+}
+
+@media only screen and (min-width: @tablet-width) {
+  .networks__link {
+    width: 62px;
+    height: 62px;
+  }
+
+  .networks__link--facebook::before {
+    width: 14px;
+    height: 26px;
+  }
+
+  .networks__link--vk::before {
+    width: 30px;
+    height: 16px;
+  }
+
+  .networks__link--instagram::before {
+    width: 22px;
+    height: 22px;
+  }
 }

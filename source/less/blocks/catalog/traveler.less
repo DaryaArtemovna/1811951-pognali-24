@@ -1,51 +1,406 @@
-.traveler__title {
-  text-align: center;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 21px;
-  color: @twilight-blue;
-  margin-bottom: 15px;
-}
-
-.traveler__tags {
-  text-align: center;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  color: @greyish-brown;
-}
-
-.traveler__content {
-  background-color: @white;
-  padding: 27px;
-  border-radius: 30px;
-}
-
-.traveler__img {
+.traveler {
+  display: grid;
+  grid-template-rows: 43px 40px minmax(50px, max-content) minmax(60px, max-content) minmax(88px, max-content) minmax(40px, max-content);
+  grid-template-columns: 87px 1fr;
+  grid-template-areas: "photo name""photo like""hashtags hashtags""flags flags""status status""button button";
+  padding: 14px 18px 23px 17px;
   width: 270px;
-  height: 270px;
+  background-color: @white;
+  border-radius: 20px;
 }
 
-.traveler__wrapper {
-  margin-bottom: 20px;
+.traveler:not(:last-child) {
+  margin-bottom: 7px;
+}
+
+.traveler__photo {
+  grid-area: photo;
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.traveler__name {
+  grid-area: name;
+  position: relative;
+  font-size: 20px;
+  line-height: 20px;
+  color: @twilight-blue;
+  max-width: 85px;
+  margin: 0;
+}
+
+.traveler__name::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: @offline-red;
+}
+
+.traveler__name--online::after {
+  background-color: @online-green;
+}
+
+.traveler__hashtags {
+  grid-area: hashtags;
+  font-size: 15px;
+  line-height: 18px;
+  margin: 0 0 0 9px;
+}
+
+.traveler__countries {
+  grid-area: flags;
+  margin-bottom: 10px;
+  padding-left: 9px;
+}
+
+.traveler__countries .traveler__description {
+  margin: 0 0 20px 0;
+}
+
+.traveler__country {
+  display: flex;
+}
+
+.traveler__country:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.traveler__country .flags {
+  margin-right: 13px;
+}
+
+.traveler__country .flags img {
+  width: 26px;
+  height: 18px;
+}
+
+.traveler__country p {
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: @twilight-blue;
+  margin: 0;
+}
+
+.traveler__description {
+  position: relative;
+  font-size: 15px;
+  line-height: 16px;
+  margin: 0;
+}
+
+.traveler__description::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 1px;
+  width: 100%;
+  background-color: @light-violet;
+  z-index: -1;
+}
+
+.traveler__like {
+  grid-area: like;
+}
+
+.traveler__status {
+  grid-area: status;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 3px;
+}
+
+.traveler__moving .traveler__description {
+  margin: 0 0 17px 7px;
+}
+
+.traveler__level {
+  grid-area: level;
+}
+
+.traveler__level img {
+  width: 45px;
+  height: 45px;
+}
+
+.traveler__level .traveler__description {
+  margin-bottom: 11px;
+}
+
+.traveler__moving .moving__type {
+  width: 32px;
+  height: 32px;
+  background-color: @light-violet;
+}
+
+.traveler__moving .moving__type::after {
+  width: 16px;
+  height: 16px;
+}
+
+.traveler__moving .moving__item:not(:last-child) {
+  margin-right: 1px;
 }
 
 .traveler__link {
-  text-decoration: none;
-}
-
-.traveler__button {
-  text-decoration: none;
-  background-color: @accent-yellow;
-  font-weight: 700;
+  grid-area: button;
+  display: block;
   font-size: 17px;
   line-height: 17px;
+  font-weight: 700;
   color: @deep-dark-blue;
-  width: 230px;
-  height: 40px;
-  border-radius: 25px;
   text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-decoration: none;
+  text-align: center;
+  background-color: @accent-yellow;
+  border-radius: 25px;
+  width: 100%;
+  padding: 11px 5px;
+}
+
+@media only screen and (min-width: @tablet-width) {
+  .traveler {
+    grid-template-rows: 55px 92px 51px 1fr;
+    grid-template-columns: 221px 150px 105px 1fr;
+    grid-template-areas: "photo name name status""photo hashtags hashtags status""photo button like status""flags flags flags flags";
+    padding: 25px 25px 16px 25px;
+    width: 688px;
+  }
+
+  .traveler:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .traveler__photo {
+    width: 190px;
+    height: 190px;
+    margin: 10px 0 0 2px;
+    border-radius: 20px;
+  }
+
+  .traveler__reference {
+    width: 300px;
+    padding: 2px 0 0;
+    margin: 0 0 0 4px;
+  }
+
+  .traveler__name {
+    font-size: 30px;
+    line-height: 30px;
+    max-width: 100%;
+  }
+
+  .traveler__name::after {
+    right: 33px;
+    top: 20px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .traveler__hashtags {
+    font-size: 20px;
+    line-height: 23px;
+    margin: 0 0 0 6px;
+  }
+
+  .traveler__link {
+    font-size: 20px;
+    line-height: 20px;
+    max-width: 150px;
+    padding: 18px 5px 12px;
+    margin: 0;
+  }
+
+  .traveler__actions .like {
+    padding-top: 0;
+  }
+
+  .traveler__status {
+    display: block;
+    margin-left: auto;
+    padding-left: 0;
+  }
+
+  .traveler__transport {
+    margin: 0 auto 10px;
+    padding-top: 12px;
+  }
+
+  .traveler__moving .traveler__description,
+  .traveler__level .traveler__description {
+    display: none;
+  }
+
+  .traveler__countries {
+    padding-top: 23px;
+  }
+
+  .traveler__countries ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  .traveler__country:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 27px;
+  }
+
+  .traveler__country {
+    align-items: center;
+  }
+
+  .traveler__country .flags img {
+    width: 35px;
+    height: 24px;
+  }
+
+  .traveler__country p {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .traveler__description::after {
+    left: -36px;
+  }
+
+  .traveler__description span {
+    margin-left: 50px;
+  }
+
+  .traveler__level img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .traveler__moving .moving__item {
+    margin: 0 auto;
+  }
+
+  .traveler__moving .moving__item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .traveler__moving .moving__type {
+    width: 22px;
+    height: 22px;
+    background-color: transparent;
+  }
+
+  .traveler__moving {
+    display: block;
+    width: 22px;
+    margin: 0 auto;
+  }
+
+  .traveler__moving .moving__type::after {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+@media only screen and (min-width: @desktop-width) {
+  .traveler {
+    grid-template-rows: 94px 86px 1fr;
+    grid-template-columns: 341px 150px 110px 1fr;
+    grid-template-areas: "photo name name flags""photo hashtags hashtags flags""photo button like status";
+    width: 950px;
+    height: 285px;
+    padding: 0 43px 0 0;
+    overflow: hidden;
+  }
+
+  .traveler:not(:last-child) {
+    margin-bottom: 31px;
+  }
+
+  .traveler__photo {
+    width: 285px;
+    height: 285px;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .traveler__name::after {
+    right: 0;
+    top: 57px;
+    left: -27px;
+  }
+
+  .traveler__reference {
+    padding: 40px 0 0;
+    margin: 0 0 0 7px;
+  }
+
+  .traveler__hashtags {
+    line-height: 24px;
+    margin: 0 0 0 7px;
+  }
+
+  .traveler__actions {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .traveler__countries {
+    padding-top: 50px;
+    margin-left: 75px;
+  }
+
+  .traveler__countries .traveler__description {
+    display: none;
+  }
+
+  .traveler__countries ul {
+    display: block;
+  }
+
+  .traveler__country:not(:last-child) {
+    margin-bottom: 13px;
+    margin-right: 0;
+  }
+
+  .traveler__country .flags {
+    margin-right: 18px;
+  }
+
+  .traveler__transport {
+    margin: 0;
+    padding-top: 22px;
+  }
+
+  .traveler__status {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 70px;
+  }
+
+  .traveler__link {
+    height: 52px;
+    margin-top: 5px;
+  }
+
+  .traveler__like {
+    margin-top: 7px;
+  }
+
+  .traveler__moving {
+    display: flex;
+    width: auto;
+  }
+
+  .traveler__moving .moving__item:not(:last-child) {
+    margin-right: 13px;
+    margin-bottom: 0;
+  }
 }

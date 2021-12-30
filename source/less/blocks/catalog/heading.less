@@ -1,0 +1,88 @@
+.heading {
+  background-color: @intense-violet;
+}
+
+.heading__wrapper {
+  padding: 92px 0 14px;
+  background-color: @space-blue;
+  border-radius: 0 0 20px 20px;
+}
+
+.heading__title {
+  position: relative;
+  display: inline-block;
+  font-size: 36px;
+  line-height: 36px;
+  color: @white;
+  margin: 0;
+}
+
+.heading__title::before {
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  border-radius: 4px;
+  background-color: @orange;
+}
+
+.heading__link {
+  display: none;
+}
+
+@media only screen and (min-width: @tablet-width) {
+  .heading__wrapper {
+    padding: 213px 0 20px;
+    min-height: 350px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  .heading__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 35px;
+  }
+
+  .heading__title {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .heading__title::before {
+    height: 8px;
+    bottom: -70px;
+    z-index: 98;
+  }
+
+  .heading__link {
+    position: relative;
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: @white;
+    padding: 4px 61px 0 0;
+  }
+
+  .heading__link::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 16px;
+    mask: url("../img/heading-arrow.svg") no-repeat center / cover;
+    background-color: @white;
+  }
+}
+
+@media only screen and (min-width: @desktop-width) {
+  .heading__content {
+    padding: 0 65px;
+  }
+}

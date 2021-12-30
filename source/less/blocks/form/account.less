@@ -1,17 +1,267 @@
-.account {
+.account__wrapper {
+  padding-bottom: 15px;
   background-color: @light-violet;
 }
 
-.account__wrapper {
-  background-color: @rectangle-blue;
-  border-radius: 0 0 30px 30px;
-  padding: 20px 0 10px 0;
+.account__inner {
+  padding-bottom: 4px;
+  background-color: @accent-yellow;
 }
 
 .account__title {
-  margin: 0;
-  color: @white;
-  font-weight: 700;
+  padding: 92px 0 14px;
+  background-color: #161c36;
+  border-radius: 0 0 20px 20px;
+}
+
+.account__title h1 {
+  position: relative;
+  display: inline-block;
   font-size: 36px;
   line-height: 36px;
+  color: @white;
+  margin: 0;
+}
+
+.account__title h1::before {
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  border-radius: 4px;
+  background-color: @orange;
+}
+
+.account__form {
+  display: grid;
+  grid-template-areas:
+    "level photo"
+    "change change"
+    "tags tags"
+    "transport transport";
+  grid-template-columns: 117px auto;
+  justify-content: space-between;
+  padding: 19px 0;
+}
+
+.account__level {
+  grid-area: level;
+  margin-left: 17px;
+}
+
+.account__photo {
+  grid-area: photo;
+  margin-right: 17px;
+}
+
+.account__photo img {
+  border-radius: 50%;
+}
+
+.account__change {
+  grid-area: change;
+  padding-top: 17px;
+  margin-bottom: 34px;
+}
+
+.account__form .tags {
+  grid-area: tags;
+  margin-bottom: 26px;
+}
+
+.account__transport {
+  grid-area: transport;
+}
+
+.account__moving {
+  padding: 14px 10px;
+}
+
+.account__moving .moving__type {
+  background-color: @white;
+  width: 32px;
+  height: 32px;
+}
+
+.account__moving .moving__type::before {
+  width: 16px;
+  height: 16px;
+}
+
+.account__moving .moving__item:not(:last-child) {
+  margin-right: 1px;
+}
+
+.account__config {
+  position: relative;
+  border: 1px solid #cbced9;
+  border-radius: 10px;
+}
+
+.account__config > p {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: @light-violet;
+  line-height: 18px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: @twilight-blue;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.account__config .tags__content {
+  padding: 25px 24px 26px;
+  width: 100%;
+  border: none;
+}
+
+@media only screen and (min-width: @tablet-width) {
+  .account__inner {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .account__title {
+    padding: 215px 0 65px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  .account__topic {
+    padding-left: 35px;
+  }
+
+  .account__topic h1 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .account__topic h1::before {
+    bottom: -69px;
+    height: 8px;
+  }
+
+  .account__form {
+    grid-template-areas:
+      "level transport photo"
+      "change change change"
+      "tags tags tags";
+    grid-template-columns: 94px 308px auto;
+    grid-template-rows: 94px auto auto;
+    padding: 67px 35px 17px;
+    gap: 50px 0;
+    width: 688px;
+  }
+
+  .account__level {
+    width: 94px;
+    height: 94px;
+    margin: 0;
+  }
+
+  .account__photo {
+    width: 94px;
+    height: 94px;
+    margin: 0;
+  }
+
+  .account__photo img {
+    border-radius: 7px;
+  }
+
+  .account__config > p {
+    top: 89%;
+    font-size: 20px;
+    line-height: 18px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+  }
+
+  .account__config .tags__content {
+    padding: 35px 39px 16px;
+  }
+
+  .account__moving {
+    padding: 24px 11px;
+  }
+
+  .account__moving .moving__type {
+    width: 43px;
+    height: 43px;
+    background-color: @white;
+  }
+
+  .account__moving .moving__type::after {
+    width: 23px;
+    height: 23px;
+  }
+
+  .account__change {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: @desktop-width) {
+  .account__title {
+    padding: 215px 0 65px;
+  }
+
+  .account__topic {
+    padding-left: 65px;
+  }
+
+  .account__wrapper {
+    padding-bottom: 67px;
+  }
+
+  .account__form {
+    grid-template-areas:
+      ". level photo"
+      ". . change"
+      "tags transport transport";
+    grid-template-columns: 732px 1fr 285px;
+    grid-template-rows: 194px 69px 94px;
+    gap: 0;
+    width: auto;
+    padding: 0 0 0 64px;
+    margin-top: -189px;
+  }
+
+  .account__form .tags {
+    margin: 0;
+  }
+
+  .account__form .tags p {
+    left: 8.5%;
+  }
+
+  .account__level {
+    margin: 43px 0 0 101px;
+  }
+
+  .account__photo {
+    width: 190px;
+    height: 190px;
+  }
+
+  .account__photo img {
+    width: inherit;
+    height: inherit;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .account__change {
+    margin-top: -5px;
+  }
+
+  .account__transport {
+    width: 384px;
+    justify-self: end;
+  }
 }

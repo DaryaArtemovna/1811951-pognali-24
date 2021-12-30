@@ -1,0 +1,73 @@
+.controls {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.controls::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 1px;
+  background-color: @light-violet;
+}
+
+.controls__button {
+  position: relative;
+  display: block;
+  height: 51px;
+  width: 135px;
+  background-color: @white;
+}
+
+.controls__button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 13px;
+  height: 20px;
+  mask: url("../img/controls-arrow.svg") no-repeat center / cover;
+  background-color: @twilight-blue;
+}
+
+.controls__button--prev {
+  border-radius: 20px 0 0 20px;
+}
+
+.controls__button--next {
+  border-radius: 0 20px 20px 0;
+}
+
+.controls__button--next::before {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+@media only screen and (min-width: @tablet-width) {
+  .controls::after {
+    content: none;
+  }
+
+  .controls__button {
+    width: 60px;
+    height: 100%;
+  }
+
+  .controls__button--prev::before {
+    left: 61%;
+  }
+
+  .controls__button--next::before {
+    left: 35%;
+  }
+}
+
+@media only screen and (min-width: @desktop-width) {
+  .controls__button {
+    width: 68px;
+  }
+}

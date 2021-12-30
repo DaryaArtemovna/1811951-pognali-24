@@ -1,47 +1,123 @@
 .dates {
   border-collapse: collapse;
-  margin-bottom: 22px;
-}
-
-.dates__head {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
-  color: @greyish-brown;
+  width: 100%;
 }
 
 .dates__day {
-  padding: 8px 5px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  padding: 8px 0;
 }
 
-.dates__letter {
+.dates__day--weekend {
+  color: @coral-red;
+}
+
+.dates__day span {
   display: none;
 }
 
+.dates tbody {
+  border: 1px solid @outline;
+}
+
 .dates__row {
-  border-bottom: 1px solid @inputs-grey;
-}
-
-.dates__body {
-  border: 1px solid @inputs-grey;
-}
-
-.dates__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  border: none;
-  padding: 0;
+  border-bottom: 1px solid @outline;
 }
 
 .dates__cell {
   width: 30px;
   height: 31px;
-  border-right: 1px solid @inputs-grey;
+  padding: 0;
+  border-right: 1px solid @outline;
+}
+
+.dates__button {
+  display: block;
+  font-family: @font-main;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: @twilight-blue;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background-color: @light-violet;
+}
+
+.dates__button span {
+  display: none;
+}
+
+.dates__button--checked {
+  color: @white;
+  background-color: @twilight-blue;
+}
+
+@media only screen and (min-width: @tablet-width) {
+  .dates__day {
+    font-size: 18px;
+    line-height: 18px;
+    padding: 9px 0;
+  }
+
+  .dates__day span {
+    display: inline;
+  }
+
+  .dates__button {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .dates__cell {
+    width: 77px;
+    height: 69px;
+  }
+}
+
+@media only screen and (min-width: @desktop-width) {
+  .dates__day {
+    text-align: start;
+    padding: 15px 20px 20px;
+  }
+
+  .dates__cell {
+    height: 71px;
+  }
+
+  .dates__button {
+    position: relative;
+    display: flex;
+    padding: 14px 15px;
+  }
+
+  .dates__button span {
+    display: block;
+    margin-left: 4px;
+  }
+
+  .dates__button:hover {
+    outline-width: 4px;
+  }
+
+  .dates__button--arrival::after,
+  .dates__button--departure::after {
+    position: absolute;
+    bottom: 11px;
+    left: 15px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+
+  .dates__button--arrival::after {
+    content: "Заезд";
+  }
+
+  .dates__button--departure::after {
+    content: "Выезд";
+  }
 }
