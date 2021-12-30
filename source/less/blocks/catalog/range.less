@@ -1,0 +1,160 @@
+.range__inputs {
+  position: relative;
+  display: flex;
+  margin-bottom: 19px;
+}
+
+.range__inputs::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 1px;
+  background-color: @outline;
+}
+
+.range__inputs::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 11px;
+  background-color: @white;
+}
+
+.range__input {
+  font-family: @font-main;
+  font-size: 14px;
+  line-height: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: @twilight-blue;
+  max-width: 110px;
+  padding: 10px 9px 9px;
+  border-radius: 4px;
+  border: 1px solid @outline;
+}
+
+.range__input:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.range__input:last-child {
+  border-radius: 0 4px 4px 0;
+  margin-left: -1px;
+}
+
+.range__level {
+  position: relative;
+  height: 10px;
+  width: 100%;
+}
+
+.range__line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 2px;
+  width: 100%;
+  background-color: #1d2e5b33;
+}
+
+.range__line--blue {
+  width: 67%;
+  left: 65%;
+  background-color: @twilight-blue;
+}
+
+.range__toggle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  height: 10px;
+  width: 10px;
+  padding: 0;
+  background-color: @twilight-blue;
+  border-radius: 50%;
+  border: none;
+}
+
+.range__toggle--min {
+  right: 66%;
+}
+
+.range__toggle--max {
+  right: 0;
+}
+
+@media only screen and (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {
+  .range {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .range__inputs {
+    order: 1;
+    margin: 0;
+  }
+
+  .range__input {
+    font-size: 20px;
+    line-height: 20px;
+    max-width: 75px;
+  }
+
+  .range__level {
+    width: 281px;
+    margin-right: 61px;
+  }
+
+  .range__line--blue {
+    width: 60%;
+    left: 185px;
+  }
+
+  .range__toggle {
+    width: 13px;
+    height: 13px;
+  }
+
+  .range__toggle--min {
+    right: 168px;
+  }
+}
+
+@media only screen and (min-width: @desktop-width) {
+  .range {
+    padding-top: 9px;
+  }
+
+  .range__inputs {
+    margin-bottom: 33px;
+  }
+
+  .range__input {
+    font-size: 20px;
+    line-height: 20px;
+    max-width: 95px;
+  }
+
+  .range__line {
+    height: 3px;
+  }
+
+  .range__toggle {
+    width: 13px;
+    height: 13px;
+  }
+
+  .range__toggle--min {
+    right: 63%;
+  }
+}

@@ -1,3 +1,27 @@
 .catalog {
-  background-color: @light-violet;
+  padding-top: 25px;
+}
+
+.catalog__travelers {
+  margin-bottom: 30px;
+}
+
+@media only screen and (min-width: @tablet-width) {
+  .catalog {
+    padding-top: 44px;
+  }
+
+  .catalog__travelers {
+    margin-bottom: 49px;
+  }
+}
+
+@media only screen and (min-width: @desktop-width) {
+  .catalog {
+    padding-top: 0;
+  }
+
+  .catalog__travelers {
+    margin-bottom: 64px;
+  }
 }

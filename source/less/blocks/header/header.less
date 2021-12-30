@@ -3,7 +3,6 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: @rectangle-blue;
   z-index: 99;
 }
 
@@ -42,17 +41,13 @@
   bottom: 7%;
 }
 
+.header--scroll,
 .header--active {
   background-color: @white;
 }
 
-.header--active .logo {
-  background-image: url("../img/logo-blue_mobile.svg");
-}
-
-.header--active .header__button span {
+.header--scroll .header__button span {
   background-color: @grey;
-  left: 50%;
 }
 
 .header--active .header__button span:first-child {
@@ -65,8 +60,18 @@
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+.header--scroll .logo,
+.header--active .logo {
+  background-image: url("../img/logo-blue_mobile.svg");
+}
+
 .header--active .nav {
   display: block;
+}
+
+.header--active .header__button span {
+  left: 50%;
+  background-color: @grey;
 }
 
 .header--active .interaction {
@@ -92,24 +97,59 @@
   background-image: url("../img/icon-email--secondary.svg");
 }
 
-.header--scroll {
-  background-color: @white;
-}
+@media only screen and (min-width: @tablet-width) {
+  .header--active,
+  .header--scroll {
+    background-color: @white;
+  }
 
-.header--scroll .logo {
-  background-image: url("../img/logo-blue_mobile.svg");
-}
+  .header--scroll .logo,
+  .header--active .logo {
+    background-image: url("../img/logo-blue_desktop.svg");
+  }
 
-.header--scroll .header__button span {
-  background-color: @grey;
+  .header--active .interaction {
+    margin-bottom: 130px;
+  }
+
+  .header--active .interaction__link::before {
+    width: 68px;
+    height: 68px;
+  }
+
+  .header--active .interaction__link--phone::before {
+    background-size: 27px 26px;
+  }
+
+  .header--active .interaction__link--email::before {
+    background-size: 39px 37px;
+  }
+
+
+  .header__content {
+    padding: 40px 0 42px;
+  }
+
+  .header__button {
+    margin-left: 20px;
+  }
 }
 
 @media only screen and (min-width: @desktop-width) {
+  .header__content {
+    justify-content: flex-start;
+    padding: 49px 0;
+  }
+
   .header__button {
     display: none;
   }
 
   .header--scroll .nav__link {
     color: @dark-blue;
+  }
+
+  .header--scroll .nav::before {
+    background-color: @dark-blue;
   }
 }

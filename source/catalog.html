@@ -60,33 +60,26 @@
   </header>
 
   <main>
-    <section class="main-header">
-      <div class="main-header__wrapper">
+    <section class="heading">
+      <div class="heading__wrapper">
         <div class="container">
-          <h1 class="main-header__title">
-            Попутчики
-          </h1>
-          <a href="/" class="main-header__link">
-            На главную
-          </a>
+          <div class="heading__content">
+            <h1 class="heading__title">Попутчики</h1>
+            <a href="/" class="heading__link">На главную</a>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="finder">
-      <div class="wrapper">
-        <div class="container">
-          <div class="finder__wrapper">
-            <h2 class="finder__title">
-              Фильтрация по странам:
-            </h2>
-            <button class="finder__button finder__button--show" type="button" aria-label="Показать все или свернуть">
-              Показать все
-            </button>
-            <div class="finder__inner">
+      <div class="finder__content">
+        <div class="finder__wrapper">
+          <div class="container">
+            <div class="finder__control">
+              <h2 class="finder__title">Фильтрация по странам:</h2>
               <ul class="finder__list list-default">
                 <li class="finder__item">
-                  <a class="finder__link">Европа</a>
+                  <a class="finder__link finder__link--active">Европа</a>
                 </li>
                 <li class="finder__item">
                   <a href="#" class="finder__link">Азия</a>
@@ -98,8 +91,17 @@
                   <a href="#" class="finder__link">Острова</a>
                 </li>
               </ul>
-
-              <div class="letters">
+              <button class="finder__button" type="button" aria-label="Показать все или свернуть">
+                <span>Показать все</span>
+                <span>Свернуть</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="finder__dropdown">
+          <div class="container">
+            <div class="finder__filter">
+              <div class="finder__letters letters">
                 <ul class="letters__list list-default">
                   <li class="letters__item">
                     <button class="letters__button" type="button">А</button>
@@ -179,8 +181,8 @@
                 </ul>
               </div>
 
-              <div class="countries">
-                <div class="countries__wrapper">
+              <div class="finder__countries countries">
+                <div class="countries__wrapper countries__wrapper--active">
                   <p class="countries__letter">А</p>
                   <ul class="countries__list countries__list--active list-default">
                     <li class="countries__item">
@@ -822,440 +824,424 @@
                   </ul>
                 </div>
               </div>
-              <button class="finder__button finder__button--fold" type="button">
-                Свернуть
-                <span></span> <!-- Нарисую крестик -->
-                <span></span>
-              </button>
             </div>
+            <button class="finder__close" type="button">Свернуть</button>
           </div>
         </div>
+      </div>
     </section>
-
-    <section class="filter">
+    <div class="search">
       <div class="container">
-        <div class="filter__wrapper">
-          <h2 class="filter__title">
-            Подберите идеального попутчика
-          </h2>
-          <form class="filter__type" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="filter__content">
-              <button class="filter__button" type="button">Хобби:</button>
-              <ul class="filter__list list-default">
-                <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="gym" id="gym" checked>
-                  <label class="filter__checkbox" for="gym">Спортзал</label>
-                </li>
-                <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="hookah" id="hookah">
-                  <label class="filter__checkbox" for="hookah">Кальян</label>
-                </li>
-                <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="sofa" id="sofa">
-                  <label class="filter__checkbox" for="sofa">Диван</label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="filter__content">
-              <button class="filter__button" type="button">Музыка:</button>
-              <ul class="filter__list list-default">
-                <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="hard-rock" id="hard-rock" checked>
-                  <label class="filter__checkbox" for="hard-rock">Тяжелый рок</label>
-                </li>
-                <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="russian-rap" id="russian-rap">
-                  <label class="filter__checkbox" for="russian-rap">Русский рэп</label>
-                </li>
-                <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="eurodance" id="eurodance">
-                  <label class="filter__checkbox" for="eurodance">Евроденс</label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="filter__content">
-              <button class="filter__button" type="button">Еда:</button>
-              <ul class="filter__list list-default">
-                <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="meat" id="meat" checked>
-                  <label class="filter__checkbox" for="meat">Мясоед</label>
-                </li>
-                <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="healty" id="healty">
-                  <label class="filter__checkbox" for="healty">Сидит на ПП</label>
-                </li>
-                <li class="filter__item">
-                  <input class="visually-hidden" type="checkbox" name="vegan" id="vegan">
-                  <label class="filter__checkbox" for="vegan">Веган-сыроед</label>
-                </li>
-              </ul>
-            </fieldset>
+        <div class="search__content">
+          <section class="filter">
+            <h2 class="filter__title">Подберите идеального попутчика</h2>
+            <form class="filter__form" action="https://echo.htmlacademy.ru/" method="get">
+              <fieldset class="filter__type">
+                <button class="filter__button" type="button">Хобби<span>:</span></button>
+                <div class="filter__dropdown">
+                  <ul class="filter__list list-default">
+                    <li class="filter__item">
+                      <input class="visually-hidden" type="checkbox" name="gym" id="gym" checked>
+                      <label class="filter__checkbox" for="gym">Спортзал</label>
+                    </li>
+                    <li class="filter__item">
+                      <input class="visually-hidden" type="checkbox" name="hookah" id="hookah">
+                      <label class="filter__checkbox" for="hookah">Кальян</label>
+                    </li>
+                    <li class="filter__item">
+                      <input class="visually-hidden" type="checkbox" name="sofa" id="sofa">
+                      <label class="filter__checkbox" for="sofa">Диван</label>
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
+              <fieldset class="filter__type">
+                <button class="filter__button filter__button--active" type="button">Музыка:</button>
+                <div class="filter__dropdown">
+                  <ul class="filter__list list-default">
+                    <li class="filter__item">
+                      <input class="visually-hidden" type="checkbox" name="hard-rock" id="hard-rock" checked>
+                      <label class="filter__checkbox" for="hard-rock">Тяжелый рок</label>
+                    </li>
+                    <li class="filter__item">
+                      <input class="visually-hidden" type="checkbox" name="russian-rap" id="russian-rap">
+                      <label class="filter__checkbox" for="russian-rap">Русский рэп</label>
+                    </li>
+                    <li class="filter__item">
+                      <input class="visually-hidden" type="checkbox" name="eurodance" id="eurodance">
+                      <label class="filter__checkbox" for="eurodance">Евроденс</label>
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
+              <fieldset class="filter__type">
+                <button class="filter__button" type="button">Еда<span>:</span></button>
+                <div class="filter__dropdown">
+                  <ul class="filter__list list-default">
+                    <li class="filter__item">
+                      <input class="visually-hidden" type="checkbox" name="meat" id="meat" checked>
+                      <label class="filter__checkbox" for="meat">Мясоед</label>
+                    </li>
+                    <li class="filter__item">
+                      <input class="visually-hidden" type="checkbox" name="healty" id="healty">
+                      <label class="filter__checkbox" for="healty">Сидит на ПП</label>
+                    </li>
+                    <li class="filter__item">
+                      <input class="visually-hidden" type="checkbox" name="vegan" id="vegan">
+                      <label class="filter__checkbox" for="vegan">Веган-сыроед</label>
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
 
-            <div class="filter__field">
-              <fieldset class="filter__content">
-                <button class="filter__button" type="button">Левел:</button>
-                <label class="filter__label">
-                  <input class="filter__input" type="text" name="min-level" value="30">
-                </label>
-                <label class="filter__label">
-                  <input class="filter__input" type="text" name="max-level" value="100">
-                </label>
+              <fieldset class="filter__type">
+                <button class="filter__button filter__button--active" type="button">Транспорт<span>:</span></button>
+                <div class="filter__dropdown">
+                  <ul class="filter__moving moving list-default" aria-label="Варианты путешествий">
+                    <li class="moving__item">
+                      <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked="">
+                      <label class="moving__type moving__type--plane" for="plane"
+                        aria-label="Путешествует на самолёте"></label>
+                    </li>
+                    <li class="moving__item">
+                      <input class="visually-hidden" type="checkbox" name="car" id="car" checked="">
+                      <label class="moving__type moving__type--car" for="car"
+                        aria-label="Путешествует на машине"></label>
+                    </li>
+                    <li class="moving__item">
+                      <input class="visually-hidden" type="checkbox" name="bicycle" id="bicycle">
+                      <label class="moving__type moving__type--bicycle" for="bicycle"
+                        aria-label="Путешествует на велисипеде"></label>
+                    </li>
+                    <li class="moving__item">
+                      <input class="visually-hidden" type="checkbox" name="walk" id="walk" checked="">
+                      <label class="moving__type moving__type--walk" for="walk"
+                        aria-label="Путешествует пешком"></label>
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
+
+              <fieldset class="filter__type">
+                <button class="filter__button filter__button--active" type="button">Левел<span>:</span></button>
                 <div class="range">
-                  <div class="range__field">
-                    <div class="range__line">
-                      <div class="range__line range__line--blue"></div>
+                  <div class="range">
+                    <div class="range__inputs">
+                      <input class="range__input" type="number" name="min-level" value="30"
+                        aria-label="минимальный левел">
+                      <input class="range__input" type="number" name="max-level" value="100"
+                        aria-label="максимальный уровень">
                     </div>
-                    <button class="range__toggle range__toggle--min" type="button"
-                      aria-label="Изменить минимальный уровень"></button>
-                    <button class="range__toggle range__toggle--max" type="button"
-                      aria-label="Изменить максимальный уровень"></button>
+                    <div class="range__level">
+                      <div class="range__line">
+                        <div class="range__line range__line--blue"></div>
+                      </div>
+                      <button class="range__toggle range__toggle--min" type="button"
+                        aria-label="Изменить минимальный уровень"></button>
+                      <button class="range__toggle range__toggle--max" type="button"
+                        aria-label="Изменить максимальный уровень"></button>
+                    </div>
                   </div>
                 </div>
               </fieldset>
+              <button class="filter__submit" type="submit">Показать</button>
+            </form>
+          </section>
+
+          <section class="catalog">
+            <div class="container">
+              <article class="traveler">
+                <picture>
+                  <img class="traveler__photo" src="img/traveler-firsova.jpg" width="70" height="70" alt="Фирсова">
+                </picture>
+                <a class="traveler__reference" href="#">
+                  <h3 class="traveler__name">Таня Фирсова</h3>
+                </a>
+                <div class="traveler__like like">
+                  <button class="like__button like__button--active" type="button"></button>
+                  <span class="like__counter">1.5 М</span>
+                </div>
+                <p class="traveler__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+                <div class="traveler__countries">
+                  <p class="traveler__description">
+                    <span>хочет посетить:</span>
+                  </p>
+                  <ul class="list-default">
+                    <li class="traveler__country">
+                      <div class="flags">
+                        <img src="img/flags-srilanka.jpg" width="35" height="25" alt="Флаг">
+                      </div>
+                      <p>ШРИ-ЛАНКА</p>
+                    </li>
+                    <li class="traveler__country">
+                      <div class="flags">
+                        <img src="img/flags-thailand.jpg" width="35" height="25" alt="Флаг">
+                      </div>
+                      <p>ТАЙЛАНД</p>
+                    </li>
+                    <li class="traveler__country">
+                      <div class="flags">
+                        <img src="img/flags-seychelles.jpg" width="35" height="25" alt="Флаг">
+                      </div>
+                      <p>СЕЙШЕЛЫ</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="traveler__status">
+                  <div class="traveler__transport">
+                    <p class="traveler__description">
+                      <span>транспорт:</span>
+                    </p>
+                    <ul class="traveler__moving moving list-default" aria-label="Варианты путешествий">
+                      <li class="moving__item">
+                        <span class="moving__type moving__type--plane moving__type--active"
+                          aria-label="Путешествует на самолёте"></span>
+                      </li>
+                      <li class="moving__item">
+                        <span class="moving__type moving__type--car" aria-label="Путешествует на машине"></span>
+                      </li>
+                      <li class="moving__item">
+                        <span class="moving__type moving__type--bicycle" aria-label="Путешествует на велисипеде"></span>
+                      </li>
+                      <li class="moving__item">
+                        <span class="moving__type moving__type--walk" aria-label="Путешествует пешком"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="traveler__level">
+                    <p class="traveler__description">
+                      <span>левел:</span>
+                    </p>
+                    <img src="img/traveler-level.svg" width="45" height="45">
+                  </div>
+                </div>
+                <a class="traveler__link" href="#">Позвать!</a>
+              </article>
+              <article class="traveler">
+                <picture>
+                  <img class="traveler__photo" src="img/traveler-demin.jpg" width="70" height="70" alt="Петя Демин">
+                </picture>
+                <a class="traveler__reference" href="#">
+                  <h3 class="traveler__name">Петя Демин</h3>
+                </a>
+                <div class="traveler__like like">
+                  <button class="like__button" type="button"></button>
+                  <span class="like__counter">1500</span>
+                </div>
+                <p class="traveler__hashtags">#бургер #бар #футбол #концерт #крафт</p>
+                <div class="traveler__countries">
+                  <p class="traveler__description">
+                    <span>хочет посетить:</span>
+                  </p>
+                  <ul class="list-default">
+                    <li class="traveler__country">
+                      <div class="flags">
+                        <img src="img/flags-belgium.jpg" width="35" height="25" alt="Флаг Бельгии">
+                      </div>
+                      <p>бельгия</p>
+                    </li>
+                    <li class="traveler__country">
+                      <div class="flags">
+                        <img src="img/flags-czech.jpg" width="35" height="25" alt="Флаг Чехии">
+                      </div>
+                      <p>чехия</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="traveler__status">
+                  <div class="traveler__transport">
+                    <p class="traveler__description">
+                      <span>транспорт:</span>
+                    </p>
+                    <ul class="moving traveler__moving list-default" aria-label="Варианты путешествий">
+                      <li class="moving__item">
+                        <span class="moving__type moving__type--plane moving__type--active"
+                          aria-label="Путешествует на самолёте"></span>
+                      </li>
+                      <li class="moving__item">
+                        <span class="moving__type moving__type--car moving__type--active"
+                          aria-label="Путешествует на машине"></span>
+                      </li>
+                      <li class="moving__item">
+                        <span class="moving__type moving__type--bicycle" aria-label="Путешествует на велисипеде"></span>
+                      </li>
+                      <li class="moving__item">
+                        <span class="moving__type moving__type--walk moving__type--active"
+                          aria-label="Путешествует пешком"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="traveler__level">
+                    <p class="traveler__description">
+                      <span>левел:</span>
+                    </p>
+                    <img src="img/traveler-level.svg" width="45" height="45">
+                  </div>
+                </div>
+                <a class="traveler__link" href="#">Позвать!</a>
+              </article>
+              <article class="traveler">
+                <picture>
+                  <img class="traveler__photo" src="img/traveler-smolov.jpg" width="70" height="70" alt="Марк Смолов">
+                </picture>
+                <a class="traveler__reference" href="#">
+                  <h3 class="traveler__name traveler__name--offline">Марк Смолов</h3>
+                </a>
+                <div class="traveler__like like">
+                  <button class="like__button" type="button"></button>
+                  <span class="like__counter">170</span>
+                </div>
+                <p class="traveler__hashtags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+                <div class="traveler__countries">
+                  <p class="traveler__description">
+                    <span>хочет посетить:</span>
+                  </p>
+                  <ul class="list-default">
+                    <li class="traveler__country">
+                      <div class="flags">
+                        <img src="img/flags-usa.jpg" width="35" height="25" alt="Флаг США">
+                      </div>
+                      <p>сша</p>
+                    </li>
+                    <li class="traveler__country">
+                      <div class="flags">
+                        <img src="img/flags-australia.jpg" width="35" height="25" alt="Флаг Австралии">
+                      </div>
+                      <p>австралия</p>
+                    </li>
+                    <li class="traveler__country">
+                      <div class="flags">
+                        <img src="img/flags-dominica.jpg" width="35" height="25" alt="Флаг Доминики">
+                      </div>
+                      <p>Доминика</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="traveler__status">
+                  <div class="traveler__transport">
+                    <p class="traveler__description">
+                      <span>транспорт:</span>
+                    </p>
+                    <ul class="moving traveler__moving list-default" aria-label="Варианты путешествий">
+                      <li class="moving__item">
+                        <span class="moving__type moving__type--plane moving__type--active"
+                          aria-label="Путешествует на самолёте"></span>
+                      </li>
+                      <li class="moving__item">
+                        <span class="moving__type moving__type--car" aria-label="Путешествует на машине"></span>
+                      </li>
+                      <li class="moving__item">
+                        <span class="moving__type moving__type--bicycle moving__type--active"
+                          aria-label="Путешествует на велисипеде"></span>
+                      </li>
+                      <li class="moving__item">
+                        <span class="moving__type moving__type--walk" aria-label="Путешествует пешком"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="traveler__level">
+                    <p class="traveler__description">
+                      <span>левел:</span>
+                    </p>
+                    <img src="img/traveler-level.svg" width="45" height="45">
+                  </div>
+                </div>
+                <a class="traveler__link" href="#">Позвать!</a>
+              </article>
+              <article class="traveler">
+                <picture>
+                  <img class="traveler__photo" src="img/traveler-rogovaya.jpg" width="70" height="70"
+                    alt="Лариса Роговая">
+                </picture>
+                <a class="traveler__reference" href="#">
+                  <h3 class="traveler__name traveler__name--online">Лариса Роговая</h3>
+                </a>
+                <div class="traveler__like like">
+                  <button class="like__button like__button--active" type="button"></button>
+                  <span class="like__counter">23</span>
+                </div>
+                <p class="traveler__hashtags">#образование #карьера#учеба #линкедин</p>
+                <div class="traveler__countries">
+                  <p class="traveler__description">
+                    <span>хочет посетить:</span>
+                  </p>
+                  <ul class="list-default">
+                    <li class="traveler__country">
+                      <div class="flags">
+                        <img src="img/flags-UK.jpg" width="35" height="25" alt="Флаг Великобритании">
+                      </div>
+                      <p>Великобритания</p>
+                    </li>
+                    <li class="traveler__country">
+                      <div class="flags">
+                        <img src="img/flags-germany.jpg" width="35" height="25" alt="Флаг Германии">
+                      </div>
+                      <p>Германия</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="traveler__status">
+                  <div class="traveler__moving">
+                    <p class="traveler__description">
+                      <span>транспорт:</span>
+                    </p>
+                    <ul class="moving traveler__moving list-default" aria-label="Варианты путешествий">
+                      <li class="moving__item">
+                        <span class="moving__type moving__type--plane moving__type--active"
+                          aria-label="Путешествует на самолёте"></span>
+                      </li>
+                      <li class="moving__item">
+                        <span class="moving__type moving__type--car moving__type--active"
+                          aria-label="Путешествует на машине"></span>
+                      </li>
+                      <li class="moving__item">
+                        <span class="moving__type moving__type--bicycle" aria-label="Путешествует на велисипеде"></span>
+                      </li>
+                      <li class="moving__item">
+                        <span class="moving__type moving__type--walk" aria-label="Путешествует пешком"></span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="traveler__level">
+                    <p class="traveler__description">
+                      <span>левел:</span>
+                    </p>
+                    <img src="img/traveler-level.svg" width="45" height="45">
+                  </div>
+                </div>
+                <a class="traveler__link" href="#">Позвать!</a>
+              </article>
             </div>
-            <button class="filter__submit" type="submit">Показать</button>
-          </form>
+
+            <div class="pages">
+              <a class="pages__button" href="#">Показать ещё</a>
+              <div class="pagination">
+                <ul class="pagination__list list-default">
+                  <li class="pagination__item">
+                    <a class="pagination__link pagination__link--active">1</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link" href="#">2</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link" href="#">3</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link" href="#">4</a>
+                  </li>
+                </ul>
+                <div class="controls">
+                  <a class="controls__button controls__button--prev" href="#"
+                    aria-label="Показать предыдущую страницу"></a>
+                  <a class="controls__button controls__button--next" href="#"
+                    aria-label="Показать следующую страницу"></a>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
-    </section>
-
-    <section class="catalog">
-      <div class="container">
-        <article class="traveler">
-          <img class="traveler__img" src="#" width="270" height="270" alt="Таня Фирсова">
-          <div class="traveler__content">
-            <div class="traveler__info">
-              <h3 class="traveler__title">
-                <a href="#" class="traveler__link">Таня Фирсова</a>
-              </h3>
-              <p class="traveler__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-            </div>
-            <div class="wishlist">
-              <p class="wishlist__title">
-                Хочет посетить:
-              </p>
-              <div class="wishlist__card">
-                <div class="flags" data-tooltip="шри-ланка">
-                  <img class="flags__img" src="#" width="35" height="25" alt="Флаг Шри-Ланки">
-                </div>
-                <p class="wishlist__info">
-                  шри-ланка
-                </p>
-              </div>
-              <div class="wishlist__card">
-                <div class="flags" data-tooltip="Таиланд">
-                  <img class="flags__img" src="#" width="35" height="25" alt="Флаг Таиланда">
-                </div>
-                <p class="wishlist__info">
-                  Таиланд
-                </p>
-              </div>
-              <div class="wishlist__card">
-                <div class="flags" data-tooltip="Сейшелы">
-                  <img class="flags__img" src="#" width="35" height="25" alt="Флаг Сейшел">
-                </div>
-                <p class="wishlist__info">
-                  сейшелы
-                </p>
-              </div>
-            </div>
-            <div class="headline">
-              <p class="headline__title">
-                Транспорт:
-              </p>
-              <p class="headline__title">
-                Левел:
-              </p>
-              <ul class="moving list-default" aria-label="Варианты путешествий">
-                <li class="moving__item">
-                  <span class="moving__type moving__type--plane moving__type--active"
-                    aria-label="Путешествует на самолёте"></span>
-                </li>
-                <li class="moving__item">
-                  <span class="moving__type moving__type--car moving__type--active"
-                    aria-label="Путешествует на машине"></span>
-                </li>
-                <li class="moving__item">
-                  <span class="moving__type moving__type--bicycle" aria-label="Путешествует на велисипеде"></span>
-                </li>
-                <li class="moving__item">
-                  <span class="moving__type moving__type--walk moving__type--active"
-                    aria-label="Путешествует пешком"></span>
-                </li>
-              </ul>
-              <div class="traveler__level">
-                <img src="#" alt="Уровень попутчика">
-              </div>
-            </div>
-            <div class="traveler__interaction">
-              <a href="" class="traveler__button">позвать!</a>
-              <div class="like">
-                <button class="like__button" type="button">
-                  Добавить / Убрать лайк
-                </button>
-                <p class="like__number">
-                  1,5 М
-                </p>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="traveler">
-          <img class="traveler__img" src="#" width="270" height="270" alt="Петя Демин">
-          <div class="traveler__content">
-            <div class="traveler__info">
-              <h3 class="traveler__title">
-                <a href="#" class="traveler__link">Петя Демин</a>
-              </h3>
-              <p class="traveler__tags">#бургер #бар #футбол #концерт #крафт</p>
-            </div>
-            <div class="wishlist">
-              <p class="wishlist__title">
-                Хочет посетить:
-              </p>
-              <div class="wishlist__card">
-                <div class="flags" data-tooltip="Бельгия">
-                  <img class="flags__img" src="#" width="35" height="25" alt="Флаг Бельгии">
-                </div>
-                <p class="wishlist__info">
-                  Бельгия
-                </p>
-              </div>
-              <div class="wishlist__card">
-                <div class="flags" data-tooltip="Чехия">
-                  <img class="flags__img" src="#" width="35" height="25" alt="Флаг Чехии">
-                </div>
-                <p class="wishlist__info">
-                  Чехия
-                </p>
-              </div>
-            </div>
-            <div class="headline">
-              <p class="headline__title">
-                Транспорт:
-              </p>
-              <p class="headline__title">
-                Левел:
-              </p>
-              <ul class="moving list-default" aria-label="Варианты путешествий">
-                <li class="moving__item">
-                  <span class="moving__type moving__type--plane moving__type--active"
-                    aria-label="Путешествует на самолёте">
-                  </span>
-                </li>
-                <li class="moving__item">
-                  <span class="moving__type moving__type--car moving__type--active" aria-label="Путешествует на машине">
-                  </span>
-                </li>
-                <li class="moving__item">
-                  <span class="moving__type moving__type--bicycle" aria-label="Путешествует на велисипеде">
-                  </span>
-                </li>
-                <li class="moving__item">
-                  <span class="moving__type moving__type--walk moving__type--active" aria-label="Путешествует пешком">
-                  </span>
-                </li>
-              </ul>
-              <div class="traveler__level">
-                <img src="#" alt="Уровень попутчика">
-              </div>
-            </div>
-            <div class="traveler__interaction">
-              <a href="" class="traveler__button">позвать!</a>
-              <div class="like">
-                <button class="like__button" type="button">
-                  Добавить / Убрать лайк
-                </button>
-                <p class="like__number">
-                  1500
-                </p>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="traveler">
-          <img class="traveler__img" src="#" width="270" height="270" alt="Марк Смолов">
-          <div class="traveler__content">
-            <div class="traveler__info">
-              <h3 class="traveler__title">
-                <a href="#" class="traveler__link">Марк Смолов</a>
-              </h3>
-              <p class="traveler__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
-            </div>
-            <div class="wishlist">
-              <p class="wishlist__title">
-                Хочет посетить:
-              </p>
-              <div class="wishlist__card">
-                <div class="flags" data-tooltip="сша">
-                  <img class="flags__img" src="#" width="35" height="25" alt="Флаг сша">
-                </div>
-                <p class="wishlist__info">
-                  США
-                </p>
-              </div>
-              <div class="wishlist__card">
-                <div class="flags" data-tooltip="Австралия">
-                  <img class="flags__img" src="#" width="35" height="25" alt="Флаг Австралии">
-                </div>
-                <p class="wishlist__info">
-                  Австралия
-                </p>
-              </div>
-              <div class="wishlist__card">
-                <div class="flags" data-tooltip="Доминика">
-                  <img class="flags__img" src="#" width="35" height="25" alt="Флаг Доминики">
-                </div>
-                <p class="wishlist__info">
-                  Доминика
-                </p>
-              </div>
-            </div>
-            <div class="headline">
-              <p class="headline__title">
-                Транспорт:
-              </p>
-              <p class="headline__title">
-                Левел:
-              </p>
-              <ul class="moving list-default" aria-label="Варианты путешествий">
-                <li class="moving__item">
-                  <span class="moving__type moving__type--plane moving__type--active"
-                    aria-label="Путешествует на самолёте">
-                  </span>
-                </li>
-                <li class="moving__item">
-                  <span class="moving__type moving__type--car moving__type--active" aria-label="Путешествует на машине">
-                  </span>
-                </li>
-                <li class="moving__item">
-                  <span class="moving__type moving__type--bicycle" aria-label="Путешествует на велисипеде">
-                  </span>
-                </li>
-                <li class="moving__item">
-                  <span class="moving__type moving__type--walk moving__type--active" aria-label="Путешествует пешком">
-                  </span>
-                </li>
-              </ul>
-              <div class="traveler__level">
-                <img src="#" alt="Уровень попутчика">
-              </div>
-            </div>
-            <div class="traveler__interaction">
-              <a href="" class="traveler__button">позвать!</a>
-              <div class="like">
-                <button class="like__button" type="button">
-                  Добавить / Убрать лайк
-                </button>
-                <p class="like__number">
-                  170
-                </p>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="traveler">
-          <img class="traveler__img" src="#" width="270" height="270" alt="Лариса Роговая">
-          <div class="traveler__content">
-            <div class="traveler__info">
-              <h3 class="traveler__title">
-                <a href="#" class="traveler__link">Лариса Роговая</a>
-              </h3>
-              <p class="traveler__tags">#образование #карьера #учеба #линкедин</p>
-            </div>
-            <div class="wishlist">
-              <p class="wishlist__title">
-                Хочет посетить:
-              </p>
-              <div class="wishlist__card">
-                <div class="flags" data-tooltip="Великобритания">
-                  <img class="flags__img" src="#" width="35" height="25" alt="Флаг Великобритании">
-                </div>
-                <p class="wishlist__info">
-                  Великобритания
-                </p>
-              </div>
-              <div class="wishlist__card">
-                <div class="flags" data-tooltip="Германия">
-                  <img class="flags__img" src="#" width="35" height="25" alt="Флаг Германии">
-                </div>
-                <p class="wishlist__info">
-                  Германия
-                </p>
-              </div>
-            </div>
-            <div class="headline">
-              <p class="headline__title">
-                Транспорт:
-              </p>
-              <p class="headline__title">
-                Левел:
-              </p>
-              <ul class="moving list-default" aria-label="Варианты путешествий">
-                <li class="moving__item">
-                  <span class="moving__type moving__type--plane moving__type--active"
-                    aria-label="Путешествует на самолёте"></span>
-                </li>
-                <li class="moving__item">
-                  <span class="moving__type moving__type--car moving__type--active"
-                    aria-label="Путешествует на машине"></span>
-                </li>
-                <li class="moving__item">
-                  <span class="moving__type moving__type--bicycle" aria-label="Путешествует на велисипеде"></span>
-                </li>
-                <li class="moving__item">
-                  <span class="moving__type moving__type--walk moving__type--active"
-                    aria-label="Путешествует пешком"></span>
-                </li>
-              </ul>
-              <div class="traveler__level">
-                <img src="#" alt="Уровень попутчика">
-              </div>
-            </div>
-            <div class="traveler__interaction">
-              <a href="" class="traveler__button">позвать!</a>
-              <div class="like">
-                <button class="like__button" type="button">
-                  Добавить / Убрать лайк
-                </button>
-                <p class="like__number">
-                  23
-                </p>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="pages">
-      <div class="container">
-        <a class="pages__button" href="#">Показать ещё</a>
-        <div class="pagination">
-          <ul class="pagination__list list-default">
-            <li class="pagination__item">
-              <a class="pagination__link pagination__link--active">1</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">2</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">3</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">4</a>
-            </li>
-          </ul>
-          <div class="controls">
-            <a class="controls__button controls__button--prev" href="#" aria-label="Показать предыдущую страницу"></a>
-            <a class="controls__button controls__button--next" href="#" aria-label="Показать следующую страницу"></a>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
   </main>
 
   <footer class="footer footer--catalog">
@@ -1281,6 +1267,8 @@
     </div>
   </footer>
   <script src="js/script.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/filter.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,32 @@
+.lands {
+  padding-bottom: 24px;
+}
+
+@media only screen and (min-width: @tablet-width) {
+  .lands {
+    position: relative;
+    padding: 38px 0 50px;
+    border-top: 1px solid @outline;
+  }
+
+  .lands::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 139px;
+    height: 100%;
+    width: 1px;
+    background: linear-gradient(to top, @white 40%, transparent) @outline no-repeat bottom 0 right 0 / 100% 50px;
+  }
+}
+
+@media only screen and (min-width: @desktop-width) {
+  .lands {
+    padding: 63px 0 56px;
+  }
+
+  .lands::after {
+    right: 227px;
+    height: 125%;
+  }
+}

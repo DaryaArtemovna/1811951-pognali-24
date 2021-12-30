@@ -1,0 +1,51 @@
+.preferences {
+  margin-bottom: 21px;
+}
+
+.preferences__travelers {
+  margin-bottom: 18px;
+}
+
+.preferences__days {
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: @tablet-width) {
+  .preferences {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 38px;
+  }
+
+  .preferences__travelers {
+    margin-bottom: 24px;
+  }
+
+  .preferences__days {
+    order: 1;
+  }
+
+  .preferences__checkbox {
+    margin-bottom: 27px;
+  }
+}
+
+@media only screen and (min-width: @desktop-width) {
+  .preferences {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 480px 245px;
+    grid-template-rows: auto auto;
+    gap: 15px;
+    padding-top: 29px;
+    margin-bottom: 32px;
+    border-top: 1px solid #e1e3e9;
+  }
+
+  .preferences__travelers,
+  .preferences__days,
+  .preferences__checkbox {
+    margin: 0;
+  }
+}

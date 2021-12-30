@@ -1,17 +1,131 @@
+.route__list {
+  counter-reset: route;
+}
+
 .route__item {
   background-color: @white;
   border-radius: 10px;
-  padding: 24px 10px 24px 24px;
+  padding: 23px 24px;
 }
 
 .route__item:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 
 .route__title {
+  position: relative;
   font-size: 16px;
   line-height: 16px;
   color: @twilight-blue;
-  margin-bottom: 20px;
+  padding-left: 18px;
+  margin: 0 0 20px;
   font-weight: 700;
+}
+
+.route__title::before {
+  counter-increment: route;
+  content: counter(route) ".";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.route__data p {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: @twilight-blue;
+}
+
+.route__travelers {
+  margin: 0 0 5px;
+}
+
+.route__date {
+  margin: 0 0 24px;
+}
+
+.route__edit {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+  color: @dot-grey;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: @tablet-width) {
+  .route__item {
+    padding: 38px 0 0;
+  }
+
+  .route__title {
+    font-size: 24px;
+    line-height: 24px;
+    padding: 0 55px 0 42px;
+    margin: 0 0 35px;
+  }
+
+  .route__title::before {
+    font-size: 20px;
+    line-height: 20px;
+    left: 92%;
+  }
+
+  .route__travelers {
+    width: 155px;
+    margin: 0 20px 0 0;
+  }
+
+  .route__date {
+    width: 185px;
+    margin: 0;
+  }
+
+  .route__data {
+    display: flex;
+    padding: 19px 43px 15px;
+    border-top: 1px solid #cbced94d;
+  }
+
+  .route__data p {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .route__edit {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 1.8px;
+    margin-left: auto;
+  }
+}
+
+@media only screen and (min-width: @desktop-width) {
+  .route__item {
+    display: flex;
+    padding: 38px 40px 38px 94px;
+  }
+
+  .route__title {
+    padding: 0;
+    margin: 0;
+  }
+
+  .route__title::before {
+    left: -53px;
+  }
+
+  .route__data {
+    width: 589px;
+    margin-left: auto;
+    padding: 0;
+    border: none;
+  }
 }

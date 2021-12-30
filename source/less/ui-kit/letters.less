@@ -1,0 +1,54 @@
+.letters__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.letters__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: @font-main;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: 44px;
+  height: 41px;
+  padding: 0;
+  background-color: @white;
+  border: 1px solid @outline;
+}
+
+.letters__button--active {
+  color: @white;
+  background-color: @twilight-blue;
+}
+
+@media only screen and (min-width: @tablet-width) {
+  .letters--alternative {
+    .letters__list {
+      width: 260px;
+    }
+
+    .letters__button {
+      font-size: 20px;
+      line-height: 20px;
+      width: 52px;
+      height: 70px;
+    }
+  }
+}
+
+@media only screen and (min-width: @desktop-width) {
+  .letters--alternative .letters__list {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: start;
+    gap: 15px;
+    width: 380px;
+  }
+
+  .letters--alternative .letters__button {
+    width: 60px;
+  }
+}
