@@ -14,13 +14,15 @@
 
 .directions__text {
   padding: 0 25px;
-  margin-bottom: 61px;
+  margin: 0 0 61px;
 }
 
 .directions__text p {
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
+  padding-right: 20px;
+  margin: 0;
   color: @greyish-brown;
 }
 
@@ -52,21 +54,52 @@
 }
 
 @media only screen and (min-width: @tablet-width) {
+  .directions__wrapper {
+    padding: 70px 0 81px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  .directions__content {
+    padding: 0 34px;
+    background: image-set(url("../img/background-directions@2x.png") 2x, url("../img/background-directions.png") 1x) no-repeat top 10px right 0 / 288px 574px;
+  }
+
+  .directions__options {
+    position: relative;
+    margin-bottom: 48px;
+  }
+
+  .directions__options::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: -35px;
+    width: 141px;
+    height: 141px;
+    background: url("../img/rectangle-small--grey.svg") no-repeat center;
+  }
+
+  .directions__options .direction:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .directions__text {
+    max-width: 340px;
+    padding: 0;
+    margin-bottom: 106px;
+  }
+
+  .directions__text p {
+    line-height: 33px;
+    padding-right: 0;
+  }
+
   .directions__title {
     margin-bottom: 58px;
   }
 
-  .directions__text p {
-    font-size: 28px;
-    line-height: 33px;
-    max-width: 340px;
-    padding-right: 0;
-    margin-bottom: 106px;
-  }
-
-  .directions__options {
-    padding: 0 34px;
-    margin-bottom: 48px;
+  .directions__button::before {
+    right: 30px;
   }
 
   .directions__button {
@@ -80,6 +113,10 @@
 }
 
 @media only screen and (min-width: @desktop-width) {
+  .directions__wrapper {
+    padding: 80px 0 76px;
+  }
+
   .directions__content {
     display: grid;
     grid-template-columns: 560px 380px;
@@ -88,10 +125,19 @@
     align-items: start;
   }
 
+  .directions__title {
+    margin-bottom: 61px;
+  }
+
   .directions__options {
     grid-row: 1 / 4;
     padding: 0;
     margin-bottom: 0;
+  }
+
+  .directions__options::before {
+    top: -70px;
+    left: -70px;
   }
 
   .directions__text {
@@ -105,9 +151,7 @@
     order: 2;
     grid-column-start: 2;
     grid-row: 2 / 3;
-  }
-
-  .directions__text p {
-    margin-bottom: 0;
+    margin: 0;
+    max-width: 275px;
   }
 }
