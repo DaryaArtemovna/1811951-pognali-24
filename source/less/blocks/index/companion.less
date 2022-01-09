@@ -82,7 +82,7 @@
 @media only screen and (min-width: @tablet-width) {
   .companion {
     width: 285px;
-    border-radius: 20px;
+    margin: 0;
   }
 
   .companion__img {
@@ -94,12 +94,22 @@
   .companion__title {
     font-size: 24px;
     line-height: 22px;
-    margin-bottom: 24px;
+  }
+
+  .companion__title::before {
+    left: 28px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .companion__content {
+    padding: 28px 20px;
+    border-radius: 0 0 20px 20px;
   }
 
   .companion__tags {
     font-size: 20px;
     line-height: 23px;
-    margin-bottom: 26px;
+    margin: 0 0 26px;
   }
 }

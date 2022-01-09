@@ -1,13 +1,11 @@
 .promo {
-  color: @white;
-  background-color: @deep-dark-blue;
   padding-top: 91px;
-  background-image:
-    url("../img/background-traveler.png"),
-    url("../img/background-globe.png");
-  background-repeat: no-repeat, no-repeat;
-  background-size: 192px 255px, 320px 398px;
-  background-position: top 222px right 48px, top 77px left 0;
+  color: @white;
+  background: image-set(url("../img/background-globe@2x.jpg") 2x, url("../img/background-globe.jpg") 1x) @deep-dark-blue no-repeat top 77px center / 320px 398px;
+}
+
+.promo__content {
+  background: image-set(url("../img/background-traveler@2x.png") 2x, url("../img/background-traveler.png") 1x) no-repeat top 131px right 23px / 192px 255px;
 }
 
 .promo__title {
@@ -28,9 +26,8 @@
 }
 
 .promo__text {
+  padding: 0 80px 0 25px;
   margin-bottom: 30px;
-  padding: 0 25px;
-  max-width: 210px;
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
@@ -93,12 +90,21 @@
 }
 
 @media only screen and (min-width: @tablet-width) {
+  .promo {
+    padding-top: 158px;
+    background: image-set(url("../img/background-globe_tablet@2x.jpg") 2x, url("../img/background-globe_tablet.jpg") 1x) @space-blue no-repeat top 386px center / 768px 612px;
+  }
+
+  .promo__content {
+    background: image-set(url("../img/background-traveler_tablet@2x.png") 2x, url("../img/background-traveler_tablet.png") 1x) no-repeat top 246px right 72px / 372px 451px;
+  }
+
   .promo__interaction {
     display: none;
   }
 
   .promo__title {
-    width: 490px;
+    max-width: 545px;
     margin: 0 auto 86px;
     font-size: 60px;
     line-height: 70px;
@@ -124,6 +130,13 @@
   .promo__list {
     display: flex;
     flex-wrap: wrap;
+    width: auto;
+    margin: 0;
+  }
+
+  .promo__item {
+    height: 140px;
+    padding: 30px 90px 50px 32px;
   }
 
   .promo__item::before {
@@ -131,11 +144,6 @@
     left: 34px;
     font-size: 30px;
     line-height: 30px;
-  }
-
-  .promo__item {
-    height: 140px;
-    padding: 30px 87px 50px 32px;
   }
 
   .promo__item:not(:first-child) {
@@ -175,13 +183,21 @@
 
 @media only screen and (min-width: @desktop-width) {
   .promo {
-    padding-top: 200px;
+    padding: 0;
+    background: image-set(url("../img/background-globe_desktop@2x.png") 2x, url("../img/background-globe_desktop.png") 1x) @space-blue no-repeat top center / 1440px 750px;
+  }
+
+  .promo__content {
+    padding-top: 206px;
+    padding-bottom: 124px;
+    background: image-set(url("../img/background-traveler_desktop@2x.png") 2x, url("../img/background-traveler_desktop.png") 1x) no-repeat bottom right 345px / 431px 640px;
   }
 
   .promo__wrapper {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 101px;
+    margin-bottom: 104px;
+    padding: 0 25px 0 67px;
   }
 
   .promo__title {
@@ -190,8 +206,13 @@
   }
 
   .promo__text {
+    padding: 12px 0 0 0;
+    max-width: 260px;
     margin: 0;
-    padding: 0;
+  }
+
+  .promo__list {
+    flex-wrap: nowrap;
   }
 
   .promo__item {
@@ -200,32 +221,46 @@
 
   .promo__item:nth-child(odd),
   .promo__item:nth-child(even) {
-    width: 340px;
     height: 107px;
   }
 
   .promo__item:nth-child(1) {
+    width: 340px;
     margin: 0;
     border-radius: 20px 0 0 20px;
   }
 
   .promo__item:nth-child(2) {
+    width: 380px;
     margin-left: -20px;
     border-radius: 20px 0 0 20px;
   }
 
   .promo__item:nth-child(3) {
-    margin-left: -20px;
+    margin-left: -35px;
     border-radius: 20px 0 0 20px;
   }
 
   .promo__item:nth-child(4) {
+    width: 315px;
     margin-left: -20px;
     border-radius: 20px;
   }
 
   .promo__item::before {
-    top: 29px;
-    left: 273px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .promo__item:nth-child(1)::before,
+  .promo__item:nth-child(4)::before {
+    top: 27px;
+    left: 268px;
+  }
+
+  .promo__item:nth-child(2)::before,
+  .promo__item:nth-child(3)::before {
+    left: 299px;
+    top: 27px;
   }
 }
