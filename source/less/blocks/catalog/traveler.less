@@ -19,10 +19,23 @@
   width: 70px;
   height: 70px;
   border-radius: 50%;
+  overflow: hidden;
+}
+
+.traveler__image {
+  display: block;
+  width: inherit;
+  height: inherit;
+}
+
+.traveler__reference {
+  display: block;
 }
 
 .traveler__name {
   grid-area: name;
+  display: inline-block;
+  vertical-align: middle;
   position: relative;
   font-size: 20px;
   line-height: 20px;
@@ -31,7 +44,7 @@
   margin: 0;
 }
 
-.traveler__name::after {
+.traveler__name::before {
   content: "";
   position: absolute;
   right: -60px;
@@ -42,7 +55,7 @@
   background-color: @offline-red;
 }
 
-.traveler__name--online::after {
+.traveler__name--online::before {
   background-color: @online-green;
 }
 
@@ -96,7 +109,7 @@
   margin: 0;
 }
 
-.traveler__description::after {
+.traveler__description::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -106,6 +119,11 @@
   width: 100%;
   background-color: @light-violet;
   z-index: -1;
+}
+
+.traveler__description span {
+  position: relative;
+  z-index: 1;
 }
 
 .traveler__like {
@@ -136,21 +154,6 @@
   margin-bottom: 11px;
 }
 
-.traveler__moving .moving__type {
-  width: 32px;
-  height: 32px;
-  background-color: @light-violet;
-}
-
-.traveler__moving .moving__type::after {
-  width: 16px;
-  height: 16px;
-}
-
-.traveler__moving .moving__item:not(:last-child) {
-  margin-right: 1px;
-}
-
 .traveler__link {
   grid-area: button;
   display: block;
@@ -165,6 +168,21 @@
   border-radius: 25px;
   width: 100%;
   padding: 11px 5px;
+}
+
+.traveler__moving .moving__type {
+  width: 32px;
+  height: 32px;
+  background-color: @light-violet;
+}
+
+.traveler__moving .moving__type::before {
+  width: 16px;
+  height: 16px;
+}
+
+.traveler__moving .moving__item:not(:last-child) {
+  margin-right: 1px;
 }
 
 @media only screen and (min-width: @tablet-width) {
@@ -199,7 +217,7 @@
     max-width: 100%;
   }
 
-  .traveler__name::after {
+  .traveler__name::before {
     right: 33px;
     top: 20px;
     width: 8px;
@@ -269,7 +287,7 @@
     line-height: 20px;
   }
 
-  .traveler__description::after {
+  .traveler__description::before {
     left: -36px;
   }
 
@@ -331,15 +349,14 @@
     margin: 0;
   }
 
-  .traveler__name::after {
-    right: 0;
-    top: 57px;
-    left: -27px;
-  }
-
   .traveler__reference {
     padding: 40px 0 0;
     margin: 0 0 0 7px;
+  }
+
+  .traveler__name::before {
+    right: 0;
+    left: -27px;
   }
 
   .traveler__hashtags {
@@ -354,7 +371,7 @@
 
   .traveler__countries {
     padding-top: 50px;
-    margin-left: 75px;
+    margin-left: 64px;
   }
 
   .traveler__countries .traveler__description {
