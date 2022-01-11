@@ -1,3 +1,4 @@
+/* stylelint-disable unit-no-unknown */
 .companions {
   background-color: @light-violet;
 }
@@ -13,7 +14,7 @@
   background-color: @dark-blue;
 }
 
-.companions__wrapper::after {
+.companions__wrapper::before {
   content: "";
   position: absolute;
   width: 320px;
@@ -21,7 +22,10 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  background: url("../img/rectangle-small.svg") no-repeat top 40px left / 113px 132px;
+  background:
+    image-set(url("../img/background-smolov@2x.png") 2x, url("../img/background-smolov.png") 1x) no-repeat top 35px right 25px / 143px 143px,
+    image-set(url("../img/background-rogovaya@2x.png") 2x, url("../img/background-rogovaya.png") 1x) no-repeat top 307px left / 64px 71px,
+    url("../img/rectangle-small.svg") no-repeat top 40px left / 113px 132px;
 }
 
 .companions__content {
@@ -83,9 +87,12 @@
     border-radius: 0 0 60px 60px;
   }
 
-  .companions__wrapper::after {
+  .companions__wrapper::before {
     width: 768px;
-    background: url("../img/rectangle-medium.svg") no-repeat top 70px left 40px / 212px 212px;
+    background:
+      image-set(url("../img/background-smolov@2x.png") 2x, url("../img/background-smolov.png") 1x) no-repeat top 426px left 40px / 143px 143px,
+      image-set(url("../img/background-rogovaya_desktop@2x.png") 2x, url("../img/background-rogovaya_desktop.png") 1x) no-repeat top 80px right 74px / 285px 285px,
+      url("../img/rectangle-medium.svg") no-repeat top 70px left 40px / 212px 212px;
   }
 
   .companions__title {
@@ -131,9 +138,12 @@
     padding: 130px 0 48px;
   }
 
-  .companions__wrapper::after {
+  .companions__wrapper::before {
     width: 1440px;
-    background: url("../img/rectangle-medium.svg") no-repeat top 70px left 60px / 212px 212px;
+    background:
+      image-set(url("../img/background-smolov@2x.png") 2x, url("../img/background-smolov.png") 1x) no-repeat top 130px left 548px / 143px 143px,
+      image-set(url("../img/background-rogovaya_desktop@2x.png") 2x, url("../img/background-rogovaya_desktop.png") 1x) no-repeat bottom 78px left 190px / 285px 285px,
+      url("../img/rectangle-medium.svg") no-repeat top 70px left 60px / 212px 212px;
   }
 
   .companions__content {
