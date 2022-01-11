@@ -110,17 +110,17 @@
   background-color: @black-blue;
 }
 
-.feedback .interaction__link--phone::before,
-.feedback .interaction__link--email::before {
+.feedback .interaction__link--phone::after,
+.feedback .interaction__link--email::after {
   background-color: @accent-yellow;
 }
 
-.feedback .interaction__link--phone::before {
+.feedback .interaction__link--phone::after {
   left: 14px;
   mask: url("../img/icon-phone--secondary.svg") no-repeat center;
 }
 
-.feedback .interaction__link--email::before {
+.feedback .interaction__link--email::after {
   width: 23px;
   height: 25px;
   mask: url("../img/icon-email--secondary.svg") no-repeat center;
@@ -251,13 +251,13 @@
     height: 90px;
   }
 
-  .feedback .interaction__link--phone::before {
+  .feedback .interaction__link--phone::after {
     left: 27px;
     width: 36px;
     height: 34px;
   }
 
-  .feedback .interaction__link--email::before {
+  .feedback .interaction__link--email::after {
     left: 22px;
     width: 47px;
     height: 50px;

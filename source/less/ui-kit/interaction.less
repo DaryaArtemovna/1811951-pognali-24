@@ -24,20 +24,37 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .interaction__link--phone::before {
   background-color: @orange;
-  background-size: 18px 17px;
-  background-image: url("../img/icon-phone.svg");
 }
 
 .interaction__link--email::before {
   background-color: @orange-yellow;
-  background-size: 24px 25px;
-  background-image: url("../img/icon-email.svg");
+}
+
+.interaction__link--phone::after,
+.interaction__link--email::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: @deep-dark-blue;
+}
+
+.interaction__link--phone::after {
+  left: 15px;
+  width: 18px;
+  height: 17px;
+  mask: url("../img/icon-phone.svg") no-repeat center;
+}
+
+.interaction__link--email::after {
+  left: 11px;
+  width: 18px;
+  height: 16px;
+  mask: url("../img/icon-email.svg") no-repeat center;
 }
 
 @media only screen and (min-width: @tablet-width) {
@@ -55,11 +72,11 @@
     height: 50px;
   }
 
-  .interaction__link--phone::before {
+  .interaction__link--phone::after {
     background-size: 18px;
   }
 
-  .interaction__link--email::before {
+  .interaction__link--email::after {
     background-size: 16px 14px;
   }
 }

@@ -3,15 +3,14 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Погнали за мороженкой</title>
-  <link rel="icon" href="#">
-  <link rel="icon" type="image/png" sizes="32x32" href="#">
+  <title>Погнали за печенькой</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-
   <header class="header">
     <div class="container">
       <div class="header__content">
@@ -949,11 +948,15 @@
           </section>
 
           <section class="catalog">
-            <div class="container">
               <article class="traveler">
                 <div class="traveler__photo">
                   <picture>
-                    <img class="traveler__image" src="img/traveler-firsova.jpg" width="70" height="70" alt="Фирсова">
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/traveler-firsova_desktop.webp 1x, img/traveler-firsova_desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/traveler-firsova_tablet.webp 1x, img/traveler-firsova_tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/traveler-firsova.webp 1x, img/traveler-firsova@2x.webp 2x">
+                    <source media="(min-width: 1440px)" srcset="img/traveler-firsova_desktop.jpg 1x, img/traveler-firsova_desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/traveler-firsova_tablet.jpg 1x, img/traveler-firsova_tablet@2x.jpg 2x">
+                    <img class="traveler__image" src="img/traveler-firsova.jpg" srcset="img/traveler-firsova@2x.jpg 2x" width="70" height="70" alt="Фирсова">
                   </picture>
                 </div>
                 <a class="traveler__reference" href="#">
@@ -971,19 +974,28 @@
                   <ul class="list-default">
                     <li class="traveler__country">
                       <div class="flags">
-                        <img src="img/flags-srilanka.jpg" width="35" height="25" alt="Флаг">
+                        <picture>
+                          <source type="image/webp" srcset="img/flags-srilanka.webp 1x, img/flags-srilanka@2x.webp 2x">
+                          <img src="img/flags-srilanka.jpg" srcset="img/flags-srilanka@2x.jpg 2x" width="35" height="25" alt="Флаг">
+                        </picture>
                       </div>
                       <p>ШРИ-ЛАНКА</p>
                     </li>
                     <li class="traveler__country">
                       <div class="flags">
-                        <img src="img/flags-thailand.jpg" width="35" height="25" alt="Флаг">
+                        <picture>
+                          <source type="image/webp" srcset="img/flags-thailand.webp 1x, img/flags-thailand@2x.webp 2x">
+                          <img src="img/flags-thailand.jpg" srcset="img/flags-thailand@2x.jpg 2x" width="35" height="25" alt="Флаг">
+                        </picture>
                       </div>
                       <p>ТАЙЛАНД</p>
                     </li>
                     <li class="traveler__country">
                       <div class="flags">
-                        <img src="img/flags-seychelles.jpg" width="35" height="25" alt="Флаг">
+                        <picture>
+                          <source type="image/webp" srcset="img/flags-seychelles.webp 1x, img/flags-seychelles@2x.webp 2x">
+                          <img src="img/flags-seychelles.jpg" srcset="img/flags-seychelles@2x.jpg 2x" width="35" height="25" alt="Флаг">
+                        </picture>
                       </div>
                       <p>СЕЙШЕЛЫ</p>
                     </li>
@@ -1022,7 +1034,12 @@
               <article class="traveler">
                 <div class="traveler__photo">
                   <picture>
-                    <img class="traveler__image" src="img/traveler-demin.jpg" width="70" height="70" alt="Петя Демин">
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/traveler-demin_desktop.webp 1x, img/traveler-demin_desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/traveler-demin_tablet.webp 1x, img/traveler-demin_tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/traveler-demin.webp 1x, img/traveler-demin@2x.webp 2x">
+                    <source media="(min-width: 1440px)" srcset="img/traveler-demin_desktop.jpg 1x, img/traveler-demin_desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/traveler-demin_tablet.jpg 1x, img/traveler-demin_tablet@2x.jpg 2x">
+                    <img class="traveler__image" src="img/traveler-demin.jpg" srcset="img/traveler-demin@2x.jpg 2x" width="70" height="70" alt="Петя Демин">
                   </picture>
                 </div>
                 <a class="traveler__reference" href="#">
@@ -1040,13 +1057,19 @@
                   <ul class="list-default">
                     <li class="traveler__country">
                       <div class="flags">
-                        <img src="img/flags-belgium.jpg" width="35" height="25" alt="Флаг Бельгии">
+                        <picture>
+                          <source type="image/webp" srcset="img/flags-belgium.webp 1x, img/flags-belgium@2x.webp 2x">
+                          <img src="img/flags-belgium.jpg" srcset="img/flags-belgium@2x.jpg 2x" width="35" height="25" alt="Флаг">
+                        </picture>
                       </div>
                       <p>бельгия</p>
                     </li>
                     <li class="traveler__country">
                       <div class="flags">
-                        <img src="img/flags-czech.jpg" width="35" height="25" alt="Флаг Чехии">
+                        <picture>
+                          <source type="image/webp" srcset="img/flags-czech.webp 1x, img/flags-czech@2x.webp 2x">
+                          <img src="img/flags-czech.jpg" srcset="img/flags-czech@2x.jpg 2x" width="35" height="25" alt="Флаг">
+                        </picture>
                       </div>
                       <p>чехия</p>
                     </li>
@@ -1087,7 +1110,12 @@
               <article class="traveler">
                 <div class="traveler__photo">
                   <picture>
-                    <img class="traveler__image" src="img/traveler-smolov.jpg" width="70" height="70" alt="Марк Смолов">
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/traveler-smolov_desktop.webp 1x, img/traveler-smolov_desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/traveler-smolov_tablet.webp 1x, img/traveler-smolov_tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/traveler-smolov.webp 1x, img/traveler-smolov@2x.webp 2x">
+                    <source media="(min-width: 1440px)" srcset="img/traveler-smolov_desktop.jpg 1x, img/traveler-smolov_desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/traveler-smolov_tablet.jpg 1x, img/traveler-smolov_tablet@2x.jpg 2x">
+                    <img class="traveler__image" src="img/traveler-smolov.jpg" srcset="img/traveler-smolov@2x.jpg 2x" width="70" height="70" alt="Марк Смолов">
                   </picture>
                 </div>
                 <a class="traveler__reference" href="#">
@@ -1105,19 +1133,28 @@
                   <ul class="list-default">
                     <li class="traveler__country">
                       <div class="flags">
-                        <img src="img/flags-usa.jpg" width="35" height="25" alt="Флаг США">
+                        <picture>
+                          <source type="image/webp" srcset="img/flags-usa.webp 1x, img/flags-usa@2x.webp 2x">
+                          <img src="img/flags-usa.jpg" srcset="img/flags-usa@2x.jpg 2x" width="35" height="25" alt="Флаг">
+                        </picture>
                       </div>
                       <p>сша</p>
                     </li>
                     <li class="traveler__country">
                       <div class="flags">
-                        <img src="img/flags-australia.jpg" width="35" height="25" alt="Флаг Австралии">
+                        <picture>
+                          <source type="image/webp" srcset="img/flags-australia.webp 1x, img/flags-australia@2x.webp 2x">
+                          <img src="img/flags-australia.jpg" srcset="img/flags-australia@2x.jpg 2x" width="35" height="25" alt="Флаг">
+                        </picture>
                       </div>
                       <p>австралия</p>
                     </li>
                     <li class="traveler__country">
                       <div class="flags">
-                        <img src="img/flags-dominica.jpg" width="35" height="25" alt="Флаг Доминики">
+                        <picture>
+                          <source type="image/webp" srcset="img/flags-dominica.webp 1x, img/flags-dominica@2x.webp 2x">
+                          <img src="img/flags-dominica.jpg" srcset="img/flags-dominica@2x.jpg 2x" width="35" height="25" alt="Флаг">
+                        </picture>
                       </div>
                       <p>Доминика</p>
                     </li>
@@ -1157,8 +1194,12 @@
               <article class="traveler">
                 <div class="traveler__photo">
                   <picture>
-                    <img class="traveler__image" src="img/traveler-rogovaya.jpg" width="70" height="70"
-                      alt="Лариса Роговая">
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/traveler-rogovaya_desktop.webp 1x, img/traveler-rogovaya_desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/traveler-rogovaya_tablet.webp 1x, img/traveler-rogovaya_tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/traveler-rogovaya.webp 1x, img/traveler-rogovaya@2x.webp 2x">
+                    <source media="(min-width: 1440px)" srcset="img/traveler-rogovaya_desktop.jpg 1x, img/traveler-rogovaya_desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/traveler-rogovaya_tablet.jpg 1x, img/traveler-rogovaya_tablet@2x.jpg 2x">
+                    <img class="traveler__image" src="img/traveler-rogovaya.jpg" srcset="img/traveler-rogovaya@2x.jpg 2x" width="70" height="70" alt="Лариса Роговая">
                   </picture>
                 </div>
                 <a class="traveler__reference" href="#">
@@ -1176,13 +1217,19 @@
                   <ul class="list-default">
                     <li class="traveler__country">
                       <div class="flags">
-                        <img src="img/flags-UK.jpg" width="35" height="25" alt="Флаг Великобритании">
+                        <picture>
+                          <source type="image/webp" srcset="img/flags-UK.webp 1x, img/flags-UK@2x.webp 2x">
+                          <img src="img/flags-UK.jpg" srcset="img/flags-UK@2x.jpg 2x" width="35" height="25" alt="Флаг">
+                        </picture>
                       </div>
                       <p>Великобритания</p>
                     </li>
                     <li class="traveler__country">
                       <div class="flags">
-                        <img src="img/flags-germany.jpg" width="35" height="25" alt="Флаг Германии">
+                        <picture>
+                          <source type="image/webp" srcset="img/flags-germany.webp 1x, img/flags-germany@2x.webp 2x">
+                          <img src="img/flags-germany.jpg" srcset="img/flags-germany@2x.jpg 2x" width="35" height="25" alt="Флаг">
+                        </picture>
                       </div>
                       <p>Германия</p>
                     </li>
@@ -1219,7 +1266,6 @@
                 </div>
                 <a class="traveler__link" href="#">Позвать!</a>
               </article>
-            </div>
 
             <div class="pages">
               <a class="pages__button" href="#">Показать ещё</a>
