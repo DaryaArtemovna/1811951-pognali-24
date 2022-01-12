@@ -3,6 +3,7 @@ const button = finder.querySelector('.finder__button');
 const list = finder.querySelector('.finder__list');
 const dropdown = finder.querySelector('.finder__dropdown');
 const links = list.querySelectorAll('.finder__link');
+const closeButton = finder.querySelector('.finder__close');
 
 function buttonClickHander(e) {
   e.preventDefault();
@@ -22,7 +23,16 @@ function linkClickHander(e) {
   this.classList.add('finder__link--active');
 }
 
+function closeButtonClickHander(e) {
+  e.preventDefault();
+  button.classList.remove('finder__button--active');
+  list.classList.remove('finder__list--active');
+  dropdown.classList.remove('finder__dropdown--active');
+}
+
 button.addEventListener('click', buttonClickHander);
+
+closeButton.addEventListener('click', closeButtonClickHander);
 
 links.forEach(link => {
   link.addEventListener('click', linkClickHander)

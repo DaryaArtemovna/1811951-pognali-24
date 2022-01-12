@@ -4,6 +4,7 @@ import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
+import svgstore from 'gulp-svgstore';
 
 // Styles
 
@@ -31,6 +32,14 @@ const server = (done) => {
   });
   done();
 }
+// Sprite
+
+export const svgsprite = () => {
+  return gulp
+    .src(['source/img/sprite/*.svg'])
+    .pipe(svgstore({ inlineSvg: true }))
+    .pipe(gulp.dest('source/img/sprite'));
+};
 
 // Watcher
 

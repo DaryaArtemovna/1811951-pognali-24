@@ -48,8 +48,42 @@
 
 .account__level {
   grid-area: level;
+  width: 100px;
+  height: 100px;
+  padding-top: 16px;
   margin-left: 17px;
 }
+
+.account__level .level__bar {
+  stroke-width: 3px;
+  stroke-dasharray: 146px 35px;
+}
+
+.account__level .level__value {
+  position: relative;
+  font-size: 38px;
+  line-height: 38px;
+  color: @deep-dark-blue;
+  padding-bottom: 3px;
+  margin-bottom: 6px;
+}
+
+.account__level .level__value::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 1px;
+  background-color: @placeholder;
+}
+
+.account__level .level__label {
+  font-size: 18px;
+  line-height: 18px;
+}
+
 
 .account__photo {
   grid-area: photo;
@@ -243,6 +277,15 @@
 
   .account__level {
     margin: 43px 0 0 101px;
+  }
+
+  .account__level .level__value,
+  .account__level .level__label {
+    color: @white;
+  }
+
+  .account__level .level__value::after {
+    background-color: @white-darker;
   }
 
   .account__photo {

@@ -15,7 +15,7 @@
   padding-left: 40px;
 }
 
-.checkbox__label::after {
+.checkbox__label::before {
   content: "";
   position: absolute;
   top: 0;
@@ -27,7 +27,14 @@
 }
 
 .checkbox input:checked ~ .checkbox__label::after {
-  background: url("../img/icon-check.svg") no-repeat center center;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  transform: translateY(-50%);
+  width: 13px;
+  height: 13px;
+  background: url("../img/icon-check.svg") no-repeat center / cover;
 }
 
 @media only screen and (min-width: @tablet-width) {
@@ -44,7 +51,7 @@
     padding-left: 58px;
   }
 
-  .checkbox__label::after {
+  .checkbox__label::before {
     width: 36px;
     height: 36px;
   }

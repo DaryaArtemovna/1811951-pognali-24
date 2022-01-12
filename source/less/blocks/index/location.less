@@ -29,10 +29,9 @@
 }
 
 .location__button {
-  outline: 3px solid @dark-blue;
-  border-radius: 10px;
-  padding: 19px 19px;
   position: relative;
+  padding: 19px 19px;
+  border: 3px solid @dark-blue;
 }
 
 .location__button::before {
@@ -84,16 +83,29 @@
 }
 
 @media only screen and (min-width: @tablet-width) {
+  .location__wrapper {
+    padding: 45px 0 84px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  .location__info {
+    padding: 0 35px;
+  }
+
   .location__address {
-    max-width: 100%;
-    padding: 23px 0 23px 93px;
-    margin-bottom: 44px;
     font-size: 28px;
     line-height: 28px;
+    padding: 23px 0 23px 93px;
+    margin-bottom: 42px;
+  }
+
+  .location__address::before {
+    top: 3px;
+    width: 68px;
+    height: 68px;
   }
 
   .location__button {
-    border-radius: 20px;
     padding: 22px 34px 28px;
   }
 
@@ -101,26 +113,57 @@
     height: 517px;
   }
 
-  .location__img,
-  .location__iframe {
+  .location__img {
     height: 581px;
-    top: 7px;
+    top: 5px;
+  }
+
+  .location__map::before {
+    top: 45.5%;
+    left: 45%;
+    width: 56px;
+    height: 56px;
+    background-image: radial-gradient(@space-blue 12px, @white 13px);
   }
 }
 
 @media only screen and (min-width: @desktop-width) {
+  .location__wrapper {
+    padding: 53px 0 58px 0;
+  }
+
   .location__info {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 75px 0 222px;
   }
 
   .location__address {
-    margin-right: 147px;
-    margin-bottom: 0;
+    padding: 31px 0 31px 122px;
+    margin: 0;
+  }
+
+  .location__address::before {
+    width: 90px;
+    height: 90px;
   }
 
   .location__button {
-    min-width: 324px;
+    width: 324px;
+  }
+
+  .location__map {
+    height: 447px;
+  }
+
+  .location__map::before {
+    top: 37%;
+    left: 44%;
+  }
+
+  .location__img {
+    height: 584px;
+    top: -69px;
   }
 }
