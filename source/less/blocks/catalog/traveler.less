@@ -143,15 +143,31 @@
 
 .traveler__level {
   grid-area: level;
-}
-
-.traveler__level img {
-  width: 45px;
-  height: 45px;
+  min-width: 50px;
 }
 
 .traveler__level .traveler__description {
   margin-bottom: 11px;
+  padding-left: 5px;
+}
+
+.traveler__level .level {
+  width: 45px;
+  height: 45px;
+  padding-top: 11px;
+}
+
+.traveler__level .level__bar {
+  stroke-width: 3px;
+}
+
+.traveler__level .level__label {
+  display: none;
+}
+
+.traveler__level .level__value {
+  font-size: 24px;
+  line-height: 24px;
 }
 
 .traveler__link {
@@ -295,9 +311,34 @@
     margin-left: 50px;
   }
 
-  .traveler__level img {
+  .traveler__level .level {
     width: 60px;
-    height: 60px;
+    height: 65px;
+    padding-top: 14px;
+  }
+
+  .traveler__level .level__label {
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    color: @black-shadow;
+  }
+
+  .traveler__level .level__value {
+    position: relative;
+    padding-bottom: 2px;
+    margin-bottom: 1px;
+  }
+
+  .traveler__level .level__value::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 1px;
+    background-color: @black-invisible;
   }
 
   .traveler__moving .moving__item {

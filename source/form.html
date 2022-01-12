@@ -73,8 +73,14 @@
         <div class="container">
           <form class="account__form" method="POST" action="https://echo.htmlacademy.ru" enctype="multipart/form-data">
             <h2 class="visually-hidden">Информация обо мне</h2>
-            <div class="account__level">
-              <img src="img/account-level.svg" width="100" height="100" alt="Уровень попутчика">
+            <div class="account__level level">
+              <div class="level__info">
+                <span class="level__value">80</span>
+                <span class="level__label">level</span>
+              </div>
+              <svg class="level__bar">
+                <use xlink:href="img/sprite/sprite.svg#level"></use>
+              </svg>
             </div>
             <div class="account__photo">
               <picture>

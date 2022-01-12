@@ -14,10 +14,45 @@
   height: 270px;
 }
 
-.companion-level {
+.companion__level {
   position: absolute;
   top: 17px;
   left: 17px;
+  width: 60px;
+  height: 60px;
+  background-color: @level-background;
+  padding-top: 13px;
+}
+
+.companion__level .level__bar {
+  stroke-width: 4px;
+}
+
+.companion__level .level__info {
+  color: @white;
+}
+
+.companion__level .level__value {
+  position: relative;
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 1px;
+}
+
+.companion__level .level__value::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 1px;
+  background-color: @white-darker;
+}
+
+.companion__level .level__label {
+  font-size: 14px;
+  line-height: 14px;
 }
 
 .companion__content {
