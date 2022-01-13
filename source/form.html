@@ -4,9 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>Погнали</title>
-  <link rel="icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="misc/favicon.svg" type="image/x-icon">
+  <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -203,7 +204,7 @@
                   <p class="counter__hint">чел.</p>
                   <div class="counter__field">
                     <button class="counter__button counter__button--less" type="button" aria-label="Уменьшить"></button>
-                    <input class="counter__input" type="number" id="people" name="people" value="2" min="0">
+                    <input class="counter__input" type="number" id="travelers" name="people" value="2" min="0">
                     <button class="counter__button counter__button--more" type="button" aria-label="Увеличить"></button>
                   </div>
                 </div>
@@ -620,7 +621,7 @@
                 </div>
                 <div class="fun">
                   <div class="fun__title">
-                    <label class="fun__label" for="fun-1">Чехия</label>
+                    <label class="fun__label" for="fun-2">Чехия</label>
                     <div class="fun__flag flags" data-tooltip="Босния и Герцеговина">
                       <picture>
                         <source type="image/webp" media="(min-width: 768px)" srcset="img/flags-czech_desktop.webp 1x, img/flags-czech_desktop@2x.webp 2x">
@@ -631,7 +632,7 @@
                     </div>
                   </div>
                   <div class="fun__field">
-                    <textarea class="fun__textarea" id="fun-1" placeholder="План действий"
+                    <textarea class="fun__textarea" id="fun-2" placeholder="План действий"
                       required>Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                     <p class="fun__warning">Это поле должно быть заполнено</p>
                   </div>
