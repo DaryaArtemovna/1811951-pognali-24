@@ -14,6 +14,8 @@ import pngquant from 'imagemin-pngquant';
 import mozjpeg from 'imagemin-mozjpeg';
 import svgo from 'imagemin-svgo';
 import cache from 'gulp-cache';
+import htmlmin from 'gulp-htmlmin';
+import terser from 'gulp-terser';
 
 const PATHS = {
   watchers: {
@@ -71,6 +73,7 @@ const server = () => {
 const html = () => {
   return gulp
     .src(PATHS.entries.html)
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest(PATHS.outputs.html))
     .pipe(browser.stream());
 };
@@ -138,6 +141,11 @@ export const svgsprite = () => {
     .pipe(gulp.dest(PATHS.outputs.svgsprite));
 };
 
+//JSmin
+const cookjs = () => {
+  return gulp.src(PATHS.entries.js).pipe(terser()).pipe(gulp.dest(PATHS.outputs.js));
+};
+
 // Reload
 
 const reload = (done) => {
@@ -157,8 +165,6 @@ const copy = () => {
   return gulp
     .src(
       [
-        PATHS.entries.html,
-        PATHS.entries.js,
         PATHS.entries.images,
         PATHS.entries.misc,
         PATHS.entries.fonts
@@ -170,5 +176,5 @@ const copy = () => {
     .pipe(gulp.dest('build'));
 };
 
-export const build = gulp.series(remove, styles, cssMin, copy)
+export const build = gulp.series(remove, styles, html, cssMin, cookjs, copy);
 export const serve = gulp.series(build, server);

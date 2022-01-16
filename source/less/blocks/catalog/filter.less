@@ -60,6 +60,14 @@
   transform: translateY(-50%) rotate(180deg);
 }
 
+.filter__button:hover {
+  opacity: 0.6;
+}
+
+.filter__button:active {
+  opacity: 0.3;
+}
+
 .filter__dropdown {
   display: none;
 }
@@ -89,9 +97,18 @@
   background-color: @white;
 }
 
+.filter__checkbox:hover {
+  opacity: 0.6;
+}
+
+.filter__checkbox:active {
+  opacity: 0.3;
+}
+
 .filter__list {
   padding-bottom: 14px;
 }
+
 
 .filter__item input:checked .filter__checkbox::before {
   background-image: url("../img/filter-check.svg");
@@ -138,6 +155,16 @@
   border: none;
   border-radius: 25px;
   background-color: @white;
+  transition: all 0.3s;
+}
+
+.filter__submit:hover {
+  box-shadow: 0 3px 6px @black-purify;
+}
+
+.filter__submit:active {
+  color: @blue-ghost;
+  background-color: @accordion-yellow;
 }
 
 @media only screen and (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {

@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 14px;
-  border-top: 1px solid #f2f2f2;
+  border-top: 1px solid @grey-braindead;
 }
 
 .developer__text {
@@ -21,6 +21,14 @@
   width: 27px;
   height: 33px;
   mask: url("../img/htmlacademy.svg") no-repeat center/cover;
+}
+
+.developer:hover {
+  opacity: 0.6;
+}
+
+.developer:active {
+  opacity: 0.3;
 }
 
 @media only screen and (min-width: @tablet-width) {

@@ -1,0 +1,122 @@
+.rates {
+  display: none;
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 270px;
+  height: 443px;
+  background-color: @white;
+  box-shadow: 0 2px 8px @black-transparent;
+  border-radius: 20px;
+  overflow: hidden;
+  animation: 0.5s ease-out fadeout;
+}
+
+.rates--show {
+  display: block;
+}
+
+.rates__title {
+  text-align: center;
+  margin-bottom: 10px;
+  padding-bottom: 29px;
+  border-bottom: 1px solid @outline-dark;
+}
+
+.rates__content {
+  padding: 32px 25px;
+}
+
+.rates__item {
+  font-size: 16px;
+  line-height: 22px;
+  padding-bottom: 11px;
+  margin: 0;
+  border-bottom: 1px solid @outline-dark;
+}
+
+.rates__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.rates__item span {
+  display: block;
+}
+
+.rates__close {
+  display: block;
+  font-family: @font-main;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: @twilight-blue;
+  width: 100%;
+  padding: 24px 5px 21px;
+  background-color: @tender-violet;
+  border: none;
+}
+
+.rates__close:hover {
+  background-color: @light-violet;
+}
+
+.rates__close:active {
+  color: @blue-shadow;
+}
+
+@media only screen and (min-width: @tablet-width) {
+  .rates {
+    top: 0;
+    width: 688px;
+    height: 526px;
+    z-index: 1;
+  }
+
+  .rates__title {
+    margin-bottom: 13px;
+    padding-bottom: 50px;
+  }
+
+  .rates__content {
+    padding: 50px 94px 50px 90px;
+  }
+
+  .rates__item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    line-height: 28px;
+    padding-bottom: 13px;
+  }
+
+  .rates__item:not(:last-child) {
+    margin-bottom: 13px;
+  }
+
+  .rates__close {
+    font-size: 24px;
+    text-transform: none;
+    padding: 39px 5px 43px;
+  }
+}
+
+@media only screen and (min-width: @desktop-width) {
+  .rates {
+    top: 48%;
+    left: 51.2%;
+    transform: translate(-50%, -50%);
+    width: 750px;
+    height: 526px;
+    border-radius: 30px;
+  }
+
+  .rates__content {
+    padding: 51px 60px 52px 59px;
+  }
+
+  .rates__title {
+    margin-bottom: 11px;
+  }
+}
