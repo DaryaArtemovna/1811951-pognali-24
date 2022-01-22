@@ -1,17 +1,25 @@
 .companion {
-  border-radius: 10px;
-  overflow: hidden;
-  width: 270px;
-  margin: 0 auto;
+  transition: all 0.3s;
+}
+
+.companion:hover {
+  box-shadow: 0 4px 9px @black-zoom;
+}
+
+.companion:hover .companion__img {
+  transform: scale(1.1);
 }
 
 .companion__info {
   position: relative;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
 }
 
 .companion__img {
   width: 270px;
   height: 270px;
+  transition: all 0.3s;
 }
 
 .companion__level {
@@ -59,6 +67,19 @@
   position: relative;
   padding: 25px 40px;
   background-color: @white;
+  border-radius: 0 0 10px 10px;
+}
+
+.companion__reference {
+  margin-bottom: 16px;
+}
+
+.companion__reference:hover {
+  opacity: 0.7;
+}
+
+.companion__reference:active {
+  opacity: 0.3;
 }
 
 .companion__title {
@@ -68,7 +89,7 @@
   font-weight: 700;
   text-align: center;
   color: @twilight-blue;
-  margin: 0 0 16px;
+  margin: 0;
 }
 
 .companion__title::before {
@@ -105,9 +126,8 @@
 .companion__tags {
   line-height: 18px;
   text-align: center;
+  font-weight: 400;
   margin: 0 0 15px;
-  font-weight: 300;
-  color: @greyish-brown;
 }
 
 .companion__moving {
@@ -120,10 +140,21 @@
     margin: 0;
   }
 
+  .companion__info {
+    border-radius: 20px 20px 0 0;
+  }
+
   .companion__img {
     width: 285px;
     height: 286px;
-    object-fit: cover;
+  }
+
+  .companion__flag {
+    top: -13px;
+  }
+
+  .companion__reference {
+    margin-bottom: 24px;
   }
 
   .companion__title {

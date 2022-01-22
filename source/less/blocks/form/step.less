@@ -54,9 +54,25 @@
   border: none;
 }
 
+.step__button:hover:not(.step__button--back) {
+  background-color: @orange-yellow;
+}
+
+.step__button:active:not(.step__button--back) {
+  color: @blue-shadow;
+}
+
 .step__button--back {
   padding: 12px 5px 0;
   background-color: transparent;
+}
+
+.step__button--back:hover {
+  opacity: 0.7;
+}
+
+.step__button--back:active {
+  opacity: 0.3;
 }
 
 @media only screen and (min-width: @tablet-width) {
@@ -109,6 +125,10 @@
     width: 15px;
     height: 15px;
     background: url("../img/icon-arrow.svg") no-repeat center;
+  }
+
+  .step__button:active::before {
+    opacity: 0.3;
   }
 
   .step__button--back {

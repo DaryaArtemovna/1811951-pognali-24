@@ -40,6 +40,14 @@
   mask-image: url("../img/icon-instagram.svg");
 }
 
+.networks__link:hover {
+  background-color: @orange-yellow;
+}
+
+.networks__link:active::before {
+  opacity: 0.3;
+}
+
 @media only screen and (min-width: @tablet-width) {
   .networks__link {
     width: 62px;

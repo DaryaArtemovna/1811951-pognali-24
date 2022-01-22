@@ -4,14 +4,14 @@
 
 .profile__wrapper {
   position: relative;
-  padding: 51px 0 40px 25px;
+  padding: 51px 0 40px 0;
   border-radius: 0 0 30px 30px;
   background-color: @profile;
 }
 
 .profile__content {
   position: relative;
-  padding: 14px 0 0 24px;
+  padding: 14px 0 0 0;
 }
 
 .profile__content::before {
@@ -55,11 +55,18 @@
 }
 
 .profile__button {
-  display: block;
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
   color: @business-blue;
+}
+
+.profile__button:hover {
+  opacity: 0.7;
+}
+
+.profile__button:active {
+  opacity: 0.3;
 }
 
 .profile__item::before {
@@ -155,16 +162,16 @@
   }
 
   .profile__item:nth-child(1) .profile__text {
-    border-top: 1px solid #e1e3e9;
+    border-top: 1px solid @grey-shadow;
   }
 
   .profile__item:nth-child(2) .profile__text {
-    border-top: 1px solid #e1e3e9;
-    border-bottom: 1px solid #e1e3e9;
+    border-top: 1px solid @grey-shadow;
+    border-bottom: 1px solid @grey-shadow;
   }
 
   .profile__item:nth-child(3) .profile__text {
-    border-bottom: 1px solid #e1e3e9;
+    border-bottom: 1px solid @grey-shadow;
   }
 
   .profile__text {
@@ -174,7 +181,6 @@
   }
 
   .profile__item p {
-    font-size: 28px;
     line-height: 28px;
   }
 

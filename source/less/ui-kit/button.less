@@ -8,6 +8,18 @@
   color: @twilight-blue;
 }
 
+.button:hover {
+  background-color: @orange-yellow;
+}
+
+.button:active {
+  color: @blue-shadow;
+}
+
+.button:active::before {
+  background-color: @blue-shadow;
+}
+
 @media only screen and (min-width: @tablet-width) {
   .button {
     font-size: 24px;

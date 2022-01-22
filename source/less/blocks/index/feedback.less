@@ -28,12 +28,24 @@
   text-decoration: underline;
 }
 
+.feedback__about a:hover {
+  color: @orange;
+}
+
+.feedback__about a:active {
+  opacity: 0.3;
+}
+
 .feedback__form {
   display: flex;
   margin-bottom: 29px;
   height: 62px;
   border-radius: 10px 20px 20px 10px;
   background-color: @white;
+}
+
+.feedback__form:hover {
+  background-color: @light-violet;
 }
 
 .feedback__input {
@@ -54,6 +66,16 @@
 }
 
 
+.feedback__input:hover {
+  background-color: @light-violet;
+}
+
+.feedback__input:focus {
+  color: @white;
+  background-color: @dark-blue;
+  border-color: @white;
+}
+
 .feedback__input::placeholder {
   color: @placeholder;
 }
@@ -61,6 +83,11 @@
 .feedback__input:focus::placeholder {
   color: @white;
 }
+
+.feedback__input:hover:not(:focus)::placeholder {
+  color: @placeholder-hover;
+}
+
 
 .feedback__button {
   position: relative;

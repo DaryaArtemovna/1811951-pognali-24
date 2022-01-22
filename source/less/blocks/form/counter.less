@@ -29,6 +29,10 @@
   height: 43px;
 }
 
+.counter__field:hover .counter__input {
+  border-color: @step-hover-violet;
+}
+
 .counter__input {
   font-family: @font-main;
   font-size: 15px;
@@ -43,6 +47,10 @@
   border: 1px solid @outline;
   border-radius: 4px;
   appearance: textfield;
+}
+
+.counter__input:active {
+  border-color: @deep-dark-blue;
 }
 
 .counter__button {
@@ -94,6 +102,16 @@
   width: 2px;
   height: 14px;
   background-color: @grey;
+}
+
+.counter__button:hover::before,
+.counter__button:hover::after {
+  background-color: @grey-earth;
+}
+
+.counter__button:active::before,
+.counter__button:active::after {
+  background-color: @grey-blank;
 }
 
 @media only screen and (min-width: @tablet-width) {

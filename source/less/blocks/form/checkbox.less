@@ -37,6 +37,19 @@
   background: url("../img/icon-check.svg") no-repeat center / cover;
 }
 
+.checkbox__label:hover::before {
+  border-color: @step-hover-violet;
+}
+
+.checkbox__label:active::before {
+  border-color: @grey-sky;
+  background-color: @grey-sky;
+}
+
+.checkbox__label:active::after {
+  opacity: 0.3;
+}
+
 @media only screen and (min-width: @tablet-width) {
   .checkbox {
     height: 36px;

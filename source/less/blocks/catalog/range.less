@@ -40,6 +40,11 @@
   border: 1px solid @outline;
 }
 
+.range__input:hover {
+  border-color: @step-hover-violet;
+  z-index: 1;
+}
+
 .range__input:first-child {
   border-radius: 4px 0 0 4px;
 }
@@ -90,6 +95,12 @@
 
 .range__toggle--max {
   right: 0;
+}
+
+.range__toggle:hover,
+.range__toggle:active {
+  width: 19px;
+  height: 19px;
 }
 
 @media only screen and (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {

@@ -1,6 +1,5 @@
 .about {
   background-color: @light-violet;
-  color: @white;
 }
 
 .about__wrapper {
@@ -34,9 +33,8 @@
 }
 
 .about__text {
-  font-weight: 300;
-  font-size: 16px;
   line-height: 22px;
+  color: @white;
 }
 
 .about__text p {
@@ -61,7 +59,7 @@
     border-radius: 0 0 60px 60px;
   }
 
-  .about__wrapper::before {
+  .about__wrapper::after {
     width: 768px;
     background:
       image-set(url("../img/background-about_tablet@2x.png") 2x, url("../img/background-about_tablet.png") 1x) no-repeat right 8px top 145px,
@@ -93,21 +91,7 @@
 
   .about__button {
     display: block;
-    position: relative;
     max-width: 276px;
-    height: 80px;
-    padding: 28px 34px;
-  }
-
-  .about__button::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 21px;
-    transform: translateY(-50%);
-    width: 13px;
-    height: 13px;
-    background: url("../img/icon-arrow.svg") no-repeat center;
   }
 }
 
@@ -116,7 +100,7 @@
     padding: 127px 0 165px;
   }
 
-  .about__wrapper::before {
+  .about__wrapper::after {
     width: 1440px;
     background:
       image-set(url("../img/background-about_desktop@2x.png") 2x, url("../img/background-about_desktop.png") 1x) no-repeat right 60px bottom,

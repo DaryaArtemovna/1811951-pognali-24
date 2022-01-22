@@ -1,5 +1,5 @@
 .finder {
-  background-color: @intense-dark-violet;
+  background-color: @light-violet;
   position: relative;
 }
 
@@ -70,8 +70,13 @@
   color: #19214499;
 }
 
-.finder__link--active {
-  color: @dark-blue;
+.finder__link--active,
+.finder__link:active {
+  opacity: 1;
+}
+
+.finder__link:hover {
+  opacity: 0.6;
 }
 
 .finder__button {
@@ -96,6 +101,14 @@
 .finder__button--active {
   background-image: url("../img/finder-close.svg");
   background-size: 16px 16px;
+}
+
+.finder__button:hover {
+  opacity: 0.6;
+}
+
+.finder__button:active {
+  opacity: 0.3;
 }
 
 .finder__filter {
@@ -140,6 +153,18 @@
   border-radius: 20px;
   border: none;
   background: url("../img/finder-close.svg") @intense-dark-violet no-repeat 84px 15px / 14px;
+}
+
+.finder__close:hover {
+  background-color: @filter-button-hover;
+}
+
+.finder__close:active {
+  color: @blue-purify;
+}
+
+.finder__close:active::after {
+  background-color: @blue-purify;
 }
 
 @media only screen and (min-width: @tablet-width) {

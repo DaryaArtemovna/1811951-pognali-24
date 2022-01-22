@@ -32,6 +32,16 @@
   transform: translateY(-50%) rotate(90deg);
 }
 
+.pages__button:hover::after,
+.pages__button:hover::before {
+  opacity: 0.6;
+}
+
+.pages__button:active::after,
+.pages__button:active::before {
+  opacity: 0.3;
+}
+
 @media only screen and (min-width: @tablet-width) {
   .pages__button {
     font-size: 20px;
