@@ -45,7 +45,7 @@
   display: none;
 }
 
-.filter__button::before {
+.filter__button::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -56,7 +56,7 @@
   background: url("../img/filter-arrow.svg") no-repeat center;
 }
 
-.filter__button--active::before {
+.filter__button--active::after {
   transform: translateY(-50%) rotate(180deg);
 }
 
@@ -109,7 +109,7 @@
   padding-bottom: 14px;
 }
 
-.filter__item input:checked .filter__checkbox::before {
+.filter__item input:checked ~ .filter__checkbox::before {
   background-image: url("../img/filter-check.svg");
   background-repeat: no-repeat;
   background-position: 50% 25%;
@@ -174,7 +174,9 @@
   .filter__title {
     font-size: 30px;
     line-height: 30px;
-    margin: 0 0 69px;
+    letter-spacing: 0;
+    margin: 0 0 74px;
+    width: 100%;
   }
 
   .filter__type {
@@ -194,7 +196,7 @@
     display: inline;
   }
 
-  .filter__button::before {
+  .filter__button::after {
     content: none;
   }
 
@@ -232,7 +234,7 @@
   }
 
   .filter__type:not(:last-child) {
-    margin-bottom: 17px;
+    margin-bottom: 24px;
   }
 
   .filter__moving {
@@ -268,7 +270,7 @@
   .filter {
     order: 1;
     width: 285px;
-    padding: 44px 46px 44px 52px;
+    padding: 44px 46px 44px 48px;
   }
 
   .filter__type:last-of-type {
@@ -291,11 +293,11 @@
   }
 
   .filter__list {
-    padding: 7px 0 18px;
+    padding: 15px 0 19px;
   }
 
   .filter__item:not(:last-child) {
-    margin-bottom: 7px;
+    margin-bottom: 13px;
   }
 
   .filter__checkbox {

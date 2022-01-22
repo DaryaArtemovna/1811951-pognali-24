@@ -4,14 +4,14 @@
 
 .profile__wrapper {
   position: relative;
-  padding: 51px 0 40px 0;
+  padding: 37px 0 40px;
   border-radius: 0 0 30px 30px;
   background-color: @profile;
 }
 
 .profile__content {
   position: relative;
-  padding: 14px 0 0 0;
+  padding: 14px 0 0 24px;
 }
 
 .profile__content::before {
@@ -30,8 +30,8 @@
 }
 
 .profile__list {
+  counter-reset: profile;
   margin-bottom: 45px;
-  counter-reset: profile-counter;
 }
 
 .profile__item {
@@ -39,51 +39,20 @@
   padding: 9px 34px 0 0;
 }
 
-.profile__item p {
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 16px;
-  color: @greyish-brown;
-}
-
-.profile__item p:first-child {
-  margin-bottom: 6px;
-}
-
-.profile__item:not(:last-child) {
-  margin-bottom: 19px;
-}
-
-.profile__button {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 16px;
-  color: @business-blue;
-}
-
-.profile__button:hover {
-  opacity: 0.7;
-}
-
-.profile__button:active {
-  opacity: 0.3;
-}
-
 .profile__item::before {
+  counter-increment: profile;
+  content: counter(profile);
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  counter-increment: profile-counter;
-  content: counter(profile-counter);
-  top: 0;
-  right: 0;
+  line-height: 16px;
+  font-weight: 400;
+  color: @white;
   width: 34px;
   height: 34px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
-  color: @white;
   border-radius: 50%;
 }
 
@@ -97,6 +66,40 @@
 
 .profile__item:nth-child(3)::before {
   background-color: @accent-yellow;
+}
+
+.profile__item:not(:last-child) {
+  margin-bottom: 19px;
+}
+
+.profile__text {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.profile__text p {
+  margin: 0;
+  font-weight: 300;
+  color: @greyish-brown;
+}
+
+.profile__text p:first-child {
+  margin-bottom: 6px;
+}
+
+.profile__button {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  color: @business-blue;
+}
+
+.profile__button:hover {
+  opacity: 0.7;
+}
+
+.profile__button:active {
+  opacity: 0.3;
 }
 
 @media only screen and (min-width: @tablet-width) {
@@ -178,14 +181,15 @@
     display: flex;
     justify-content: space-between;
     padding: 19px 0;
+    font-size: 28px;
   }
 
-  .profile__item p {
+  .profile__text p {
     line-height: 28px;
   }
 
-  .profile__item p:first-child {
-    margin-bottom: 0;
+  .profile__text p:first-child {
+    margin: 0;
   }
 
   .profile__button {
@@ -211,7 +215,7 @@
 
 @media only screen and (min-width: @desktop-width) {
   .profile__wrapper {
-    padding: 102px 0 163px;
+    padding: 105px 0 163px;
   }
 
   .profile__content {

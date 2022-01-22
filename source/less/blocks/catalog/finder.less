@@ -23,6 +23,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px 0;
+  flex-wrap: wrap;
 }
 
 .finder__title {
@@ -68,6 +69,7 @@
   font-weight: 700;
   text-transform: uppercase;
   color: #19214499;
+  opacity: 0.3;
 }
 
 .finder__link--active,
@@ -145,6 +147,7 @@
 }
 
 .finder__close {
+  position: relative;
   text-transform: uppercase;
   font-family: @font-main;
   padding: 12px 20px 12px 47px;
@@ -152,7 +155,19 @@
   margin: 0 auto;
   border-radius: 20px;
   border: none;
-  background: url("../img/finder-close.svg") @intense-dark-violet no-repeat 84px 15px / 14px;
+  background-color: @intense-dark-violet;
+}
+
+.finder__close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 84px;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  mask: url("../img/finder-close.svg") no-repeat center / cover;
+  background-color: @twilight-blue;
 }
 
 .finder__close:hover {
@@ -205,9 +220,15 @@
     width: 200px;
     height: auto;
     margin: 0 0 0 auto;
-    padding-right: 56px;
+    padding-right: 44px;
     background-position: center right;
-    background-size: 32px 20px;
+    background-size: 32px 32px;
+  }
+
+  .finder__close::after {
+    left: 39%;
+    width: 24px;
+    height: 22px;
   }
 
   .finder__button span:first-child {
@@ -231,6 +252,7 @@
 
   .finder__item:not(:last-child) {
     margin-right: 28px;
+    margin-bottom: 0;
   }
 
   .finder__link {
@@ -361,7 +383,7 @@
     display: block;
     width: 200px;
     max-height: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 22px;
     overflow: auto;
   }
 
@@ -372,5 +394,9 @@
   .finder__close {
     width: 100%;
     background-position: 594px 38px;
+  }
+
+  .finder__close::after {
+    left: 44.8%;
   }
 }

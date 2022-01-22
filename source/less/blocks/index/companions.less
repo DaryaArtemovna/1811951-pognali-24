@@ -9,12 +9,12 @@
 
 .companions__wrapper {
   position: relative;
-  padding: 66px 0 28px;
+  padding: 66px 0 31px;
   border-radius: 0 0 30px 30px;
   background-color: @dark-blue;
 }
 
-.companions__wrapper::before {
+.companions__wrapper::after {
   content: "";
   position: absolute;
   width: 320px;
@@ -55,7 +55,7 @@
 }
 
 .companions__showcase {
-  margin-bottom: 17px;
+  margin-bottom: 18px;
 }
 
 .companions__showcase .companion:not(:last-child) {
@@ -63,8 +63,10 @@
 }
 
 .companions__more {
+  font-size: 18px;
+  line-height: 18px;
   position: relative;
-  padding: 24px 23px;
+  padding: 22px 23px;
   border-radius: 10px;
 }
 
@@ -85,7 +87,7 @@
     border-radius: 0 0 60px 60px;
   }
 
-  .companions__wrapper::before {
+  .companions__wrapper::after {
     width: 768px;
     background:
       image-set(url("../img/background-smolov@2x.png") 2x, url("../img/background-smolov.png") 1x) no-repeat top 426px left 40px / 143px 143px,
@@ -130,10 +132,16 @@
   }
 
   .companions__more {
-    padding: 28px 34px;
     border-radius: 20px;
     max-width: 618px;
     margin: 0 auto;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 28px 31px;
+  }
+
+  .companions__more::before {
+    right: 36px;
   }
 }
 
@@ -142,7 +150,7 @@
     padding: 130px 0 48px;
   }
 
-  .companions__wrapper::before {
+  .companions__wrapper::after {
     width: 1440px;
     background:
       image-set(url("../img/background-smolov@2x.png") 2x, url("../img/background-smolov.png") 1x) no-repeat top 130px left 548px / 143px 143px,
@@ -152,7 +160,7 @@
 
   .companions__content {
     display: grid;
-    grid-template-columns: 430px 640px;
+    grid-template-columns: 440px 630px;
     grid-template-rows: minmax(320px, max-content) 80px auto;
     justify-content: space-between;
     align-items: flex-start;
@@ -166,18 +174,23 @@
   .companions__about {
     grid-row: 1 / 2;
     padding: 0;
-    margin-bottom: 85px;
+    margin-bottom: 86px;
   }
 
   .companions__more {
     grid-row: 2 / 3;
     max-width: 280px;
     margin: 0;
+    padding: 28px 33px;
   }
 
   .companions__showcase {
     grid-row: 1 / 4;
     margin: 0;
     padding: 5px 0 0;
+  }
+
+  .companions__text {
+    line-height: 33px;
   }
 }

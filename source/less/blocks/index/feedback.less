@@ -18,7 +18,7 @@
   line-height: 22px;
   font-weight: 400;
   text-align: center;
-  padding: 0 37px;
+  padding: 0 36px 0 32px;
   margin: 0 0 29px;
 }
 
@@ -200,12 +200,19 @@
   }
 
   .feedback__text {
+    font-size: 28px;
     line-height: 30px;
     margin-bottom: 42px;
+    letter-spacing: 0.01em;
+    padding-left: 8px;
   }
 
   .feedback__text p {
     display: inline;
+  }
+
+  .feedback__text p:first-child {
+    margin-right: 10px;
   }
 
   .feedback .interaction {
@@ -238,7 +245,7 @@
   }
 
   .feedback__title {
-    margin-bottom: 60px;
+    margin-bottom: 61px;
   }
 
   .feedback__about {
@@ -246,9 +253,14 @@
     margin-bottom: 59px;
   }
 
+  .feedback__input {
+    border-radius: 25px 0 0 25px;
+  }
+
   .feedback__form {
     max-width: 89%;
     margin-bottom: 70px;
+    height: 82px;
   }
 
   .feedback__button {
@@ -257,12 +269,17 @@
     padding-right: 50px;
   }
 
+  .feedback__button::before {
+    right: 34px;
+  }
+
   .feedback__button span {
     display: block;
   }
 
   .feedback__text {
     margin-bottom: 45px;
+    padding-left: 0;
   }
 
   .feedback .interaction {

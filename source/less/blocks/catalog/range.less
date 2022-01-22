@@ -13,6 +13,7 @@
   width: 16px;
   height: 1px;
   background-color: @outline;
+  z-index: 2;
 }
 
 .range__inputs::before {
@@ -24,6 +25,7 @@
   width: 16px;
   height: 11px;
   background-color: @white;
+  z-index: 2;
 }
 
 .range__input {
@@ -38,6 +40,7 @@
   padding: 10px 9px 9px;
   border-radius: 4px;
   border: 1px solid @outline;
+  appearance: textfield;
 }
 
 .range__input:hover {
@@ -122,7 +125,7 @@
   }
 
   .range__level {
-    width: 281px;
+    max-width: 281px;
     margin-right: 61px;
   }
 

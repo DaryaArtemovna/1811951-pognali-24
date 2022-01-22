@@ -9,7 +9,7 @@
   border-radius: 0 0 30px 30px;
 }
 
-.about__wrapper::before {
+.about__wrapper::after {
   content: "";
   position: absolute;
   top: 0;
@@ -35,6 +35,7 @@
 .about__text {
   line-height: 22px;
   color: @white;
+  font-size: 16px;
 }
 
 .about__text p {
@@ -78,6 +79,7 @@
   .about__text {
     line-height: 33px;
     margin-bottom: 53px;
+    font-size: 28px;
   }
 
   .about__text p:first-child {
@@ -92,6 +94,19 @@
   .about__button {
     display: block;
     max-width: 276px;
+    position: relative;
+  }
+
+  .about__button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 21px;
+    transform: translateY(-50%);
+    width: 13px;
+    height: 13px;
+    mask: url("../img/icon-arrow.svg") no-repeat center;
+    background-color: @twilight-blue;
   }
 }
 

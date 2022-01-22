@@ -8,7 +8,8 @@
   padding-bottom: 10px;
 }
 
-.step:not(:last-child) {
+.step:first-of-type,
+.step:nth-of-type(2) {
   margin-bottom: 10px;
 }
 
@@ -37,6 +38,7 @@
   line-height: 22px;
   font-weight: 400;
   margin: 0;
+  color: @greyish-brown;
 }
 
 .step__button {
@@ -52,6 +54,7 @@
   padding: 14px 5px;
   border-radius: 20px;
   border: none;
+  background-color: @accent-yellow;
 }
 
 .step__button:hover:not(.step__button--back) {
@@ -81,8 +84,12 @@
     border-radius: 30px;
   }
 
-  .step:not(:last-child) {
+  .step:first-of-type {
     margin-bottom: 37px;
+  }
+
+  .step:nth-of-type(2) {
+    margin-bottom: 53px;
   }
 
   .step--short {
@@ -90,7 +97,7 @@
   }
 
   .step__header {
-    margin-bottom: 37px;
+    margin-bottom: 36px;
   }
 
   .step__title {
@@ -102,6 +109,7 @@
   .step__description {
     font-size: 20px;
     line-height: 24px;
+    max-width: 500px;
   }
 
   .step__button {
@@ -165,6 +173,10 @@
     margin-bottom: 55px;
   }
 
+  .step__description {
+    max-width: none;
+  }
+
   .step__title {
     margin-bottom: 34px;
   }
@@ -219,5 +231,10 @@
     letter-spacing: 2px;
     margin: 0;
     opacity: 0.6;
+  }
+
+  .step__button::before {
+    top: 48%;
+    right: 173px;
   }
 }

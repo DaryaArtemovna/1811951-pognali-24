@@ -35,6 +35,7 @@
   display: block;
   width: inherit;
   height: inherit;
+  transition: all 0.3s;
 }
 
 .traveler__reference {
@@ -133,9 +134,8 @@
   left: 0;
   transform: translateY(-50%);
   height: 1px;
-  width: 100%;
+  width: 110%;
   background-color: @light-violet;
-  z-index: -1;
 }
 
 .traveler__description span {
@@ -154,7 +154,7 @@
   padding-left: 3px;
 }
 
-.traveler__moving .traveler__description {
+.traveler__transport .traveler__description {
   margin: 0 0 17px 7px;
 }
 
@@ -221,7 +221,7 @@
 @media only screen and (min-width: @tablet-width) {
   .traveler {
     grid-template-rows: 55px 92px 51px 1fr;
-    grid-template-columns: 221px 150px 105px 1fr;
+    grid-template-columns: 230px 150px 105px 1fr;
     grid-template-areas: "photo name name status""photo hashtags hashtags status""photo button like status""flags flags flags flags";
     padding: 25px 25px 16px 25px;
     width: 688px;
@@ -234,7 +234,7 @@
   .traveler__photo {
     width: 190px;
     height: 190px;
-    margin: 10px 0 0 2px;
+    margin: 10px 0 0 10px;
     border-radius: 20px;
   }
 
@@ -251,8 +251,8 @@
   }
 
   .traveler__name::before {
-    right: 33px;
-    top: 20px;
+    right: -30px;
+    top: 13px;
     width: 8px;
     height: 8px;
   }
@@ -286,7 +286,7 @@
     padding-top: 12px;
   }
 
-  .traveler__moving .traveler__description,
+  .traveler__transport .traveler__description,
   .traveler__level .traveler__description {
     display: none;
   }
@@ -385,7 +385,7 @@
   }
 }
 
-@media only screen and (min-width: @desktop-width) {
+@media only screen and (min-width: 1439px) {
   .traveler {
     grid-template-rows: 94px 86px 1fr;
     grid-template-columns: 341px 150px 110px 1fr;
@@ -393,7 +393,6 @@
     width: 950px;
     height: 285px;
     padding: 0 43px 0 0;
-    overflow: hidden;
   }
 
   .traveler:not(:last-child) {
@@ -403,7 +402,7 @@
   .traveler__photo {
     width: 285px;
     height: 285px;
-    border-radius: 0;
+    border-radius: 20px 0 0 20px;
     margin: 0;
   }
 
@@ -466,7 +465,7 @@
   }
 
   .traveler__like {
-    margin-top: 7px;
+    padding-top: 7px;
   }
 
   .traveler__moving {

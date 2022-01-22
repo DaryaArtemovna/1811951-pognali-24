@@ -25,6 +25,7 @@
   width: 12px;
   height: 12px;
   background: url("../img/icon-like.svg") no-repeat center center;
+  opacity: 0.3;
 }
 
 .like__button:hover {
@@ -51,8 +52,9 @@
   opacity: 0.5;
 }
 
-.like__button--active::before {
+.like__button--active::after {
   background: url("../img/icon-like--active.svg") no-repeat center center;
+  opacity: 1;
 }
 
 .like__counter {

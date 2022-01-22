@@ -1,9 +1,9 @@
 .location__wrapper {
-  background-color: @accent-yellow;
   position: relative;
   padding: 32px 0 37px;
   border-radius: 0 0 30px 30px;
   z-index: 3;
+  background-color: @accent-yellow;
 }
 
 .location__address {
@@ -31,6 +31,9 @@
   position: relative;
   padding: 19px 19px;
   border: 3px solid @dark-blue;
+  border-radius: 10px;
+  font-size: 18px;
+  line-height: 18px;
 }
 
 .location__button::before {
@@ -41,7 +44,8 @@
   transform: translateY(-50%);
   width: 13px;
   height: 13px;
-  background: url("../img/icon-arrow.svg") no-repeat center;
+  mask: url("../img/icon-arrow.svg") no-repeat center;
+  background-color: @dark-blue;
 }
 
 .location__button:hover {
@@ -118,7 +122,14 @@
   }
 
   .location__button {
+    font-size: 24px;
+    line-height: 24px;
     padding: 22px 34px 28px;
+    border-radius: 20px;
+  }
+
+  .location__button::before {
+    right: 32px;
   }
 
   .location__map {
