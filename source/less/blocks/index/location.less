@@ -1,21 +1,18 @@
 .location__wrapper {
   background-color: @accent-yellow;
-  color: @dark-blue;
+  position: relative;
   padding: 32px 0 37px;
   border-radius: 0 0 30px 30px;
   z-index: 3;
-  position: relative;
 }
 
 .location__address {
   position: relative;
-  color: @twilight-blue;
-  font-weight: 700;
   line-height: 22px;
-  font-size: 16px;
+  font-weight: 700;
+  color: @twilight-blue;
   text-transform: uppercase;
-  padding-left: 61px;
-  max-width: 210px;
+  padding: 0 50px 0 61px;
   margin-bottom: 32px;
 }
 
@@ -47,8 +44,26 @@
   background: url("../img/icon-arrow.svg") no-repeat center;
 }
 
+.location__button:hover {
+  color: @white;
+  background-color: @dark-blue;
+}
+
+.location__button:hover::before {
+  background-color: @white;
+}
+
+.location__button:active {
+  color: @white-darker;
+}
+
+.location__button:active::before {
+  background-color: @white-darker;
+}
+
 .location__map {
   position: relative;
+  width: 100%;
   height: 314px;
   margin-top: -53px;
 }

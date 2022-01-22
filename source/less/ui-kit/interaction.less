@@ -8,6 +8,11 @@
   align-items: center;
 }
 
+.interaction__link:active::after {
+  opacity: 0.3;
+}
+
+
 .interaction__link span {
   display: none;
   line-height: 18px;
@@ -65,6 +70,14 @@
 }
 
 @media only screen and (min-width: @desktop-width) {
+  .interaction__link--phone:hover::before {
+    background-color: @orange-intense;
+  }
+
+  .interaction__link--email:hover::before {
+    background-color: @orange;
+  }
+
   .interaction__link::before {
     width: 50px;
     height: 50px;

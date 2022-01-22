@@ -7,6 +7,15 @@
   width: 270px;
   background-color: @white;
   border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.traveler:hover {
+  box-shadow: 0 4px 9px @black-zoom;
+}
+
+.traveler:hover .traveler__image {
+  transform: scale(1.1);
 }
 
 .traveler:not(:last-child) {
@@ -42,6 +51,14 @@
   color: @twilight-blue;
   max-width: 85px;
   margin: 0;
+}
+
+.traveler__name:hover {
+  opacity: 0.6;
+}
+
+.traveler__name:active {
+  opacity: 0.3;
 }
 
 .traveler__name::before {

@@ -27,8 +27,28 @@
   background: url("../img/icon-like.svg") no-repeat center center;
 }
 
+.like__button:hover {
+  background-color: @intense-violet;
+}
+
+.like__button:hover:not(.like__button--active)::after {
+  opacity: 0.5;
+}
+
+.like__button:active::after {
+  opacity: 0.1;
+}
+
 .like__button--active {
   background-color: @like-pink;
+}
+
+.like__button--active:hover {
+  background-color: @hover-like-pink;
+}
+
+.like__button--active:active::before {
+  opacity: 0.5;
 }
 
 .like__button--active::before {

@@ -3,12 +3,12 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Погнали</title>
   <link rel="icon" href="misc/favicon.svg" type="image/x-icon">
   <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -19,20 +19,20 @@
         <nav class="nav">
           <ul class="nav__list list-default">
             <li class="nav__item">
-              <a class="nav__link" href="index.html">О сервисе</a>
+              <a class="nav__link" href="index.html" data-hover="О сервисе">О сервисе</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="form.html">Направления</a>
+              <a class="nav__link" href="form.html" data-hover="Направления">Направления</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="catalog.html">Попутчики</a>
+              <a class="nav__link" href="catalog.html" data-hover="Попутчики">Попутчики</a>
             </li>
           </ul>
           <a class="login button" href="#">Авторизация</a>
           <ul class="interaction list-default">
             <li class="interaction__item">
               <a class="interaction__link interaction__link--phone" href="tel:88005558628">
-                <span>800 555-86-28</span>
+                <span>8 800 555-86-28</span>
               </a>
             </li>
             <li class="interaction__item">
@@ -42,12 +42,9 @@
             </li>
           </ul>
           <div class="socials">
-            <a class="socials__link socials__link--facebook" href="https://www.facebook.com/htmlacademy"
-              aria-label="Фейсбук"></a>
-            <a class="socials__link socials__link--vk" href="https://twitter.com/htmlacademy_ru"
-              aria-label="Вконтакте"></a>
-            <a class="socials__link socials__link--instagram" href="https://www.instagram.com/htmlacademy/"
-              aria-label="Инстаграм"></a>
+            <a class="socials__link socials__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Фейсбук"></a>
+            <a class="socials__link socials__link--vk" href="https://twitter.com/htmlacademy_ru" aria-label="Вконтакте"></a>
+            <a class="socials__link socials__link--instagram" href="https://www.instagram.com/htmlacademy/" aria-label="Инстаграм"></a>
           </div>
         </nav>
         <button class="header__button" type="button" aria-label="Открыть, закрыть меню">
@@ -85,32 +82,37 @@
             </div>
             <div class="account__photo">
               <picture>
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/account-photo_desktop.webp 1x, img/account-photo_desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/account-photo_tablet.webp 1x, img/account-photo_tablet@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/account-photo_desktop.webp 1x, img/account-photo_desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/account-photo_tablet.webp 1x, img/account-photo_tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/account-photo.webp 1x, img/account-photo@2x.webp 2x">
-                <source media="(min-width: 1440px)" srcset="img/account-photo_desktop.jpg 1x, img/account-photo_desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/account-photo_tablet.jpg 1x, img/account-photo_tablet@2x.jpg 2x">
-                <img src="img/account-photo.jpg" srcset="img/account-photo@2x.jpg 2x" width="100" height="100" alt="Петя Демин">
+                <source media="(min-width: 1440px)"
+                  srcset="img/account-photo_desktop.jpg 1x, img/account-photo_desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/account-photo_tablet.jpg 1x, img/account-photo_tablet@2x.jpg 2x">
+                <img src="img/account-photo.jpg" srcset="img/account-photo@2x.jpg 2x" width="100" height="100"
+                  alt="Петя Демин">
               </picture>
             </div>
             <div class="account__transport account__config">
               <p>транспорт</p>
               <ul class="account__moving moving list-default" aria-label="Варианты путешествий">
-                <li class="moving__item">
+                <li class="moving__item" data-tooltip="Авиаперелет">
                   <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked>
                   <label class="moving__type moving__type--plane" for="plane"
                     aria-label="Путешествует на самолёте"></label>
                 </li>
-                <li class="moving__item">
+                <li class="moving__item"  data-tooltip="Автотранспорт">
                   <input class="visually-hidden" type="checkbox" name="car" id="car" checked>
                   <label class="moving__type moving__type--car" for="car" aria-label="Путешествует на машине"></label>
                 </li>
-                <li class="moving__item">
+                <li class="moving__item" data-tooltip="Велосипед">
                   <input class="visually-hidden" type="checkbox" name="bicycle" id="bicycle">
                   <label class="moving__type moving__type--bicycle" for="bicycle"
                     aria-label="Путешествует на велисипеде"></label>
                 </li>
-                <li class="moving__item">
+                <li class="moving__item" data-tooltip="Пешком">
                   <input class="visually-hidden" type="checkbox" name="walk" id="walk" checked>
                   <label class="moving__type moving__type--walk" for="walk" aria-label="Путешествует пешком"></label>
                 </li>
@@ -136,26 +138,28 @@
     <section class="plans">
       <div class="plans__wrapper">
         <div class="container">
-          <h2 class="plans__title">Мои планы:</h2>
-          <div class="route">
-            <ol class="route__list list-default">
-              <li class="route__item">
-                <p class="route__title">Франция, Италия</p>
-                <div class="route__data">
-                  <p class="route__travelers">3 попутчика</p>
-                  <p class="route__date">26 мар — 29 мар</p>
-                  <a class="route__edit" href="#">Изменить</a>
-                </div>
-              </li>
-              <li class="route__item">
-                <p class="route__title">Таиланд, Индонезия</p>
-                <div class="route__data">
-                  <p class="route__travelers">1 попутчик</p>
-                  <p class="route__date">1 июл — 15 июл</p>
-                  <a class="route__edit" href="#">Изменить</a>
-                </div>
-              </li>
-            </ol>
+          <div class="plans__content">
+            <h2 class="plans__title">Мои планы:</h2>
+            <div class="route">
+              <ul class="route__list list-default">
+                <li class="route__item">
+                  <p class="route__title">Франция, Италия</p>
+                  <div class="route__data">
+                    <p class="route__travelers">3 попутчика</p>
+                    <p class="route__date">26 мар — 29 мар</p>
+                    <a class="route__edit" href="#">Изменить</a>
+                  </div>
+                </li>
+                <li class="route__item">
+                  <p class="route__title">Таиланд, Индонезия</p>
+                  <div class="route__data">
+                    <p class="route__travelers">1 попутчик</p>
+                    <p class="route__date">1 июл — 15 июл</p>
+                    <a class="route__edit" href="#">Изменить</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -166,7 +170,7 @@
         <div class="container">
           <form class="add__form" action="https://echo.htmlacademy.ru" method="GET">
             <div class="add__title">
-              <h2 class="add__title">Добавить план:</h2>
+              <h2>Добавить план:</h2>
               <div class="add__dots">
                 <span class="add__dot add__dot--active"></span>
                 <span class="add__dot"></span>
@@ -181,8 +185,8 @@
                     <span>Шаг 1.</span> Даты пребывания
                   </h3>
                   <p class="step__description">
-                    Укажите предпочтительное количество попутчиков, которых вы
-                    хотели бы позвать в поездку и ее предполагаемую
+                    Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать в поездку, и ее
+                    предполагаемую
                     длительность.
                   </p>
                 </div>
@@ -204,7 +208,8 @@
                   <p class="counter__hint">чел.</p>
                   <div class="counter__field">
                     <button class="counter__button counter__button--less" type="button" aria-label="Уменьшить"></button>
-                    <input class="counter__input" type="number" id="travelers" name="people" value="2" min="0">
+                    <input class="counter__input" type="number" id="people" name="people" value="2" min="0"
+                      maxlength="2">
                     <button class="counter__button counter__button--more" type="button" aria-label="Увеличить"></button>
                   </div>
                 </div>
@@ -213,7 +218,7 @@
                   <p class="counter__hint">дн.</p>
                   <div class="counter__field">
                     <button class="counter__button counter__button--less" type="button" aria-label="Уменьшить"></button>
-                    <input class="counter__input" type="number" id="days" name="days" value="3" min="1">
+                    <input class="counter__input" type="number" id="days" name="days" value="3" min="1" maxlength="2">
                     <button class="counter__button counter__button--more" type="button" aria-label="Увеличить"></button>
                   </div>
                 </div>
@@ -347,13 +352,15 @@
                         <button class="dates__button" type="button" disabled>25</button>
                       </td>
                       <td class="dates__cell">
-                        <button class="dates__button dates__button--checked dates__button--arrival" type="button">26</button>
+                        <button class="dates__button dates__button--checked dates__button--arrival"
+                          type="button">26</button>
                       </td>
                       <td class="dates__cell">
                         <button class="dates__button dates__button--checked" type="button">27</button>
                       </td>
                       <td class="dates__cell">
-                        <button class="dates__button dates__button--checked dates__button--departure" type="button">28</button>
+                        <button class="dates__button dates__button--checked dates__button--departure"
+                          type="button">28</button>
                       </td>
                       <td class="dates__cell">
                         <button class="dates__button" type="button">29</button>
@@ -386,7 +393,7 @@
                 </table>
               </div>
               <footer class="step__footer">
-                <a class="button step__button" href="#step-2">
+                <a class="step__button" href="#step-2">
                   Следующий шаг
                 </a>
               </footer>
@@ -421,10 +428,13 @@
                     герцеговина</button>
                   <div class="land__flag flags" data-tooltip="Босния и Герцеговина">
                     <picture>
-                      <source type="image/webp" media="(min-width: 768px)" srcset="img/flags-bosnia_desktop.webp 1x, img/flags-bosnia_desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)"
+                        srcset="img/flags-bosnia_desktop.webp 1x, img/flags-bosnia_desktop@2x.webp 2x">
                       <source type="image/webp" srcset="img/flags-bosnia.webp 1x, img/flags-bosnia@2x.webp 2x">
-                      <source media="(min-width: 768px)" srcset="img/flags-bosnia_desktop.jpg 1x, img/flags-bosnia_desktop@2x.jpg 2x">
-                      <img class="flags__img" src="img/flags-bosnia.jpg" srcset="img/flags-bosnia@2x.jpg 2x" width="35" height="25" alt="Флаг Боснии и Герцеговины">
+                      <source media="(min-width: 768px)"
+                        srcset="img/flags-bosnia_desktop.jpg 1x, img/flags-bosnia_desktop@2x.jpg 2x">
+                      <img class="flags__img" src="img/flags-bosnia.jpg" srcset="img/flags-bosnia@2x.jpg 2x" width="35"
+                        height="25" alt="Флаг Боснии и Герцеговины">
                     </picture>
                   </div>
                   <button class="land__delete" type="button" aria-label="Удалить"></button>
@@ -433,10 +443,13 @@
                   <button class="land__button" type="button" aria-label="Выбрать страну">Чехия</button>
                   <div class="land__flag flags" data-tooltip="Босния и Герцеговина">
                     <picture>
-                      <source type="image/webp" media="(min-width: 768px)" srcset="img/flags-czech_desktop.webp 1x, img/flags-czech_desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)"
+                        srcset="img/flags-czech_desktop.webp 1x, img/flags-czech_desktop@2x.webp 2x">
                       <source type="image/webp" srcset="img/flags-czech.webp 1x, img/flags-czech@2x.webp 2x">
-                      <source media="(min-width: 768px)" srcset="img/flags-czech_desktop.jpg 1x, img/flags-czech_desktop@2x.jpg 2x">
-                      <img class="flags__img" src="img/flags-czech.jpg" srcset="img/flags-czech@2x.jpg 2x" width="35" height="25" alt="Флаг Чехии">
+                      <source media="(min-width: 768px)"
+                        srcset="img/flags-czech_desktop.jpg 1x, img/flags-czech_desktop@2x.jpg 2x">
+                      <img class="flags__img" src="img/flags-czech.jpg" srcset="img/flags-czech@2x.jpg 2x" width="35"
+                        height="25" alt="Флаг Чехии">
                     </picture>
                   </div>
                   <button class="land__delete" type="button" aria-label="Удалить"></button>
@@ -446,7 +459,7 @@
                     страну</button>
                   <button class="land__delete" type="button" aria-label="Удалить"></button>
                   <div class="land__select">
-                    <div class="letters letters--alrernative">
+                    <div class="letters letters--alternative">
                       <ul class="letters__list list-default">
                         <li class="letters__item">
                           <button class="letters__button letters__button--active" type="button">А</button>
@@ -573,8 +586,8 @@
                 </div>
               </div>
               <footer class="step__footer">
-                <a class="button step__button" href="#step-3">Следующий шаг</a>
-                <a class="button step__button step__button--back" href="#step-1">На шаг назад</a>
+                <a class="step__button" href="#step-3">Следующий шаг</a>
+                <a class="step__button step__button--back" href="#step-1">На шаг назад</a>
               </footer>
             </section>
 
@@ -607,14 +620,17 @@
                     <label class="fun__label" for="fun-1">Босния и Герцеговина</label>
                     <div class="fun__flag flags" data-tooltip="Босния и Герцеговина">
                       <picture>
-                        <source type="image/webp" media="(min-width: 768px)" srcset="img/flags-bosnia_desktop.webp 1x, img/flags-bosnia_desktop@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)"
+                          srcset="img/flags-bosnia_desktop.webp 1x, img/flags-bosnia_desktop@2x.webp 2x">
                         <source type="image/webp" srcset="img/flags-bosnia.webp 1x, img/flags-bosnia@2x.webp 2x">
-                        <source media="(min-width: 768px)" srcset="img/flags-bosnia_desktop.jpg 1x, img/flags-bosnia_desktop@2x.jpg 2x">
-                        <img class="flags__img" src="img/flags-bosnia.jpg" srcset="img/flags-bosnia@2x.jpg 2x" width="35" height="25" alt="Флаг Боснии и Герцеговины">
+                        <source media="(min-width: 768px)"
+                          srcset="img/flags-bosnia_desktop.jpg 1x, img/flags-bosnia_desktop@2x.jpg 2x">
+                        <img class="flags__img" src="img/flags-bosnia.jpg" srcset="img/flags-bosnia@2x.jpg 2x"
+                          width="35" height="25" alt="Флаг Боснии и Герцеговины">
                       </picture>
                     </div>
                   </div>
-                  <div class="fun__field">
+                  <div class="fun__field fun__field--warning">
                     <textarea class="fun__textarea" id="fun-1" placeholder="План действий" required></textarea>
                     <p class="fun__warning">Это поле должно быть заполнено</p>
                   </div>
@@ -624,10 +640,13 @@
                     <label class="fun__label" for="fun-2">Чехия</label>
                     <div class="fun__flag flags" data-tooltip="Босния и Герцеговина">
                       <picture>
-                        <source type="image/webp" media="(min-width: 768px)" srcset="img/flags-czech_desktop.webp 1x, img/flags-czech_desktop@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)"
+                          srcset="img/flags-czech_desktop.webp 1x, img/flags-czech_desktop@2x.webp 2x">
                         <source type="image/webp" srcset="img/flags-czech.webp 1x, img/flags-czech@2x.webp 2x">
-                        <source media="(min-width: 768px)" srcset="img/flags-czech_desktop.jpg 1x, img/flags-czech_desktop@2x.jpg 2x">
-                        <img class="flags__img" src="img/flags-bosnia.jpg" srcset="img/flags-czech@2x.jpg 2x" width="35" height="25" alt="Флаг Чехии">
+                        <source media="(min-width: 768px)"
+                          srcset="img/flags-czech_desktop.jpg 1x, img/flags-czech_desktop@2x.jpg 2x">
+                        <img class="flags__img" src="img/flags-bosnia.jpg" srcset="img/flags-czech@2x.jpg 2x" width="35"
+                          height="25" alt="Флаг Чехии">
                       </picture>
                     </div>
                   </div>
@@ -638,11 +657,11 @@
                   </div>
                 </div>
               </div>
-              <footer>
-                <button class="button step__button" type="submit">
+              <footer class="step__footer">
+                <button class="step__button" type="submit">
                   Отправить
                 </button>
-                <a class="button step__button step__button--back" href="#step-2">
+                <a class="step__button step__button--back" href="#step-2">
                   На шаг назад
                 </a>
               </footer>
@@ -668,7 +687,8 @@
         </div>
         <div class="developer">
           <p class="developer__text">Разработано</p>
-          <a class="developer__logo" href="https://htmlacademy.ru" aria-label="Логотип и ссылка на разработчика">
+          <a class="developer__logo" href="https://htmlacademy.ru/intensive/adaptive"
+            aria-label="Логотип и ссылка на разработчика">
             <img class="developer__img" src="#" width="27" height="33" alt="Логотип разработчика">
           </a>
         </div>

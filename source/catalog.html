@@ -3,12 +3,12 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Погнали за печенькой</title>
   <link rel="icon" href="misc/favicon.svg" type="image/x-icon">
   <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -19,19 +19,19 @@
         <nav class="nav">
           <ul class="nav__list list-default">
             <li class="nav__item">
-              <a class="nav__link" href="index.html">О сервисе</a>
+              <a class="nav__link" href="index.html" data-hover="О сервисе">О сервисе</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="form.html">Направления</a>
+              <a class="nav__link" href="form.html" data-hover="Направления">Направления</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="catalog.html">Попутчики</a>
+              <a class="nav__link" href="catalog.html" data-hover="Попутчики">Попутчики</a>
             </li>
           </ul>
           <ul class="interaction list-default">
             <li class="interaction__item">
               <a class="interaction__link interaction__link--phone" href="tel:88005558628">
-                <span>800 555-86-28</span>
+                <span>8 800 555-86-28</span>
               </a>
             </li>
             <li class="interaction__item">
@@ -104,7 +104,7 @@
               <div class="finder__letters letters">
                 <ul class="letters__list list-default">
                   <li class="letters__item">
-                    <button class="letters__button" type="button">А</button>
+                    <button class="letters__button letters__button--active" type="button">А</button>
                   </li>
                   <li class="letters__item">
                     <button class="letters__button" type="button">Б</button>
@@ -184,7 +184,7 @@
               <div class="finder__countries countries">
                 <div class="countries__wrapper countries__wrapper--active">
                   <p class="countries__letter">А</p>
-                  <ul class="countries__list countries__list--active list-default">
+                  <ul class="countries__list list-default">
                     <li class="countries__item">
                       <a href="#" class="countries__link">Австралия</a>
                     </li>
@@ -825,7 +825,7 @@
                 </div>
               </div>
             </div>
-            <button class="finder__close" type="button">Свернуть</button>
+            <button class="finder__close button" type="button">Свернуть</button>
           </div>
         </div>
       </div>
@@ -837,7 +837,7 @@
             <h2 class="filter__title">Подберите идеального попутчика</h2>
             <form class="filter__form" action="https://echo.htmlacademy.ru/" method="get">
               <fieldset class="filter__type">
-                <button class="filter__button" type="button">Хобби<span>:</span></button>
+                <button class="filter__button filter__button--active" type="button">Хобби<span>:</span></button>
                 <div class="filter__dropdown">
                   <ul class="filter__list list-default">
                     <li class="filter__item">
@@ -856,7 +856,7 @@
                 </div>
               </fieldset>
               <fieldset class="filter__type">
-                <button class="filter__button filter__button--active" type="button">Музыка:</button>
+                <button class="filter__button filter__button--active" type="button">Музыка<span>:</span></button>
                 <div class="filter__dropdown">
                   <ul class="filter__list list-default">
                     <li class="filter__item">
@@ -875,7 +875,7 @@
                 </div>
               </fieldset>
               <fieldset class="filter__type">
-                <button class="filter__button" type="button">Еда<span>:</span></button>
+                <button class="filter__button filter__button--active" type="button">Еда<span>:</span></button>
                 <div class="filter__dropdown">
                   <ul class="filter__list list-default">
                     <li class="filter__item">
@@ -895,25 +895,25 @@
               </fieldset>
 
               <fieldset class="filter__type">
-                <button class="filter__button filter__button--active" type="button">Транспорт<span>:</span></button>
+                <button class="filter__button" type="button">Транспорт<span>:</span></button>
                 <div class="filter__dropdown">
                   <ul class="filter__moving moving list-default" aria-label="Варианты путешествий">
-                    <li class="moving__item">
+                    <li class="moving__item" data-tooltip="Авиаперелет">
                       <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked="">
                       <label class="moving__type moving__type--plane" for="plane"
                         aria-label="Путешествует на самолёте"></label>
                     </li>
-                    <li class="moving__item">
+                    <li class="moving__item" data-tooltip="Автотранспорт">
                       <input class="visually-hidden" type="checkbox" name="car" id="car" checked="">
                       <label class="moving__type moving__type--car" for="car"
                         aria-label="Путешествует на машине"></label>
                     </li>
-                    <li class="moving__item">
+                    <li class="moving__item" data-tooltip="Велосипед">
                       <input class="visually-hidden" type="checkbox" name="bicycle" id="bicycle">
                       <label class="moving__type moving__type--bicycle" for="bicycle"
                         aria-label="Путешествует на велисипеде"></label>
                     </li>
-                    <li class="moving__item">
+                    <li class="moving__item" data-tooltip="Пешком">
                       <input class="visually-hidden" type="checkbox" name="walk" id="walk" checked="">
                       <label class="moving__type moving__type--walk" for="walk"
                         aria-label="Путешествует пешком"></label>
@@ -923,23 +923,19 @@
               </fieldset>
 
               <fieldset class="filter__type">
-                <button class="filter__button filter__button--active" type="button">Левел<span>:</span></button>
-                <div class="range">
+                <button class="filter__button" type="button">Левел<span>:</span></button>
+                <div class="filter__dropdown">
                   <div class="range">
                     <div class="range__inputs">
-                      <input class="range__input" type="number" name="min-level" value="30"
-                        aria-label="минимальный левел">
-                      <input class="range__input" type="number" name="max-level" value="100"
-                        aria-label="максимальный уровень">
+                      <input class="range__input" type="number" name="min-level" value="30" aria-label="минимальный левел">
+                      <input class="range__input" type="number" name="max-level" value="100" aria-label="максимальный уровень">
                     </div>
                     <div class="range__level">
                       <div class="range__line">
                         <div class="range__line range__line--blue"></div>
                       </div>
-                      <button class="range__toggle range__toggle--min" type="button"
-                        aria-label="Изменить минимальный уровень"></button>
-                      <button class="range__toggle range__toggle--max" type="button"
-                        aria-label="Изменить максимальный уровень"></button>
+                      <button class="range__toggle range__toggle--min" type="button" aria-label="Изменить минимальный уровень"></button>
+                      <button class="range__toggle range__toggle--max" type="button" aria-label="Изменить максимальный уровень"></button>
                     </div>
                   </div>
                 </div>
@@ -949,8 +945,9 @@
           </section>
 
           <section class="catalog">
+            <div class="catalog__travelers">
               <article class="traveler">
-                <div class="traveler__photo">
+                <a class="traveler__photo" href="#">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)" srcset="img/traveler-firsova_desktop.webp 1x, img/traveler-firsova_desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/traveler-firsova_tablet.webp 1x, img/traveler-firsova_tablet@2x.webp 2x">
@@ -959,7 +956,7 @@
                     <source media="(min-width: 768px)" srcset="img/traveler-firsova_tablet.jpg 1x, img/traveler-firsova_tablet@2x.jpg 2x">
                     <img class="traveler__image" src="img/traveler-firsova.jpg" srcset="img/traveler-firsova@2x.jpg 2x" width="70" height="70" alt="Фирсова">
                   </picture>
-                </div>
+                </a>
                 <a class="traveler__reference" href="#">
                   <h3 class="traveler__name">Таня Фирсова</h3>
                 </a>
@@ -1008,17 +1005,16 @@
                       <span>транспорт:</span>
                     </p>
                     <ul class="traveler__moving moving list-default" aria-label="Варианты путешествий">
-                      <li class="moving__item">
-                        <span class="moving__type moving__type--plane moving__type--active"
-                          aria-label="Путешествует на самолёте"></span>
+                      <li class="moving__item" data-tooltip="Авиаперелет">
+                        <span class="moving__type moving__type--plane moving__type--active" aria-label="Путешествует на самолёте"></span>
                       </li>
-                      <li class="moving__item">
+                      <li class="moving__item" data-tooltip="Автотранспорт">
                         <span class="moving__type moving__type--car" aria-label="Путешествует на машине"></span>
                       </li>
-                      <li class="moving__item">
+                      <li class="moving__item" data-tooltip="Велосипед">
                         <span class="moving__type moving__type--bicycle" aria-label="Путешествует на велисипеде"></span>
                       </li>
-                      <li class="moving__item">
+                      <li class="moving__item" data-tooltip="Пешком">
                         <span class="moving__type moving__type--walk" aria-label="Путешествует пешком"></span>
                       </li>
                     </ul>
@@ -1041,7 +1037,7 @@
                 <a class="traveler__link" href="#">Позвать!</a>
               </article>
               <article class="traveler">
-                <div class="traveler__photo">
+                <a class="traveler__photo" href="#">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)" srcset="img/traveler-demin_desktop.webp 1x, img/traveler-demin_desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/traveler-demin_tablet.webp 1x, img/traveler-demin_tablet@2x.webp 2x">
@@ -1050,7 +1046,7 @@
                     <source media="(min-width: 768px)" srcset="img/traveler-demin_tablet.jpg 1x, img/traveler-demin_tablet@2x.jpg 2x">
                     <img class="traveler__image" src="img/traveler-demin.jpg" srcset="img/traveler-demin@2x.jpg 2x" width="70" height="70" alt="Петя Демин">
                   </picture>
-                </div>
+                </a>
                 <a class="traveler__reference" href="#">
                   <h3 class="traveler__name">Петя Демин</h3>
                 </a>
@@ -1089,21 +1085,18 @@
                     <p class="traveler__description">
                       <span>транспорт:</span>
                     </p>
-                    <ul class="moving traveler__moving list-default" aria-label="Варианты путешествий">
-                      <li class="moving__item">
-                        <span class="moving__type moving__type--plane moving__type--active"
-                          aria-label="Путешествует на самолёте"></span>
+                    <ul class="traveler__moving moving list-default" aria-label="Варианты путешествий">
+                      <li class="moving__item" data-tooltip="Авиаперелет">
+                        <span class="moving__type moving__type--plane moving__type--active" aria-label="Путешествует на самолёте"></span>
                       </li>
-                      <li class="moving__item">
-                        <span class="moving__type moving__type--car moving__type--active"
-                          aria-label="Путешествует на машине"></span>
+                      <li class="moving__item" data-tooltip="Автотранспорт">
+                        <span class="moving__type moving__type--car moving__type--active" aria-label="Путешествует на машине"></span>
                       </li>
-                      <li class="moving__item">
+                      <li class="moving__item" data-tooltip="Велосипед">
                         <span class="moving__type moving__type--bicycle" aria-label="Путешествует на велисипеде"></span>
                       </li>
-                      <li class="moving__item">
-                        <span class="moving__type moving__type--walk moving__type--active"
-                          aria-label="Путешествует пешком"></span>
+                      <li class="moving__item" data-tooltip="Пешком">
+                        <span class="moving__type moving__type--walk moving__type--active" aria-label="Путешествует пешком"></span>
                       </li>
                     </ul>
                   </div>
@@ -1125,7 +1118,7 @@
                 <a class="traveler__link" href="#">Позвать!</a>
               </article>
               <article class="traveler">
-                <div class="traveler__photo">
+                <a class="traveler__photo" href="#">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)" srcset="img/traveler-smolov_desktop.webp 1x, img/traveler-smolov_desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/traveler-smolov_tablet.webp 1x, img/traveler-smolov_tablet@2x.webp 2x">
@@ -1134,7 +1127,7 @@
                     <source media="(min-width: 768px)" srcset="img/traveler-smolov_tablet.jpg 1x, img/traveler-smolov_tablet@2x.jpg 2x">
                     <img class="traveler__image" src="img/traveler-smolov.jpg" srcset="img/traveler-smolov@2x.jpg 2x" width="70" height="70" alt="Марк Смолов">
                   </picture>
-                </div>
+                </a>
                 <a class="traveler__reference" href="#">
                   <h3 class="traveler__name traveler__name--offline">Марк Смолов</h3>
                 </a>
@@ -1182,19 +1175,17 @@
                     <p class="traveler__description">
                       <span>транспорт:</span>
                     </p>
-                    <ul class="moving traveler__moving list-default" aria-label="Варианты путешествий">
-                      <li class="moving__item">
-                        <span class="moving__type moving__type--plane moving__type--active"
-                          aria-label="Путешествует на самолёте"></span>
+                    <ul class="traveler__moving moving list-default" aria-label="Варианты путешествий">
+                      <li class="moving__item" data-tooltip="Авиаперелет">
+                        <span class="moving__type moving__type--plane moving__type--active" aria-label="Путешествует на самолёте"></span>
                       </li>
-                      <li class="moving__item">
+                      <li class="moving__item" data-tooltip="Автотранспорт">
                         <span class="moving__type moving__type--car" aria-label="Путешествует на машине"></span>
                       </li>
-                      <li class="moving__item">
-                        <span class="moving__type moving__type--bicycle moving__type--active"
-                          aria-label="Путешествует на велисипеде"></span>
+                      <li class="moving__item" data-tooltip="Велосипед">
+                        <span class="moving__type moving__type--bicycle moving__type--active" aria-label="Путешествует на велисипеде"></span>
                       </li>
-                      <li class="moving__item">
+                      <li class="moving__item" data-tooltip="Пешком">
                         <span class="moving__type moving__type--walk" aria-label="Путешествует пешком"></span>
                       </li>
                     </ul>
@@ -1217,7 +1208,7 @@
                 <a class="traveler__link" href="#">Позвать!</a>
               </article>
               <article class="traveler">
-                <div class="traveler__photo">
+                <a class="traveler__photo" href="#">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)" srcset="img/traveler-rogovaya_desktop.webp 1x, img/traveler-rogovaya_desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/traveler-rogovaya_tablet.webp 1x, img/traveler-rogovaya_tablet@2x.webp 2x">
@@ -1226,7 +1217,7 @@
                     <source media="(min-width: 768px)" srcset="img/traveler-rogovaya_tablet.jpg 1x, img/traveler-rogovaya_tablet@2x.jpg 2x">
                     <img class="traveler__image" src="img/traveler-rogovaya.jpg" srcset="img/traveler-rogovaya@2x.jpg 2x" width="70" height="70" alt="Лариса Роговая">
                   </picture>
-                </div>
+                </a>
                 <a class="traveler__reference" href="#">
                   <h3 class="traveler__name traveler__name--online">Лариса Роговая</h3>
                 </a>
@@ -1234,7 +1225,7 @@
                   <button class="like__button like__button--active" type="button"></button>
                   <span class="like__counter">23</span>
                 </div>
-                <p class="traveler__hashtags">#образование #карьера#учеба #линкедин</p>
+                <p class="traveler__hashtags">#образование #карьера #учеба #линкедин</p>
                 <div class="traveler__countries">
                   <p class="traveler__description">
                     <span>хочет посетить:</span>
@@ -1261,23 +1252,21 @@
                   </ul>
                 </div>
                 <div class="traveler__status">
-                  <div class="traveler__moving">
+                  <div class="traveler__transport">
                     <p class="traveler__description">
                       <span>транспорт:</span>
                     </p>
-                    <ul class="moving traveler__moving list-default" aria-label="Варианты путешествий">
-                      <li class="moving__item">
-                        <span class="moving__type moving__type--plane moving__type--active"
-                          aria-label="Путешествует на самолёте"></span>
+                    <ul class="traveler__moving moving list-default" aria-label="Варианты путешествий">
+                      <li class="moving__item" data-tooltip="Авиаперелет">
+                        <span class="moving__type moving__type--plane moving__type--active" aria-label="Путешествует на самолёте"></span>
                       </li>
-                      <li class="moving__item">
-                        <span class="moving__type moving__type--car moving__type--active"
-                          aria-label="Путешествует на машине"></span>
+                      <li class="moving__item" data-tooltip="Автотранспорт">
+                        <span class="moving__type moving__type--car moving__type--active" aria-label="Путешествует на машине"></span>
                       </li>
-                      <li class="moving__item">
+                      <li class="moving__item" data-tooltip="Велосипед">
                         <span class="moving__type moving__type--bicycle" aria-label="Путешествует на велисипеде"></span>
                       </li>
-                      <li class="moving__item">
+                      <li class="moving__item" data-tooltip="Пешком">
                         <span class="moving__type moving__type--walk" aria-label="Путешествует пешком"></span>
                       </li>
                     </ul>
@@ -1299,13 +1288,13 @@
                 </div>
                 <a class="traveler__link" href="#">Позвать!</a>
               </article>
-
+            </div>
             <div class="pages">
               <a class="pages__button" href="#">Показать ещё</a>
               <div class="pagination">
                 <ul class="pagination__list list-default">
                   <li class="pagination__item">
-                    <a class="pagination__link pagination__link--active">1</a>
+                    <a class="pagination__link">1</a>
                   </li>
                   <li class="pagination__item">
                     <a class="pagination__link" href="#">2</a>
@@ -1318,10 +1307,8 @@
                   </li>
                 </ul>
                 <div class="controls">
-                  <a class="controls__button controls__button--prev" href="#"
-                    aria-label="Показать предыдущую страницу"></a>
-                  <a class="controls__button controls__button--next" href="#"
-                    aria-label="Показать следующую страницу"></a>
+                  <a class="controls__button controls__button--prev" href="#" aria-label="Показать предыдущую страницу"></a>
+                  <a class="controls__button controls__button--next" href="#" aria-label="Показать следующую страницу"></a>
                 </div>
               </div>
             </div>
@@ -1346,7 +1333,7 @@
         </div>
         <div class="developer">
           <p class="developer__text">Разработано</p>
-          <a class="developer__logo" href="https://htmlacademy.ru" aria-label="Логотип и ссылка на разработчика">
+          <a class="developer__logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип и ссылка на разработчика">
             <img class="developer__img" src="#" width="27" height="33" alt="Логотип разработчика">
           </a>
         </div>

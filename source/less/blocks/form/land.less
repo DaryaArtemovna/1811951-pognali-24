@@ -50,6 +50,11 @@
   background-position: 25px 50%, 100%;
 }
 
+.land__button:hover:not(.land__button--add) {
+  border-color: @step-hover-violet;
+}
+
+
 .land__button--empty {
   letter-spacing: 0.1em;
 }
@@ -89,6 +94,14 @@
   color: @twilight-blue;
 }
 
+.land__button--add:hover {
+  background-color: @violet;
+}
+
+.land__button--add:hover::before {
+  opacity: 0.3;
+}
+
 .land__button--add::before,
 .land__button--active::before {
   top: 50%;
@@ -100,10 +113,21 @@
 
 .land__button--add::before {
   background: url("../img/icon-plus.svg") no-repeat center / cover;
+  opacity: 0.2;
 }
 
 .land__button--active::before {
   background: url("../img/land-close.svg") no-repeat center / cover;
+  opacity: 0.3;
+}
+
+.land__button--active:hover::before {
+  opacity: 1;
+}
+
+.land__button--active:active::before,
+.land__button--add:active::before {
+  opacity: 0.1;
 }
 
 .land__button--active {
@@ -147,6 +171,16 @@
 
 .land__delete::after {
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.land__delete:hover::before,
+.land__delete:hover::after {
+  opacity: 0.3;
+}
+
+.land__delete:active::before,
+.land__delete:active::after {
+  opacity: 0.05;
 }
 
 .land__select {
